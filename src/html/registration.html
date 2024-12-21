@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  @@include("components/head.html", { "title": "NMS Taxi" })
+
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <main class="page">
+          <div class="auth">
+            <div class="banner left">
+              <img src="/img/logo.svg" alt="" />
+            </div>
+
+            <div class="form">
+              <div class="form__body">
+                <h2 class="form__title">Rejestracja</h2>
+
+                <div class="form__switch">
+                  <button class="form__switch-value active">Kierowca</button>
+                  <button class="form__switch-value">Partner</button>
+                </div>
+
+                <div class="form__fields">
+                  @@include("components/ui/field.html", { label: "Imię", type: "text", valid:"valid", error:"Wypełnij pole" })
+                  @@include("components/ui/field.html", { label: "Nazwisko", type: "text", valid:"valid", error:"Wypełnij pole" }) 
+                  @@include("components/ui/field.html", { label: "E-mail", type: "email", valid:"valid", error:"e-mail jest nieprawidłowy" }) 
+                  @@include("components/ui/field.html", { label: "Hasło", type: "password", valid:"valid", error:"Wypełnij pole", eye:false }) 
+                  @@include("components/ui/field.html", { label: "Wypełnij pole poprawnie", type: "password", valid:"valid", error:"Wypełnij pole", eye:false})
+               
+                  Тут будет капча
+               
+                </div>  
+
+                <div class="form__policy">
+                  @@include("components/ui/toggle.html", {
+                     type: "checkbox",
+                    })
+                    <p class="form__policy-text">Rejestrując się, zgadzasz się na nasze <a href="#">Warunki korzystania</a> z usług i <a href="#">Politykę prywatności</a>, zobowiązujesz się do przestrzegania obowiązków wynikających z przepisów Unii Europejskiej oraz lokalnych przepisów prawnych, a także do świadczenia wyłącznie legalnych usług i treści na platformie NMS.
+                    </p>
+                </div>
+
+                @@include("components/ui/button.html", {
+                  className: "large form__button",
+                  label: "Zarejestruj się "
+                 })
+              </div>
+            </div>
+         </div>
+        </main>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>
