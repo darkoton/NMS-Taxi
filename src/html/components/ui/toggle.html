@@ -1,6 +1,7 @@
 <div class="ui-toggle">
-  <input type="@@type" class="@@if(context.switch){switch} custom small">
+  <input @@if(context.name){name="@@name" } type="@@if(context.type){@@type}@@if(!context.type){checkbox}"
+    @@if(context.id){id="@@id" } class="@@if(context.switch){switch} @@if(context.className){@@className} small">
   @@if(context.label){
-  <label for="@@id" class="ui-checkbox-label">@@label</label>
+  <label @@if(context.id){for="@@id" } class="ui-checkbox-label">@@label</label>
   }
 </div>

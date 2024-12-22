@@ -11,21 +11,27 @@
 
           <div class="form left forgot">
             <div class="form__body">
-              <h2 class="form__title">Nie pamiętam hasła</h2>
+              <h2 class="form__title">Resetowanie hasła</h2>
 
               <p class="form__description">
-                Nie martw się, wyślemy ci wiadomość e-mail z instrukcjami
+                Wysłaliśmy kod do <a href="#">test@nms.korpo.pl</a>
               </p>
 
-              <div class="form__fields">
-                @@include("components/ui/field.html", { label: "E-mail", type: "email", valid:"valid",
-                error:"e-mail jest nieprawidłowy" })
+              <div class="form__code-field">
+                <input data-order="1" required type="number" min="0" max="9">
+                <input data-order="2" required type="number" min="0" max="9">
+                <input data-order="3" required type="number" min="0" max="9">
+                <input data-order="4" required type="number" min="0" max="9">
               </div>
 
               @@include("components/ui/button.html", {
               className: "large form__button",
-              label: "Resetuj"
+              label: "Kontynuuj"
               })
+
+              <div class="form__back-link">
+                <span>Nie dostałeś e-maila? <a href="#">Wyślij ponownie</a></span>
+              </div>
 
               <div class="form__back">
                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
