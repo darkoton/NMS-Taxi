@@ -77,14 +77,16 @@ langSelects.forEach(select => {
 
 const switchRegister = document.querySelector('.form__switch');
 
-switchRegister.querySelectorAll('button').forEach(button => {
-  button.onclick = () => {
-    document.querySelector('.driver').style.display = 'none';
-    document.querySelector('.partner').style.display = 'none';
+if (switchRegister) {
+  switchRegister.querySelectorAll('button').forEach(button => {
+    button.onclick = () => {
+      document.querySelector('.driver').style.display = 'none';
+      document.querySelector('.partner').style.display = 'none';
 
-    document.querySelector(`.${button.dataset.value}`).style.display = 'flex';
-  };
-});
+      document.querySelector(`.${button.dataset.value}`).style.display = 'flex';
+    };
+  });
+}
 
 // Event delegation
 window.addEventListener('click', ({ target }) => {
