@@ -38,8 +38,8 @@
   --disabled-color: rgb(138, 138, 138);
 }
 
-[class^="ui-"] {
-  font-family: "Poppins", serif;
+[class^='ui-'] {
+  font-family: 'Poppins', serif;
   // font-weight: 400;
 }
 
@@ -86,7 +86,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     width: 6px;
     height: 6px;
@@ -103,14 +103,15 @@
     font-size: 12px;
   }
 
-  & svg {
+  & .ui-icon-info {
     color: var(--icon-color);
+    --size: 12px;
   }
 }
 
 .ui-doc-verf {
   --bg-color: var(--neutrals-100);
-
+  --icon-color: var(--neutrals-900);
   border-radius: 8px;
   padding: 4px 8px;
   display: inline-flex;
@@ -121,15 +122,19 @@
   & {
     &.error {
       --bg-color: var(--error-bg);
+      --icon-color: var(--error);
     }
     &.active {
       --bg-color: var(--success-bg);
+      --icon-color: var(--success);
     }
     &.process {
       --bg-color: var(--turquoise-bg);
+      --icon-color: var(--turquoise);
     }
     &.attention {
       --bg-color: var(--yellow-bg);
+      --icon-color: var(--yellow);
     }
   }
 
@@ -137,6 +142,10 @@
     font-weight: 500;
     font-size: 12px;
     color: var(--neutrals-900);
+  }
+
+  & i {
+    color: var(--icon-color);
   }
 }
 
@@ -289,8 +298,8 @@
   gap: 8px;
 
   @supports (-webkit-appearance: none) or (-moz-appearance: none) {
-    input[type="checkbox"],
-    input[type="radio"] {
+    input[type='checkbox'],
+    input[type='radio'] {
       --active: var(--blue-1);
       --active-inner: var(--neutrals-20);
       --border: rgba(0, 0, 0, 0);
@@ -321,7 +330,7 @@
       }
 
       &:after {
-        content: "";
+        content: '';
         display: block;
         left: 0;
         top: 0;
@@ -376,7 +385,7 @@
         margin-left: 4px;
       }
     }
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       &:not(.switch) {
         border-radius: 7px;
         &:after {
@@ -415,7 +424,7 @@
         }
 
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           left: 0;
@@ -487,7 +496,7 @@
         }
       }
     }
-    input[type="radio"] {
+    input[type='radio'] {
       border-radius: 50%;
       &:after {
         width: 19px;
@@ -577,7 +586,7 @@
       box-shadow: inset 0 0 2px 0 var(--error);
     }
 
-    &[type="phone"] {
+    &[type='phone'] {
       padding-left: 68px;
     }
   }
@@ -613,6 +622,7 @@
   & .ui-field-close-eye {
     transition: all 0.3s ease 0s;
     position: absolute;
+    color: var(--neutrals-900);
     top: 0;
     left: 0;
   }
@@ -639,6 +649,18 @@
     gap: 4px;
     color: var(--neutrals-500);
     cursor: pointer;
+
+    i {
+      transition: all 0.3s ease 0s;
+    }
+
+    &.open i {
+      transform: scaleY(-1);
+    }
+
+    & .ui-dropdown-list {
+      width: 100px;
+    }
   }
 }
 
@@ -691,7 +713,7 @@
       background-color: var(--light-blue);
 
       &::after {
-        content: "";
+        content: '';
         width: 16px;
         height: 12px;
         background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6663 1.68359L5.49967 10.8503L1.33301 6.68359' stroke='%23008CBF' stroke-width='1.66667' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");

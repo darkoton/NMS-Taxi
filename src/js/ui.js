@@ -95,6 +95,7 @@ fields.forEach(field => {
 
     selectButton.onclick = () => {
       selectList.classList.toggle('open');
+      selectButton.classList.toggle('open');
     };
 
     selectList.querySelectorAll('li').forEach(li => {
@@ -103,6 +104,7 @@ fields.forEach(field => {
           i.classList.remove('select');
         });
 
+        selectButton.classList.remove('open');
         li.classList.add('select');
         phoneCode.textContent = li.dataset.value;
       };
@@ -168,6 +170,10 @@ window.addEventListener('click', ({ target }) => {
 
     document.querySelectorAll('.ui-dropdown').forEach(dropdown => {
       dropdown.classList.remove('open');
+    });
+
+    document.querySelectorAll('.ui-field-phone').forEach(field => {
+      field.classList.remove('open');
     });
   }
 });
