@@ -9,28 +9,30 @@
 
       <i class="ui-icon-arrow-down"></i>
 
-      <ul class="ui-dropdown-list">
-        <li data-value="+48">
-          <div>
-            <img src="./img/ui/input/poland.svg" alt="Poland">
-            <span>+48</span>
-          </div>
-  
-        </li>
-        <li data-value="+380">
-          <div>
-            <img src="./img/ui/input/ukrain.svg" alt="Ukrain">
-            <span>+380</span>
-          </div>
-  
-        </li>
-      </ul>
-      
+
+
     </span>
+
+    <ul class="ui-dropdown-list phone">
+      <li data-value="+48">
+        <div>
+          <img src="./img/ui/input/poland.svg" alt="Poland">
+          <span>+48</span>
+        </div>
+
+      </li>
+      <li data-value="+380">
+        <div>
+          <img src="./img/ui/input/ukrain.svg" alt="Ukrain">
+          <span>+380</span>
+        </div>
+
+      </li>
+    </ul>
 
     }
 
-    <input @@if(context.type){data-type="@@type" type="@@type"} @@if(!context.type){type="text"}>
+    <input @@if(context.type){data-type="@@type" type="@@type" } @@if(!context.type){type="text" }>
 
     @@if(context.valid && context.type !== 'password'){
     <i class="ui-icon-check ui-field-valid"></i>

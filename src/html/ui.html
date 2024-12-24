@@ -1,26 +1,31 @@
 <!doctype html>
 <html lang="en">
-  @@include("components/head.html", { "title": "Gulp-template" })
+@@include("components/head.html", { "title": "Gulp-template" })
 
-  <body>
-    <div class="wrapper">
-      <div class="content">
-        <main class="page">
-          @@include("components/ui/status.html", {label:"test"})
-          @@include("components/ui/doc-verf.html", {type:"attention", count: 1})
-          @@include("components/ui/button.html", {label:"attention", className: 'secondary', disabled: ''})
-          @@include("components/ui/toggle.html", {type:"checkbox", switch:'switch'})
-          @@include("components/ui/toggle.html", {type:"radio" })
-          @@include("components/ui/field.html", {type:"phone", eye:true, label: "test field", valid:'valid', error:'test error' })
-          @@include("components/ui/dropdown.html", {
-            type:"default",
-            label: "test field",
-            options: [{label:'label', value:'value'}]
-            })
-        </main>
-      </div>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main class="page">
+        @@include("components/ui/status.html", {label:"test"})
+        @@include("components/ui/doc-verf.html", {type:"attention", count: 1})
+        @@include("components/ui/button.html", {label:"attention", className: 'secondary', disabled: ''})
+        @@include("components/ui/toggle.html", {type:"checkbox", switch:'switch'})
+        @@include("components/ui/toggle.html", {type:"radio" })
+        @@include("components/ui/field.html", {type:"phone", eye:true, label: "test field", valid:'valid',
+        error:'test error' })
+        @@include("components/ui/dropdown.html", {
+        type:"default",
+        label: "test field",
+        options: [{label:'label', value:'value'}]
+        })
+        @@include("components/ui/multi-field.html", {
+        label:"label multi" })
+
+      </main>
     </div>
-    <script src="js/script.js"></script>
-    <script src="js/ui.js"></script>
-  </body>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+
 </html>
