@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+@@include("components/head.html", { "title": "NMS Taxi" })
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main class="page">
+        <div class="document">
+          <div class="document__body">
+            <div class="banner">
+              <div class="banner__body">
+                <img class="banner__logo" src="./img/logo-2.svg" alt="" />
+                <div class="banner__steps">
+                  <div class="banner__step">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-id-card"></i>
+                      </span>
+                    </div>
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">Dokumenty partnera
+                      </h3>
+                      <p class="banner__step-text">
+                        Dodaj dokumenty aby rozpocząć współpracę jako partner
+                      </p>
+                    </div>
+                  </div>
+                  <div class="banner__step active">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-document"></i>
+                      </span>
+                    </div>
+
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">Licencja
+                      </h3>
+                      <p class="banner__step-text">
+                        Dodaj licencję w swoim mieście
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form">
+              <div class="form__body">
+                <h2 class="form__title">Licencja</h2>
+
+                <p class="form__description">
+                  Dodaj swoją licencję, aby rozpocząć proces współpracy
+                </p>
+
+                <div class="form__sections">
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Licencja Główna </div>
+                    </div>
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <h4 class="form__field-title">Warszawa</h4>
+                        <p class="form__field-text">Dodaj licencję dla miasta, w którym pracujesz</p>
+                      </div>
+
+                      <div class="form__field-body">
+                        @@include("components/ui/multi-field.html", {id:"warzawa"})
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Dodatkowa licencja </div>
+                      <div class="form__actions">
+                        <button class="form__add">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.85376 1.36328V10.3633" stroke="#2E2E2E" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.17065 5.86328H10.5365" stroke="#2E2E2E" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            Dodać licencję
+                          </span>
+                        </button>
+                        <button class="form__reset">
+                          <i class="ui-icon-reset"></i>
+                          <span>Resetuj</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <h4 class="form__field-title">Pruszków</h4>
+                        <p class="form__field-text">Dodaj licencję dla miasta, w którym pracujesz</p>
+                      </div>
+
+                      <div class="form__field-body">
+                        @@include("components/ui/multi-field.html", {id:"bank"})
+                      </div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <h4 class="form__field-title">Ząbki</h4>
+                        <p class="form__field-text">Dodaj licencję dla miasta, w którym pracujesz</p>
+                      </div>
+
+                      <div class="form__field-body">
+                        @@include("components/ui/multi-field.html", {id:"zqbki"})
+                      </div>
+                    </div>
+                  </div>
+
+                  @@include("components/ui/button.html", {className:"form__submit medium", label: "Dalej"})
+
+                </div>
+                <!-- <div class="form__fields">
+                @@include("components/ui/field.html", { label: "E-mail", type: "email", valid:"valid",
+                error:"e-mail jest nieprawidłowy" })
+              </div>
+
+              @@include("components/ui/button.html", {
+              className: "large form__button",
+              label: "Resetuj"
+              }) -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+
+</html>

@@ -6,18 +6,140 @@
   <div class="wrapper">
     <div class="content">
       <main class="page">
-        <div class="auth reverse">
+        <div class="document">
 
 
-          <div class="form left forgot">
+          <div class="banner">
+            <div class="banner__body">
+              <img class="banner__logo" src="./img/logo-2.svg" alt="" />
+              <div class="banner__steps">
+                <div class="banner__step active">
+                  <div class="banner__icon-body">
+                    <span class="banner__icon">
+                      <i class="ui-icon-id-card"></i>
+                    </span>
+                  </div>
+                  <div class="banner__step-info">
+                    <h3 class="banner__step-title">Dokumenty partnera
+                    </h3>
+                    <p class="banner__step-text">
+                      Dodaj dokumenty aby rozpocząć współpracę jako partner
+                    </p>
+                  </div>
+                </div>
+                <div class="banner__step">
+                  <div class="banner__icon-body">
+                    <span class="banner__icon">
+                      <i class="ui-icon-document"></i>
+                    </span>
+                  </div>
+
+                  <div class="banner__step-info">
+                    <h3 class="banner__step-title">Licencja
+                    </h3>
+                    <p class="banner__step-text">
+                      Dodaj licencję w swoim mieście
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form">
             <div class="form__body">
-              <h2 class="form__title">Nie pamiętam hasła</h2>
+              <h2 class="form__title">Dokumenty</h2>
 
               <p class="form__description">
-                Nie martw się, wyślemy ci wiadomość e-mail z instrukcjami
+                Dodaj swoje dokumenty, aby rozpocząć proces współpracy
               </p>
 
-              <div class="form__fields">
+              <div class="form__sections">
+                <div class="form__section">
+                  <div class="form__header">
+                    <div class="form__label">Dowód tożsamości</div>
+                    <button class="form__reset">
+                      <i class="ui-icon-reset"></i>
+                      <span>Resetuj</span>
+                    </button>
+                  </div>
+
+                  <div class="form__section-body">
+                    <div class="form__field-info">
+                      <h4 class="form__field-title">Dowód Osobisty</h4>
+                      <p class="form__field-text">Akceptujemy zdjęcie dobrej jakości lub skan przedniej strony dowodu
+                        osobistego, pierwszej strony paszpotu oraz karty pobytu</p>
+                    </div>
+
+                    <div class="form__field-body">
+                      <label for="prozd" class="form__input-file">
+                        <input type="file" hidden id="prozd">
+                        <div class="form__input-file-body">
+                          <span class="form__input-icon">
+                            <i class="ui-icon-download "></i>
+                          </span>
+                          <div class="form__input-label">Przód</div>
+                        </div>
+                      </label>
+                      <label for="tyt" class="form__input-file">
+                        <input type="file" hidden id="tyt">
+                        <div class="form__input-file-body">
+                          <span class="form__input-icon">
+                            <i class="ui-icon-download "></i>
+                          </span>
+                          <div class="form__input-label">Tył</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__section">
+                  <div class="form__header">
+                    <div class="form__label">Wyciągi</div>
+                  </div>
+
+                  <div class="form__section-body">
+                    <div class="form__field-info">
+                      <h4 class="form__field-title">Wyciąg bankowy</h4>
+                      <p class="form__field-text">Wyciąg z aplikacji bankowej</p>
+                    </div>
+
+                    <div class="form__field-body">
+                      @@include("components/ui/multi-field.html", {id:"bank"})
+                    </div>
+                  </div>
+                  <div class="form__section-body">
+                    <div class="form__field-info">
+                      <h4 class="form__field-title">Wyciąg z KRS</h4>
+                      <p class="form__field-text">Akceptujemy aktualny KRS nie powyżej 30 dni</p>
+                    </div>
+
+
+                    <div class="form__field-body">
+                      @@include("components/ui/multi-field.html", {id:"krs"})
+                    </div>
+                  </div>
+                </div>
+                <div class="form__section">
+                  <div class="form__header">
+                    <div class="form__label">Zdjęcie Z DOWODEM</div>
+                  </div>
+
+                  <div class="form__section-body">
+                    <div class="form__field-info">
+                      <p class="form__field-text">Zrób selfi z widocznym trzymającym dowodem osobistym w rękach </p>
+                    </div>
+
+                    <div class="form__field-body">
+                      @@include("components/ui/multi-field.html", {id:"bank"})
+                    </div>
+                  </div>
+                </div>
+
+                @@include("components/ui/button.html", {className:"form__submit medium", label: "Dalej"})
+
+              </div>
+              <!-- <div class="form__fields">
                 @@include("components/ui/field.html", { label: "E-mail", type: "email", valid:"valid",
                 error:"e-mail jest nieprawidłowy" })
               </div>
@@ -25,21 +147,12 @@
               @@include("components/ui/button.html", {
               className: "large form__button",
               label: "Resetuj"
-              })
+              }) -->
 
-              <div class="form__back">
-                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13.3334 7.00033H1.66675M1.66675 7.00033L7.50008 12.8337M1.66675 7.00033L7.50008 1.16699"
-                    stroke="#525252" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span>Powrót do logowania</span>
-              </div>
             </div>
           </div>
 
-          <div class="banner right">
-            <img class="banner__logo" src="./img/logo.svg" alt="" />
-          </div>
+
         </div>
       </main>
     </div>
