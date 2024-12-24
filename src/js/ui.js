@@ -167,11 +167,14 @@ const multiFields = document.querySelectorAll('.ui-multi-field');
 multiFields.forEach(field => {
   const list = field.querySelector('.ui-multi-value-list');
   const input = field.querySelector('.ui-multi-input');
-  const button = field.querySelector('.ui-multi-button');
+  // const button = field.querySelector('.ui-multi-button');
 
-  function addItem() {
-    const li = document.createElement('li');
-    li.innerHTML = ` <span></span>
+  function RenderItem() {
+    list.innerHTML = '';
+
+    Array.from(input.files).forEach(file => {
+      const li = document.createElement('li');
+      li.innerHTML = ` <span></span>
                   <button>
                       <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M1.1712 1.17157L6.82806 6.82843M1.1712 6.82843L6.82806 1.17157" stroke="white"
@@ -179,31 +182,24 @@ multiFields.forEach(field => {
                       </svg>
                   </button>`;
 
-    li.querySelector('span').textContent = input.value;
-    const multiValue = input.dataset.value ? JSON.parse(input.dataset.value) : [];
-    multiValue.push(input.value);
-    input.dataset.value = JSON.stringify(multiValue);
-    li.querySelector('button').addEventListener('click', () => {
-      li.remove();
+      li.querySelector('span').textContent = file.name;
+      const multiValue = input.dataset.value ? JSON.parse(input.dataset.value) : [];
+      multiValue.push(file.name);
+      input.dataset.value = JSON.stringify(multiValue);
+      li.querySelector('button').addEventListener('click', () => {
+        li.remove();
 
-      let currMultiValue = input.dataset.value ? JSON.parse(input.dataset.value) : [];
-      currMultiValue = currMultiValue.filter(e => e !== li.querySelector('span').textContent);
-      input.dataset.value = JSON.stringify(currMultiValue);
+        let currMultiValue = input.dataset.value ? JSON.parse(input.dataset.value) : [];
+        currMultiValue = currMultiValue.filter(e => e !== li.querySelector('span').textContent);
+        input.dataset.value = JSON.stringify(currMultiValue);
+      });
+
+      list.appendChild(li);
     });
-
-    list.appendChild(li);
-
-    input.value = '';
   }
 
   input.dataset.value = '[]';
-  input.addEventListener('keyup', ({ key }) => {
-    if (key === 'Enter' && input.value.trim()) {
-      addItem();
-    }
-  });
-
-  button.addEventListener('click', addItem);
+  input.addEventListener('change', RenderItem);
 });
 
 // Event delegation

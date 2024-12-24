@@ -38,8 +38,8 @@
   --disabled-color: rgb(138, 138, 138);
 }
 
-[class^='ui-'] {
-  font-family: 'Poppins', serif;
+[class^="ui-"] {
+  font-family: "Poppins", serif;
   // font-weight: 400;
 }
 
@@ -86,7 +86,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     width: 6px;
     height: 6px;
@@ -298,8 +298,8 @@
   gap: 8px;
 
   @supports (-webkit-appearance: none) or (-moz-appearance: none) {
-    input[type='checkbox'],
-    input[type='radio'] {
+    input[type="checkbox"],
+    input[type="radio"] {
       --active: var(--blue-1);
       --active-inner: var(--neutrals-20);
       --border: rgba(0, 0, 0, 0);
@@ -330,7 +330,7 @@
       }
 
       &:after {
-        content: '';
+        content: "";
         display: block;
         left: 0;
         top: 0;
@@ -385,7 +385,7 @@
         margin-left: 4px;
       }
     }
-    input[type='checkbox'] {
+    input[type="checkbox"] {
       &:not(.switch) {
         border-radius: 7px;
         &:after {
@@ -424,7 +424,7 @@
         }
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -496,7 +496,7 @@
         }
       }
     }
-    input[type='radio'] {
+    input[type="radio"] {
       border-radius: 50%;
       &:after {
         width: 19px;
@@ -532,6 +532,7 @@
   width: 100%;
 
   label {
+    display: inline-block;
     font-weight: 400;
     font-size: 12px;
     color: var(--neutrals-900);
@@ -586,7 +587,7 @@
       box-shadow: inset 0 0 2px 0 var(--error);
     }
 
-    &[type='phone'] {
+    &[type="phone"] {
       padding-left: 68px;
     }
   }
@@ -672,7 +673,8 @@
     --button-padding: 0 17.5px;
   }
 
-  label {
+  & .ui-multi-label {
+    display: inline-block;
     font-weight: 400;
     font-size: 12px;
     color: var(--neutrals-900);
@@ -696,6 +698,7 @@
     background: var(--neutrals-20);
     padding: 2px 3px;
     border-radius: 12px;
+    padding-right: 100px;
   }
 
   & .ui-multi-value-list {
@@ -724,7 +727,8 @@
 
   & .ui-multi-input {
     flex: 1 1 auto;
-    font-size: 1;
+    // font-size: 1;
+    display: none;
   }
 
   & .ui-multi-button {
@@ -798,7 +802,7 @@
       background-color: var(--light-blue);
 
       &::after {
-        content: '';
+        content: "";
         width: 16px;
         height: 12px;
         background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6663 1.68359L5.49967 10.8503L1.33301 6.68359' stroke='%23008CBF' stroke-width='1.66667' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
@@ -843,6 +847,7 @@
   }
 
   & .ui-dropdown-label {
+    display: inline-block;
     font-weight: 400;
     font-size: 12px;
     color: var(--neutrals-800);
