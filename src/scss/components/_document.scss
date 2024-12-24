@@ -1,6 +1,7 @@
 .document {
   background-color: var(--neutrals-20);
   height: 100%;
+  display: flex;
   // padding: 24px;
 
   @media (max-width: 992px) {
@@ -10,13 +11,14 @@
   &__body {
     display: flex;
     gap: 8px;
+    flex: 1 1 auto;
 
     @media (max-width: 992px) {
       flex-direction: column;
       align-items: center;
       gap: 24px;
       padding: 30px 0;
-      background: url('../img/document-bg.png') 0 0 / cover no-repeat;
+      background: url("../img/document-bg.png") 0 0 / cover no-repeat;
     }
   }
 
@@ -27,6 +29,7 @@
     max-width: 412px;
     margin: 24px;
     margin-right: 0;
+    display: flex;
 
     @media (max-width: 992px) {
       background: transparent;
@@ -35,11 +38,12 @@
 
     &__body {
       padding: 60px 17px 60px 28px;
-      background: url('../img/document-bg.png') 0 0 / cover no-repeat;
+      background: url("../img/document-bg.png") 0 0 / cover no-repeat;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 97px;
+      flex: 1 1 auto;
 
       @media (max-width: 992px) {
         background: transparent;
@@ -91,7 +95,7 @@
 
       &:first-child {
         .banner__icon-body::after {
-          content: '';
+          content: "";
           height: 86px;
           width: 1px;
           border-left: 1px dashed var(--neutrals-700);
@@ -131,7 +135,7 @@
     @media (max-width: 992px) {
       background-color: transparent;
       width: 100%;
-      padding: 0 20px;
+      padding: 0 16px;
     }
 
     &__body {
@@ -196,6 +200,12 @@
     &__actions {
       display: flex;
       gap: 8px;
+
+      @media (max-width: 650px) {
+        & .form__reset {
+          display: none;
+        }
+      }
     }
     &__reset {
       cursor: pointer;
@@ -234,6 +244,12 @@
       justify-content: space-between;
       align-items: center;
       gap: 10px;
+
+      @media (max-width: 650px) {
+        flex-direction: column;
+        gap: 21px;
+        align-items: start;
+      }
     }
     &__field-info {
       display: flex;
@@ -241,6 +257,14 @@
       gap: 12px;
       width: 100%;
       max-width: 215px;
+
+      @media (max-width: 650px) {
+        max-width: 100%;
+      }
+
+      @media (max-width: 500px) {
+        max-width: 220px;
+      }
     }
     &__field-title {
       font-size: 14px;
@@ -260,6 +284,16 @@
       flex: 1 1 auto;
       width: 100%;
       max-width: 440px;
+
+      @media (max-width: 650px) {
+        max-width: 100%;
+      }
+
+      & .ui-multi-field .ui-multi-button {
+        @media (max-width: 650px) {
+          font-size: 14px;
+        }
+      }
     }
     &__input-file {
       width: 50%;
@@ -268,6 +302,7 @@
       padding: 8px;
       cursor: pointer;
       transition: all 0.3s ease 0s;
+      height: 108px;
 
       @media (any-hover: hover) {
         cursor: pointer;
