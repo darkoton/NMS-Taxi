@@ -1,28 +1,33 @@
-//< " CONNECTING JS COMPONENTS " >=============================================================================================================>//
-import isWebp from './modules/webp.js'; //SUPPORT WEBP
+//< " popups " >=============================================================================================================>//
 
-import isDevice from './modules/device.js'; //DEFINE DEVICE
+const popups = document.querySelectorAll('.popup');
+const openBtns = document.querySelectorAll('[data-popup-open]');
+openBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const popup = document.querySelector('.' + btn.dataset.popupOpen);
+    popup.classList.add('active');
+  });
+});
 
-// import './modules/preloader.js'; // PRELOADER
+popups.forEach(popup => {
+  const closeBtns = popup.querySelectorAll('.popup-close');
 
-// import "./modules/spoiler.js"  // SPOILERS
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      popup.classList.remove('active');
+    });
+  });
+});
 
-// import "./modules/dynamic_adap.js"  // DYNAMIC ADAPTIVE
-
-// import "./modules/scroll_header.js"  // SCROLL HEADER
-
-// import "./modules/swiper.js"  // SLIDER SWIPER
-
-// import "./modules/animate_scroll.js"  // ANIMATE WITH SCROLL
-
-// import "./modules/tabs.js"  // TABS
-
-// import "./modules/parallax.js"  // PARALLAX EFFECT
+window.addEventListener('click', ({ target }) => {
+  if (!target.closest('.popup-body') && !target.closest('[data-popup-open]')) {
+    popups.forEach(popup => {
+      popup.classList.remove('active');
+    });
+  }
+});
 
 //< " СКРИПТЫ " >=============================================================================================================>//
-
-isWebp();
-isDevice();
 
 // Code field
 const codeFields = document.querySelectorAll('.form__code-field');

@@ -100,16 +100,20 @@
 
               @@include("components/ui/button.html", {
               className: "large form__button",
-              label: "Zarejestruj się"
+              label: "Zarejestruj się",
+              attributes: 'data-popup-open="popup-register"'
               })
             </div>
           </div>
         </div>
       </main>
     </div>
+
+
   </div>
-  <script src="js/script.js"></script>
-  <script src="js/ui.js"></script>
+
+  @@include("components/footer.html")
+
 </body>
 
 </html>

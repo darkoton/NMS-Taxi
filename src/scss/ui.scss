@@ -870,6 +870,7 @@
       justify-content: space-between;
       align-items: center;
       height: 100%;
+      overflow: auto;
 
       & i {
         transition: all 0.2s ease 0s;

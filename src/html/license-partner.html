@@ -73,7 +73,7 @@
                     <div class="form__header">
                       <div class="form__label">Dodatkowa licencja </div>
                       <div class="form__actions">
-                        <button class="form__add">
+                        <button class="form__add" data-popup-open="popup-add-license">
                           <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.85376 1.36328V10.3633" stroke="#2E2E2E" stroke-width="1.5"
@@ -115,18 +115,12 @@
                     </div>
                   </div>
 
-                  @@include("components/ui/button.html", {className:"form__submit medium", label: "Dalej"})
+                  @@include("components/ui/button.html", {className:"form__submit medium", label: "Dalej",
+                  attributes: 'data-popup-open="popup-sucess-partner"'
+                  })
 
                 </div>
-                <!-- <div class="form__fields">
-                @@include("components/ui/field.html", { label: "E-mail", type: "email", valid:"valid",
-                error:"e-mail jest nieprawidłowy" })
-              </div>
 
-              @@include("components/ui/button.html", {
-              className: "large form__button",
-              label: "Resetuj"
-              }) -->
 
               </div>
             </div>
@@ -134,9 +128,12 @@
         </div>
       </main>
     </div>
+
+    @@include("components/footer.html")
+
   </div>
-  <script src="js/script.js"></script>
-  <script src="js/ui.js"></script>
+  @@include("components/footer.html")
+
 </body>
 
 </html>

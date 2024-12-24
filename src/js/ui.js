@@ -1,4 +1,4 @@
-const fields = document.querySelectorAll('.ui-field');
+const fields = document.querySelectorAll('.ui-field.ui-field-text');
 
 function validateEmail(value) {
   const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -130,10 +130,14 @@ dropdowns.forEach(dropdown => {
   options.forEach(
     option =>
       (option.onclick = () => {
-        if (listValue.dataset.value && listValue.dataset.value.includes(option.dataset.value)) {
+        let value = listValue.dataset.value ? JSON.parse(listValue.dataset.value) : [];
+
+        if (value.includes(option.dataset.value)) {
           option.classList.remove('select');
           listValue.querySelector(`[data-value="${option.dataset.value}"]`).remove();
-          listValue.dataset.value = listValue.dataset.value.replace(option.dataset.value + ' ', '');
+
+          value = value.filter(e => e !== option.dataset.value);
+          listValue.dataset.value = JSON.stringify(value);
           return;
         }
 
@@ -152,9 +156,12 @@ dropdowns.forEach(dropdown => {
           event.stopPropagation();
           list.querySelector(`[data-value="${li.dataset.value}"]`).classList.remove('select');
           li.remove();
-          listValue.dataset.value = listValue.dataset.value.replace(li.dataset.value + ' ', '');
+          value = value.filter(e => e !== li.dataset.value);
+          listValue.dataset.value = JSON.stringify(value);
         };
-        listValue.dataset.value = (listValue.dataset.value ? listValue.dataset.value : '') + option.dataset.value + ' ';
+
+        value.push(option.dataset.value);
+        listValue.dataset.value = JSON.stringify(value);
         listValue.appendChild(li);
         option.classList.add('select');
       }),
