@@ -1,3 +1,7 @@
+//< " modules " >=============================================================================================================>//
+
+import isWebp from './modules/webp.js';
+isWebp();
 //< " popups " >=============================================================================================================>//
 
 const popups = document.querySelectorAll('.popup');
@@ -89,6 +93,12 @@ if (switchRegister) {
       document.querySelector('.partner').style.display = 'none';
 
       document.querySelector(`.${button.dataset.value}`).style.display = 'flex';
+
+      switchRegister.querySelectorAll('button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      button.classList.add('active');
     };
   });
 }
