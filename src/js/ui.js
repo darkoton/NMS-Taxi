@@ -209,6 +209,12 @@ multiFields.forEach(field => {
   input.addEventListener('change', RenderItem);
 });
 
+// Datepicker
+const datepickers = document.querySelectorAll('.datepicker');
+datepickers.forEach(el => {
+  const datepicker = new Datepicker(el, { language: 'pl', format: 'yyyy-mm-dd' });
+});
+
 // Event delegation
 window.addEventListener('click', ({ target }) => {
   if (!target.closest('.ui-dropdown-list') && !target.closest('.ui-field-phone') && !target.closest('.ui-dropdown-field')) {

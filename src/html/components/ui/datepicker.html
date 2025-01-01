@@ -1,1 +1,9 @@
-<input type="text" name="foo">
+<div class="date-picker-field">
+  @@if(context.label){
+  <label>@@label</label>
+  }
+
+  <div class="date-picker-input-body">
+    <input type="text" class="datepicker datepicker-input" placeholder="YYYY-MM-DD"> <i class="ui-icon-calendar"></i>
+  </div>
+</div>
