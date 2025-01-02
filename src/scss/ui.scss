@@ -161,7 +161,7 @@
   --text-size: 14px;
   --text-weight: 700;
   --text-transform: uppercase;
-  --gap: 10;
+  --gap: 10px;
 
   border: var(--border-width) solid var(--border-color);
   background-color: var(--bg-color);
@@ -172,6 +172,7 @@
   font-size: var(--text-size);
   font-weight: var(--text-weight);
   text-transform: var(--text-transform);
+  gap: var(--gap);
 
   display: flex;
   align-items: center;
@@ -196,7 +197,7 @@
       --text-size: 14px;
       --text-weight: 700;
       --text-transform: uppercase;
-      --gap: 10;
+      --gap: 10px;
 
       &:active {
         --bg-color: var(--dark-blue);
@@ -243,6 +244,7 @@
     }
 
     &.secondary {
+      --border-width: 1px;
       --border-color: var(--yellow-1);
       --bg-color: var(--yellow-1);
       --shadow-color: transparent;
@@ -253,7 +255,7 @@
       --text-size: 12px;
       --text-weight: 500;
       --text-transform: none;
-      --gap: 8;
+      --gap: 8px;
 
       &:active {
         --border-color: var(--yellow);
@@ -1084,4 +1086,65 @@
 
 .date-picker-input-body input {
   height: 40px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-radius: 16px;
+  padding: 6px;
+  background-color: var(--dark-blue);
+  gap: 6px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: var(--neutrals-50);
+    background-color: var(--dark-blue);
+    padding: 12px 17.5px;
+    border-radius: 12px;
+    gap: 8px;
+
+    i {
+      --size: 25px;
+    }
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        background-color: var(--neutrals-20);
+        color: var(--neutrals-900);
+      }
+    }
+
+    &.active {
+      background-color: var(--light-blue);
+      color: var(--neutrals-900);
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__link {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
+    justify-content: space-between;
+    &__link {
+      padding: 9px 13px;
+    }
+  }
+
+  @media (max-width: 440px) {
+    &__link {
+      padding: 5px;
+      border-radius: 8px;
+    }
+  }
 }

@@ -12,39 +12,214 @@
               <div class="header__body">
                 <h1 class="header__title">Zarobki</h1>
 
-                <nav class="header__nav">
-                  <a href="#" class="header__nav-link">
-                    <i class="ui-icon-driver"></i>
-                    <span>Kierowcy</span>
-                  </a>
-                  <a href="#" class="header__nav-link">
-                    <i class="ui-icon-car"></i>
-                    <span>Pojazdy</span>
-                  </a>
-                  <a href="#" class="header__nav-link">
-                    <i class="ui-icon-history"></i>
-                    <span>Historia</span>
-                  </a>
-                  <a href="#" class="header__nav-link">
-                    <i class="ui-icon-money"></i>
-                    <span>Zarobki</span>
-                  </a>
-                  <a href="#" class="header__nav-link">
-                    <i class="ui-icon-bonus"></i>
-                    <span>Bonusy</span>
-                  </a>
-                  <a href="#" class="header__nav-link">
-                    <i class="ui-icon-check"></i>
-                    <span>Faktury</span>
-                  </a>
-                </nav>
+                @@include("./components//ui/menu.html")
 
                 <div class="header__profile">
-                  <img src="./img/user.png" alt="">
+                  <img class="header__profile-avatar" src="./img/user.png" alt="">
+                  <div class="header__profile-info">
+                    <span class="header__profile-name">Artur Gawryś</span>
+                    <span class="header__profile-email">artur@nmskorpo.pl</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </header>
 
+            <div class="dashboard__info info right-0">
+              <div class="info__body">
+                <div class="info__filtr filtr">
+                  <div class="filtr__head">
+                    @@include("components/ui/datepicker.html", {
+                    "className": "filtr__input",
+                    iconColor: "var(--neutrals-900)"
+                    })
+                    @@include("components/ui/button.html", {
+                    "className": "filtr__button secondary outlined",
+                    label: "Pobierz raport",
+                    icon: '<i class="ui-icon-download"></i>'
+                    })
+
+                  </div>
+
+                  <div class="filtr__about">
+                    <div class="filtr__cash">
+                      <h4 class="filtr__cash-title">Do przełewu:</h4>
+                      <span class="filtr__cash-value">841 582,07 zł </span>
+                    </div>
+
+                    <div class="filtr__info">
+                      <div class="info__section">
+                        <div class="info__line">
+                          <span class="info__line-label">Przychód
+                            <span class="info__line-label-subtitle">(brutto)</span>:</span>
+                          <span class="info__line-value">1 031 982,92 zł</span>
+                        </div>
+                      </div>
+                      <div class="info__section">
+                        <div class="info__line">
+                          <span class="info__line-label">Opłaty
+                            <span class="info__line-label-subtitle">(brutto)</span>:</span>
+                          <span class="info__line-value">-190 400,85 zł</span>
+                        </div>
+                        <div class="info__section">
+                          <div class="info__line">
+                            <span class="info__line-label">Prowizja:</span>
+                            <span class="info__line-value">-154 797,44 zł</span>
+                          </div>
+                          <div class="info__line">
+                            <span class="info__line-label">Podatek:</span>
+                            <span class="info__line-value">-35 603,41 zł</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="info__section no-line">
+                        <div class="info__line result">
+                          <span class="info__line-label">Dochód:</span>
+                          <span class="info__line-value">841 582,07 zł</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filtr__info">
+                      <div class="info__section">
+                        <div class="info__line">
+                          <span class="info__line-label">Odebrano gotówki:</span>
+                          <span class="info__line-value">-612 947,83 zł</span>
+                        </div>
+                      </div>
+                      <div class="info__section no-line">
+                        <div class="info__line result">
+                          <span class="info__line-label">Przewidywany przelew:</span>
+                          <span class="info__line-value">228 634,20 zł</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <div class="info__list list">
+                  <div class="list__search">
+                    <i class="ui-icon-search"></i>
+                    <input type="text" class="list__search-input" placeholder="Wyszukaj kierowcę" />
+                  </div>
+                  <div class="list__table-body">
+                    <ul class="list__table">
+                      <li class="list__table-header">
+                        <span class="list__table-name name">Imie Nazwisko</span>
+                        <span class="list__table-name income">
+                          Przychód
+                          <span><strong>(</strong>brutto<strong>)</strong></span>
+                        </span>
+                        <span class="list__table-name costs">
+                          Koszty
+                          <span><strong>(</strong>brutto<strong>)</strong></span>
+                        </span>
+                        <span class="list__table-name cash">Gotówka</span>
+                        <span class="list__table-name transfer">Przewidywany przelew</span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value name">
+                          <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value income">
+                          111 398,92
+                        </span>
+                        <span class="list__table-value costs">
+                          20 553,11
+                        </span>
+                        <span class="list__table-value cash">
+                          10 293,08
+                        </span>
+                        <span class="list__table-value transfer">
+                          10 293,08
+                        </span>
+                        <span class="list__table-value">
+                          <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value name">
+                          <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value income">
+                          111 398,92
+                        </span>
+                        <span class="list__table-value costs">
+                          20 553,11
+                        </span>
+                        <span class="list__table-value cash">
+                          10 293,08
+                        </span>
+                        <span class="list__table-value transfer">
+                          10 293,08
+                        </span>
+                        <span class="list__table-value">
+                          <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value name">
+                          <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value income">
+                          111 398,92
+                        </span>
+                        <span class="list__table-value costs">
+                          20 553,11
+                        </span>
+                        <span class="list__table-value cash">
+                          10 293,08
+                        </span>
+                        <span class="list__table-value transfer">
+                          10 293,08
+                        </span>
+                        <span class="list__table-value">
+                          <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value name">
+                          <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value income">
+                          111 398,92
+                        </span>
+                        <span class="list__table-value costs">
+                          20 553,11
+                        </span>
+                        <span class="list__table-value cash">
+                          10 293,08
+                        </span>
+                        <span class="list__table-value transfer">
+                          10 293,08
+                        </span>
+                        <span class="list__table-value">
+                          <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="info__body user">
+                <div class="user__head">
+                  <img class="user__avatar" src="./img/user.png" alt="">
+                  <p class="user__text">
+                    Andrzej Sebastian Kowalski
+                  </p>
+                </div>
+
+                .user__
+              </div> -->
+            </div>
           </div>
         </div>
       </main>

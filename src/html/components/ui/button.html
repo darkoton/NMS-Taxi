@@ -1,5 +1,10 @@
 <button @@if(context.attributes){@@attributes} @@if(context.disabled){disabled}
   class="ui-button @@if(context.className){@@className}">
+
+  @@if(context.icon){
+  @@icon
+  }
+
   @@if(context.label){
   <span class="ui-button-text">
     @@label
