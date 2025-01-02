@@ -1134,13 +1134,15 @@
   }
 
   @media (max-width: 992px) {
-    width: 100%;
+    flex: 1 1 auto;
     justify-content: space-between;
     &__link {
       padding: 9px 13px;
     }
   }
-
+  @media (max-width: 680px) {
+    width: 100%;
+  }
   @media (max-width: 440px) {
     &__link {
       padding: 5px;

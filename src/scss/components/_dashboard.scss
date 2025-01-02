@@ -1,7 +1,6 @@
 .dashboard {
   background-color: var(--neutrals-50);
   height: 100%;
-  // overflow: auto;
 
   &__body {
     display: flex;
@@ -63,18 +62,21 @@
     padding-top: 0;
     display: flex;
     gap: 16px;
+    flex: 1 1 auto;
 
-    &.right-0 {
-      padding-right: 0;
-    }
-    &.left-0 {
-      padding-left: 0;
-    }
-    &.top-0 {
-      padding-top: 0;
-    }
-    &.bottom-0 {
-      padding-bottom: 0;
+    @media (min-width: 1120px) {
+      &.right-0 {
+        padding-right: 0;
+      }
+      &.left-0 {
+        padding-left: 0;
+      }
+      &.top-0 {
+        padding-top: 0;
+      }
+      &.bottom-0 {
+        padding-bottom: 0;
+      }
     }
 
     &__body {
@@ -216,6 +218,7 @@
       gap: 16px;
       border-bottom: 1px solid var(--neutrals-500);
       font-size: 12px;
+
       i {
         --size: 24px;
       }
@@ -234,7 +237,6 @@
       overflow: auto;
     }
     &__table {
-      // overflow: auto;
       min-width: 600px;
       &::-webkit-scrollbar {
         width: 5px;
@@ -257,31 +259,36 @@
         // justify-content: space-between;
         border-radius: 10px;
         padding: 8px 56px;
+        gap: 8px;
 
         background-color: var(--neutrals-50);
         color: var(--neutrals-900);
+        justify-content: space-between;
       }
       &-name {
         font-weight: 500;
         font-size: 14px;
         line-height: 21px;
         color: var(--neutrals-900);
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
 
-        &.name {
-          width: 29%;
-        }
-        &.income {
-          width: 19%;
-        }
-        &.costs {
-          width: 17%;
-        }
-        &.cash {
-          width: 19%;
-        }
-        &.transfer {
-          width: 13%;
-        }
+        // &.name {
+        //   width: 22%;
+        // }
+        // &.income {
+        //   width: 19%;
+        // }
+        // &.costs {
+        //   width: 17%;
+        // }
+        // &.cash {
+        //   width: 12%;
+        // }
+        // &.transfer {
+        //   width: 13%;
+        // }
 
         & span {
           font-weight: 400;
@@ -350,9 +357,57 @@
       }
     }
   }
+  & .user{
+    padding-top: 87px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background: url('../img/dashboard/decor-bg-2.png') left bottom / contain no-repeat;
+    background-color: var(--neutrals-20);
+
+    &__close{
+      position: absolute;
+      top: 26px;
+      right: 26px;
+      padding: 5px;
+      color: var(--neutrals-600);
+      background: transparent;
+
+    }
+
+    &__head{
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    &__avatar{
+      width: 100%;
+      max-width: 56px;
+    }
+    &__name{
+      line-height: 27px;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      color: var(--neutrals-900);
+    }
+
+    &__info{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
 
   @media (max-width: 1120px) {
+    overflow: auto;
+
     & .info {
+      flex-direction: column-reverse;
+
+
       &__body {
         flex-direction: column;
         gap: 15px;
@@ -378,12 +433,23 @@
         max-height: 400px;
       }
     }
+    & .user{
+      max-width: 100%;
+      flex: 0 1 auto;
+
+      background-position: center;
+      background-size: cover;
+    }
   }
 
   @media (max-width: 992px) {
     & .header {
       &__title {
         display: none;
+      }
+    } & .list{
+      &__table-name{
+        font-size: 12px;
       }
     }
   }
@@ -451,6 +517,31 @@
 
     & .list {
       gap: 10px;
+
+      &__table-header{
+        padding: 4px 20px;
+        justify-content: space-between;
+      }
+      &__table-name{
+        font-size: 12px;
+
+        &.name, &.income, &.costs, &.cash, &.transfer {
+          width: auto;
+        }
+      }
+    }
+
+    & .user{
+      padding-top: 35px;
+      &__close{
+        top: 15px;
+        right: 15px;
+      }
+      &__name{
+        line-height: 20px;
+        font-weight: 600;
+        font-size: 15px;
+      }
     }
   }
 }
