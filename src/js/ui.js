@@ -168,6 +168,33 @@ dropdowns.forEach(dropdown => {
   );
 });
 
+
+// Selects
+const selects = document.querySelectorAll('.ui-select');
+
+selects.forEach(select => {
+  const list = select.querySelector('.ui-dropdown-list');
+  const value = select.querySelector('.ui-dropdown-value > span');
+  const openButton = select.querySelector('.ui-dropdown-value');
+
+  openButton.onclick = () => {
+    list.classList.toggle('open');
+    dropdown.classList.toggle('open');
+  };
+
+  const options = list.querySelectorAll('li');
+  options.forEach(
+    option =>
+      (option.onclick = () => {
+        value.textContent = option.textContent
+        select.dataset.value = option.dataset.value
+      })
+  );
+});
+
+
+
+
 // Multi field
 
 const multiFields = document.querySelectorAll('.ui-multi-field');

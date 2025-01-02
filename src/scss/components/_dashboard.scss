@@ -56,7 +56,6 @@
       }
     }
   }
-
   & .info {
     padding: 32px 24px;
     padding-top: 0;
@@ -211,6 +210,43 @@
     gap: 32px;
     flex: 1 1 auto;
 
+    &__tabs{
+      display: flex;
+      align-self: start;
+      background-color: var(--neutrals-50);
+      border-radius: 10px;
+    }
+    &__tab{
+      padding: 9.5px 18px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      background-color: var(--neutrals-50);
+      color: var(--neutrals-900);
+
+      @media(any-hover:hover){
+        &:hover{
+          background-color: var(--light-blue);
+        }
+      }
+
+      &.active{
+        background-color: var(--light-blue);
+      }
+    }
+
+    &__filter{
+      display: flex;
+      gap: 8px;
+      width: 100%;
+      max-width: 385px;
+
+      & .ui-select{
+        width: 100%;
+      }
+    }
+
     &__search {
       display: flex;
       padding: 8px 0;
@@ -237,7 +273,7 @@
       overflow: auto;
     }
     &__table {
-      min-width: 600px;
+      min-width: 850px;
       &::-webkit-scrollbar {
         width: 5px;
       }
@@ -258,7 +294,7 @@
         display: flex;
         // justify-content: space-between;
         border-radius: 10px;
-        padding: 8px 56px;
+        padding: 8px 16px;
         gap: 8px;
 
         background-color: var(--neutrals-50);
@@ -273,22 +309,8 @@
         display: flex;
         align-items: center;
         white-space: nowrap;
-
-        // &.name {
-        //   width: 22%;
-        // }
-        // &.income {
-        //   width: 19%;
-        // }
-        // &.costs {
-        //   width: 17%;
-        // }
-        // &.cash {
-        //   width: 12%;
-        // }
-        // &.transfer {
-        //   width: 13%;
-        // }
+        width: 100%;
+        justify-content: center;
 
         & span {
           font-weight: 400;
@@ -306,7 +328,7 @@
         // justify-content: space-between;
         align-items: center;
         gap: 8px;
-        padding: 12px 8px 12px 16px;
+        padding: 12px 16px;
         border-radius: 12px;
 
         @media (any-hover: hover) {
@@ -324,22 +346,13 @@
         font-weight: 400;
         font-size: 12px;
         color: var(--neutrals-900);
+        width: 100%;
+        justify-content: center;
 
-        &.name {
-          width: 30%;
+        &.stretch{
+          justify-content: stretch;
         }
-        &.income {
-          width: 16.5%;
-        }
-        &.costs {
-          width: 16%;
-        }
-        &.cash {
-          width: 17%;
-        }
-        &.transfer {
-          width: 13%;
-        }
+
       }
       &-avatar {
         width: 100%;
@@ -353,6 +366,48 @@
         color: var(--neutrals-900);
         i {
           --size: 24px;
+        }
+      }
+      &-button-dots{
+        display: flex;
+        align-items: center;
+        background: transparent;
+      }
+    }
+
+    &__pagination{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      &-left, &-right{
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      &-title{
+        font-weight: 400;
+        font-size: 12px;
+        color: var(--neutrals-500);
+      }
+      &-value{
+        font-weight: 400;
+        font-size: 12px;
+        color: var(--blue-1);
+      }
+      &-actions{
+        display: flex;
+        gap: 8px;
+
+        button{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 16px;
+          height: 16px;
+          background: transparent;
         }
       }
     }
@@ -401,8 +456,13 @@
     }
   }
 
+
   @media (max-width: 1120px) {
     overflow: auto;
+
+    &__body{
+      gap: 10px;
+    }
 
     & .info {
       flex-direction: column-reverse;
@@ -519,7 +579,7 @@
       gap: 10px;
 
       &__table-header{
-        padding: 4px 20px;
+        padding: 4px 0px;
         justify-content: space-between;
       }
       &__table-name{
@@ -528,6 +588,12 @@
         &.name, &.income, &.costs, &.cash, &.transfer {
           width: auto;
         }
+      }
+
+      &__tab{
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-size: 12px;
       }
     }
 

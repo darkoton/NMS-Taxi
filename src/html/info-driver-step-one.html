@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+@@include("components/head.html", { "title": "NMS Taxi" })
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main class="page">
+        <div class="document">
+          <div class="document__body">
+            <div class="banner">
+              <div class="banner__body">
+                <img class="banner__logo" src="./img/logo-2.svg" alt="" />
+                <div class="banner__steps">
+                  <div class="banner__step active">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-user"></i>
+                      </span>
+                    </div>
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">Dane osobowe
+                      </h3>
+
+                      <p class="banner__step-text">
+                        Dodaj swoje dane osobowe
+                      </p>
+                    </div>
+                  </div>
+                  <div class="banner__step">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-id-card"></i>
+                      </span>
+                    </div>
+
+
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">
+                        Dokumenty kierowcy
+                      </h3>
+                      <p class="banner__step-text">
+                        Dodaj dokumenty potrzebne do pracy jako kierowca
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form">
+              <div class="form__body">
+                <h2 class="form__title">Szczegóły kierowcy</h2>
+
+                <p class="form__description">
+                  Dodaj dane osobowe, aby rozpocząć dodawanie kierowcy
+                </p>
+
+                <div class="form__sections">
+                  <div class="form__section">
+
+                    <div class="form__label center">Dane osobowe</div>
+
+                    @@include("components/ui/field.html", {label: "Imię"})
+                      @@include("components/ui/field.html", {label: "Nazwisko"})
+                      @@include("components/ui/field.html", {label: "Płec"})
+
+                  </div>
+
+                  <div class="form__section">
+
+                    <div class="form__label center">Dane kontaktowe</div>
+
+                    @@include("components/ui/field.html", {label: "Telefon", type: 'phone'})
+                    @@include("components/ui/field.html", {label: "E-mail", type: 'email'})
+
+                  </div>
+
+                  @@include("components/ui/button.html", {className:"form__submit medium", label: "Dalej"})
+
+                </div>
+                <!-- <div class="form__fields">
+                @@include("components/ui/field.html", { label: "E-mail", type: "email", valid:"valid",
+                error:"e-mail jest nieprawidłowy" })
+              </div>
+
+              @@include("components/ui/button.html", {
+              className: "large form__button",
+              label: "Resetuj"
+              }) -->
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("components/footer.html")
+
+  </div>
+</body>
+
+</html>

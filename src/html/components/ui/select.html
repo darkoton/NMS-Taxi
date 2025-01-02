@@ -1,4 +1,4 @@
-<div class="ui-dropdown">
+<div class="ui-select @@if(context.theme){@@theme}">
 
     @@if(context.label){
     <label class="ui-dropdown-label">@@label</label>
@@ -6,13 +6,15 @@
 
     <div class="ui-dropdown-field">
         <span class="ui-dropdown-value">
-              <ul class="ui-dropdown-value-list">
-
-              </ul>
+              <span>
+                @@if(context.placeholder){
+                  @@placeholder
+                }
+              </span>
               <i class="ui-icon-arrow-down"></i>
         </span>
 
-        <ul class="ui-dropdown-list">
+        <ul class="ui-dropdown-list @@if(context.position){@@position}">
             @@for (var i = 0; i < options.length; i++) {
                 <li data-value="`+options[i].value+`">
                     `+options[i].label+`
