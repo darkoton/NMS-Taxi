@@ -8,21 +8,8 @@
       <main class="page">
         <div class="dashboard">
           <div class="dashboard__body">
-            <header class="dashboard__header header">
-              <div class="header__body">
-                <h1 class="header__title">Faktury</h1>
 
-                @@include("./components/ui/menu.html")
-
-                <div class="header__profile">
-                  <img class="header__profile-avatar" src="./img/user.png" alt="">
-                  <div class="header__profile-info">
-                    <span class="header__profile-name">Artur Gawryś</span>
-                    <span class="header__profile-email">artur@nmskorpo.pl</span>
-                  </div>
-                </div>
-              </div>
-            </header>
+            @@include("./components/dashboard-header.html", { "title": "Faktury" })
 
             <div class="dashboard__info info tabs">
               <div class="info__body">
@@ -85,7 +72,7 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>
@@ -115,7 +102,7 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>
@@ -145,7 +132,7 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>
@@ -175,7 +162,7 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>
@@ -205,7 +192,7 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>
@@ -235,7 +222,7 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>
@@ -265,7 +252,7 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>
@@ -295,7 +282,7 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>
@@ -325,14 +312,14 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>
                     </ul>
                   </div>
 
-                  <div class="list__table-body tab-block tab-2 _active">
+                  <div class="list__table-body tab-block tab-2">
                     <ul class="list__table">
                       <li class="list__table-header">
                         <span class="list__table-name">ID Faktur</span>
@@ -358,7 +345,7 @@
                           @@include('./components/ui/button.html', {
                           label: "Pobierz",
                           icon: "<i class='ui-icon-download'></i>",
-                          className: "secondary outlined"
+                          className: "secondary outlined list__table-download-button"
                           })
                         </span>
                       </li>

@@ -8,21 +8,9 @@
       <main class="page">
         <div class="dashboard">
           <div class="dashboard__body">
-            <header class="dashboard__header header">
-              <div class="header__body">
-                <h1 class="header__title">Kierowcy</h1>
 
-                @@include("./components/ui/menu.html")
+            @@include("./components/dashboard-header.html", { "title": "Historia" })
 
-                <div class="header__profile">
-                  <img class="header__profile-avatar" src="./img/user.png" alt="">
-                  <div class="header__profile-info">
-                    <span class="header__profile-name">Artur Gawryś</span>
-                    <span class="header__profile-email">artur@nmskorpo.pl</span>
-                  </div>
-                </div>
-              </div>
-            </header>
 
             <div class="dashboard__info info">
               <div class="info__body">

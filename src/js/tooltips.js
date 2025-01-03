@@ -65,7 +65,7 @@ tippy(docStatusButtons, {
          <button class="tippy-menu-button error">
           <i class="ui-icon-error"></i>
           Zdjęcie profilowe
-         </button>         
+         </button>
        </div>
        `,
   allowHTML: true,
@@ -84,11 +84,11 @@ tippy(addButtons, {
 
     menu.innerHTML = `
         <button class="tippy-menu-button" data-popup-open="popup-invite-driver">
-          Wysłać zaproszenie 
-          </button>  
+          Wysłać zaproszenie
+          </button>
           <button class="tippy-menu-button" data-popup-open="popup-add-driver">
-          Dodaj do systemy 
-        </button>      
+          Dodaj do systemy
+        </button>
     `;
 
     const buttons = menu.querySelectorAll('button');
@@ -106,3 +106,77 @@ tippy(addButtons, {
   interactive: true,
   trigger: 'click',
 });
+
+const downloadButtons = document.querySelectorAll('.list__table-download-button');
+
+tippy(downloadButtons, {
+  content: `
+       <div class="tippy-menu">
+         <button class="tippy-menu-button">
+          <i class="ui-icon-download"></i>
+          Nazwa i nr fv
+         </button>
+         <button class="tippy-menu-button">
+          <i class="ui-icon-download"></i>
+          Nazwa i nr fv
+         </button>
+         <button class="tippy-menu-button">
+          <i class="ui-icon-download"></i>
+          Nazwa i nr fv
+         </button>
+         <button class="tippy-menu-button">
+          <i class="ui-icon-download"></i>
+          Nazwa i nr fv
+         </button>
+       </div>
+       `,
+  allowHTML: true,
+  placement: 'bottom-end',
+  arrow: false,
+  interactive: true,
+  trigger: 'click',
+});
+
+const profileButtons = document.querySelectorAll('.header__profile');
+tippy(profileButtons, {
+  content: (e)=>{
+    const menu = document.createElement('div');
+    menu.classList.add('tippy-menu');
+    menu.style.width = `${e.clientWidth}px`;
+
+    renderButtons(menu, [{
+      text: "Mój profil",
+      handleClick: ()=>{
+      }
+    },
+    {
+      text: "Ustawienia",
+    },
+    {
+      text: "Dodaj nowe miasto",
+    },
+    {
+      text: "Wyloguj się",
+    },
+  ])
+
+    return menu
+  },
+  allowHTML: true,
+  placement: 'bottom-end',
+  arrow: false,
+  interactive: true,
+  trigger: 'click',
+});
+
+function renderButtons(container, buttons){
+  buttons.forEach((btn, i) => {
+    const button = document.createElement('button')
+    button.classList.add('tippy-menu-button')
+    button.textContent = btn.text
+    button.onclick = btn.handle
+
+    container.appendChild(button)
+  });
+
+}
