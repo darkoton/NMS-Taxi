@@ -279,10 +279,10 @@
       width: 100%;
       overflow: auto;
 
-      &.tab-block{
+      &.tab-block {
         display: none;
 
-        &._active{
+        &._active {
           display: block;
         }
       }
@@ -489,6 +489,196 @@
     }
   }
 
+  & .profile {
+    right: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 468px;
+    position: fixed;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: var(--neutrals-20);
+    border-radius: 12px 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    padding: 42px 24px;
+    overflow: auto;
+    z-index: 100;
+    transition: all 0.3s ease 0s;
+
+    &.active {
+      right: 0;
+    }
+
+    &__close {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      letter-spacing: 0.12em;
+      text-align: center;
+      line-height: 36px;
+    }
+
+    &__tabs {
+      display: flex;
+      width: 100%;
+      max-width: 350px;
+      background-color: var(--neutrals-50);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    &__tab {
+      width: 50%;
+      background-color: var(--neutrals-50);
+      border-radius: 10px;
+      line-height: 21px;
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      padding: 9.5px 16px;
+      cursor: pointer;
+
+      &._active {
+        background-color: var(--light-blue);
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__avatar {
+      width: 100%;
+      max-width: 60px;
+      margin-bottom: 8px;
+    }
+
+    &__name {
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+    }
+    &__city {
+      font-weight: 400;
+      font-size: 10px;
+      color: var(--neutrals-500);
+      line-height: 15px;
+      margin-bottom: 15px;
+    }
+    &__adress {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+
+      & .medium {
+        font-weight: 500;
+      }
+    }
+
+    &__data {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 32px;
+
+      &-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &-head {
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--neutrals-400);
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &-title {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          color: var(--dark-blue);
+          gap: 4px;
+          display: flex;
+          align-items: center;
+
+          & i {
+            --size: 14px;
+          }
+
+          & .ui-icon-ok {
+            color: var(--success);
+          }
+
+          & .ui-icon-attention {
+            color: var(--yellow);
+          }
+        }
+
+        &-value {
+          font-weight: 400;
+          font-size: 12px;
+          margin-bottom: 4px;
+
+          &.profile__data-info-value-copy {
+            padding-right: 20px;
+            position: relative;
+          }
+
+          & .copy {
+            position: absolute;
+            right: 5px;
+            background: transparent;
+            top: 50%;
+            transform: translateY(-50%);
+
+            i {
+              --size: 16px;
+            }
+          }
+        }
+
+        &-desc {
+          font-weight: 400;
+          font-size: 10px;
+          color: var(--neutrals-500);
+          margin-bottom: 8px;
+        }
+
+        &-note {
+          font-style: italic;
+          font-weight: 300;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
   @media (max-width: 1120px) {
     overflow: auto;
 
@@ -643,6 +833,14 @@
         line-height: 20px;
         font-weight: 600;
         font-size: 15px;
+      }
+    }
+
+    & .profile {
+      padding: 26px 8px;
+
+      &__tab {
+        padding: 9.5px 4px;
       }
     }
   }

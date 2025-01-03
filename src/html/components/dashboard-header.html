@@ -13,3 +13,126 @@
     </div>
   </div>
 </header>
+
+<div class="profile tabs">
+
+  <button class="profile__close">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <p class="profile__title">
+    Profil
+  </p>
+  <div class="profile__tabs">
+    <div class="profile__tab tab _active">Moje dane</div>
+    <div class="profile__tab tab">Dokumenty firmowe</div>
+  </div>
+
+  <div class="profile__info">
+    <img src="./img/user.png" alt="" class="profile__avatar">
+    <p class="profile__name">Andrzej Sebastian Kowalski</p>
+    <p class="profile__city">Partner taksówki, Warszawa</p>
+    <p class="profile__adress"><span class="medium">Adres:</span> Warszawa, Aleja Wilanowska 366A, 02-665</p>
+  </div>
+
+  <div class="profile__data">
+    <div class="profile__data-section">
+      <div class="profile__data-head">
+        <p class="profile__data-title">Dane osobowe</p>
+      </div>
+
+      <div class="profile__data-fields">
+        @@include('./ui/field.html', {
+        label:"E-mail",
+        type: "email"
+        })
+
+        @@include('./ui/field.html', {
+        label: "Telefon",
+        type: "phone"
+        })
+      </div>
+    </div>
+
+    <div class="profile__data-section">
+      <div class="profile__data-head">
+        <p class="profile__data-title">Dane podatkowe</p>
+      </div>
+
+      <div class="profile__data-info">
+        <div class="profile__data-info-section">
+          <p class="profile__data-info-title">Numer NIP* <i class="ui-icon-ok"></i></p>
+          <p class="profile__data-info-value">5272947549</p>
+          <p class="profile__data-info-desc">*NIP - aktualny numer identyfikacji podatkowej</p>
+          <p class="profile__data-info-note">Jak go znaleźć dla mojego kraju? <a href="#">*link</a></p>
+        </div>
+
+        <div class="profile__data-info-section">
+          <p class="profile__data-info-title">Numer REGON <i class="ui-icon-ok"></i></p>
+          <p class="profile__data-info-value">388001556</p>
+        </div>
+
+        <div class="profile__data-info-section">
+          <p class="profile__data-info-title">Stawka VAT% <i class="ui-icon-ok"></i></p>
+          <p class="profile__data-info-value">8%</p>
+        </div>
+
+        <div class="profile__data-info-section">
+          <p class="profile__data-info-title">Token eKasy</p>
+          <p class="profile__data-info-value profile__data-info-value-copy">
+            0000000c-0000-00000b-00000-00000000000000
+
+            <button class="copy">
+              <i class="ui-icon-copy"></i>
+            </button>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="profile__data-section">
+      <div class="profile__data-head">
+        <p class="profile__data-title">Dane rachunku bankowego</p>
+      </div>
+
+      <div class="profile__data-info">
+        <div class="profile__data-info-section">
+          <p class="profile__data-info-title">Odbiorca rachunku <i class="ui-icon-ok"></i></p>
+          <p class="profile__data-info-value">NMS Korpo sp z o o</p>
+        </div>
+
+        <div class="profile__data-info-section">
+          <p class="profile__data-info-title">IBAN <i class="ui-icon-attention"></i></p>
+          <p class="profile__data-info-value text-yellow">PL3000000000000000000000084</p>
+        </div>
+
+        <div class="profile__data-info-section">
+          <p class="profile__data-info-title">Kod SWIFT <i class="ui-icon-ok"></i></p>
+          <p class="profile__data-info-value">PKOPPLPW</p>
+        </div>
+
+        <div class="profile__data-info-section">
+          <p class="profile__data-info-title">Bank</p>
+          <p class="profile__data-info-value profile__data-info-value-copy">
+            -
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  document.querySelector('.profile__close').addEventListener('click', closeProfile)
+
+  function closeProfile() {
+    document.querySelector('.profile').classList.remove('active')
+  }
+
+</script>

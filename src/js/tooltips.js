@@ -139,28 +139,35 @@ tippy(downloadButtons, {
 
 const profileButtons = document.querySelectorAll('.header__profile');
 tippy(profileButtons, {
-  content: (e)=>{
+  content: e => {
     const menu = document.createElement('div');
     menu.classList.add('tippy-menu');
-    menu.style.width = `${e.clientWidth}px`;
+    // menu.style.width = `${e.clientWidth}px`;
 
-    renderButtons(menu, [{
-      text: "Mój profil",
-      handleClick: ()=>{
-      }
-    },
-    {
-      text: "Ustawienia",
-    },
-    {
-      text: "Dodaj nowe miasto",
-    },
-    {
-      text: "Wyloguj się",
-    },
-  ])
+    renderButtons(
+      menu,
+      [
+        {
+          text: 'Mój profil',
+          handleClick: () => {
+            const profile = document.querySelector('.profile');
+            profile.classList.add('active');
+          },
+        },
+        {
+          text: 'Ustawienia',
+        },
+        {
+          text: 'Dodaj nowe miasto',
+        },
+        {
+          text: 'Wyloguj się',
+        },
+      ],
+      e,
+    );
 
-    return menu
+    return menu;
   },
   allowHTML: true,
   placement: 'bottom-end',
@@ -169,14 +176,15 @@ tippy(profileButtons, {
   trigger: 'click',
 });
 
-function renderButtons(container, buttons){
-  buttons.forEach((btn, i) => {
-    const button = document.createElement('button')
-    button.classList.add('tippy-menu-button')
-    button.textContent = btn.text
-    button.onclick = btn.handle
-
-    container.appendChild(button)
+function renderButtons(container, buttons, parent) {
+  buttons.forEach(btn => {
+    const button = document.createElement('button');
+    button.classList.add('tippy-menu-button');
+    button.textContent = btn.text;
+    button.onclick = () => {
+      btn.handleClick();
+      parent._tippy.hide();
+    };
+    container.appendChild(button);
   });
-
 }

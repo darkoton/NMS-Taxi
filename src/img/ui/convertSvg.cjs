@@ -1,11 +1,11 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 // Папка с SVG файлами
-const iconsDir = path.join(__dirname, "icons");
+const iconsDir = path.join(__dirname, 'icons');
 
 // Файл, куда запишем результат
-const outputCssFile = path.join(__dirname, "icons.css");
+const outputCssFile = path.join(__dirname, 'icons.css');
 
 // Проверяем, существует ли папка
 if (!fs.existsSync(iconsDir)) {
@@ -14,10 +14,10 @@ if (!fs.existsSync(iconsDir)) {
 }
 
 // Читаем файлы из папки
-const files = fs.readdirSync(iconsDir).filter(file => path.extname(file) === ".svg");
+const files = fs.readdirSync(iconsDir).filter(file => path.extname(file) === '.svg');
 
 if (files.length === 0) {
-  console.error("Нет SVG файлов в папке.");
+  console.error('Нет SVG файлов в папке.');
   process.exit(1);
 }
 
@@ -40,12 +40,13 @@ let cssContent = `/* Автоматически сгенерированные �
 `;
 
 files.forEach(file => {
-  const iconName = path.basename(file, ".svg").toLowerCase().replace(/ /g, '-'); // Имя файла без расширения
+  const iconName = path.basename(file, '.svg').toLowerCase().replace(/ /g, '-').replace('.svg', ''); // Имя файла без расширения
   const svgPath = path.join(iconsDir, file);
-  const svgData = fs.readFileSync(svgPath, "utf8");
+  const svgData = fs.readFileSync(svgPath, 'utf8');
+  console.log(iconName);
 
   // Кодируем SVG в base64
-  const base64Data = Buffer.from(svgData).toString("base64");
+  const base64Data = Buffer.from(svgData).toString('base64');
 
   // Генерируем CSS-класс
   cssContent += `
@@ -56,6 +57,6 @@ files.forEach(file => {
 });
 
 // Записываем результат в файл
-fs.writeFileSync(outputCssFile, cssContent, "utf8");
+fs.writeFileSync(outputCssFile, cssContent, 'utf8');
 
 console.log(`CSS для иконок успешно сгенерирован в файл: ${outputCssFile}`);
