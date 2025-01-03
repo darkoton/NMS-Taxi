@@ -250,19 +250,13 @@
                   </div>
 
 
-                  @@include("components/ui/button.html", {className:"form__submit medium", label: "Dalej"})
+                  @@include("components/ui/button.html", {
+                    className:"form__submit medium",
+                    label: "Dalej",
+                    attributes: "data-popup-open='popup-add-doc-car'"
+                  })
 
                 </div>
-                <!-- <div class="form__fields">
-                @@include("components/ui/field.html", { label: "E-mail", type: "email", valid:"valid",
-                error:"e-mail jest nieprawidłowy" })
-              </div>
-
-              @@include("components/ui/button.html", {
-              className: "large form__button",
-              label: "Resetuj"
-              }) -->
-
               </div>
             </div>
 

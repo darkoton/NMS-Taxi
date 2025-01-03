@@ -24,442 +24,347 @@
               </div>
             </header>
 
-            <div class="dashboard__info info">
+            <div class="dashboard__info info tabs">
               <div class="info__body">
                 <div class="info__list list">
                   <div class="list__tabs">
-                    <button class="list__tab active">Od floty do pasażera</button>
-                    <button class="list__tab">Dokumentacja podatkowa</button>
+                    <button class="list__tab tab _active" data-tab-name="tab-1">Od floty do pasażera</button>
+                    <button class="list__tab tab" data-tab-name="tab-2">Dokumentacja podatkowa</button>
                   </div>
                   <div class="list__row">
                     <div class="list__filter">
-                      @@include("./components/ui/select.html", {
-                      placeholder: "Status",
-                      options: [{
-                      label: "Status 1",
-                      value: "status-1"
-                      },{
-                      label: "Status 2",
-                      value: "status-2"
-                      },{
-                      label: "Status 3",
-                      value: "status-3"
-                      },{
-                      label: "Status 4",
-                      value: "status-4"
-                      },{
-                      label: "Status 5",
-                      value: "status-5"
-                      },{
-                      label: "Status 6",
-                      value: "status-6"
-                      },{
-                      label: "Status 7",
-                      value: "status-7"
-                      },]
+                      @@include("./components/ui/datepicker.html", {
+                        placeholder: "Rok",
+                        iconColor: "var(--neutrals-900)"
                       })
-                      @@include("./components/ui/select.html", {
-                      placeholder: "Dokumenty",
-                      options: [{
-                      label: "Dokumenty 1",
-                      value: "dokumenty-1"
-                      },{
-                      label: "Dokumenty 2",
-                      value: "dokumenty-2"
-                      },{
-                      label: "Dokumenty 3",
-                      value: "dokumenty-3"
-                      },{
-                      label: "Dokumenty 4",
-                      value: "dokumenty-4"
-                      },{
-                      label: "Dokumenty 5",
-                      value: "dokumenty-5"
-                      },{
-                      label: "Dokumenty 6",
-                      value: "dokumenty-6"
-                      },{
-                      label: "Dokumenty 7",
-                      value: "dokumenty-7"
-                      },]
+                      @@include("./components/ui/datepicker.html", {
+                        placeholder:"Miesiąc",
+                        iconColor: "var(--neutrals-900)"
                       })
                     </div>
-
-                    @@include('./components/ui/button.html', {
-                    className:"medium list__add-button",
-                    label: "Dodaj Kierowcę",
-                    icon: "<i class='ui-icon-plus'></i>"
-                    })
                   </div>
                   <div class="list__search">
                     <i class="ui-icon-search"></i>
                     <input type="text" class="list__search-input" placeholder="Wyszukaj kierowcę" />
                   </div>
-                  <div class="list__table-body">
+                  <div class="list__table-body tab-block tab-1 _active">
                     <ul class="list__table">
                       <li class="list__table-header">
-                        <span class="list__table-name">Imie Nazwisko</span>
-                        <span class="list__table-name">Status</span>
-                        <span class="list__table-name">Dane kontaktowe</span>
-                        <span class="list__table-name">Dokumenty</span>
-                        <span class="list__table-name">Ustawienia</span>
+                        <span class="list__table-name">Data</span>
+                        <span class="list__table-name">Kierowca</span>
+                        <span class="list__table-name">Trasa</span>
+                        <span class="list__table-name">Kurs</span>
+                        <span class="list__table-name">Płatnośc</span>
+                        <span class="list__table-name">Suma</span>
+                        <span class="list__table-name">Nr Faktury</span>
+                        <span class="list__table-name"></span>
                       </li>
                       <li class="list__table-item">
                         <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
+                          14/11/2024 12:34:00
                         </span>
                         <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          19,35 zł
+                        </span>
+                        <span class="list__table-value">
+                          510399-PL1124-18138
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
                           })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'error',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
                         </span>
                       </li>
                       <li class="list__table-item">
                         <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
+                          14/11/2024 12:34:00
                         </span>
                         <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Deaktywowany',
-                          type: 'inactive large',
-                          icon: false,
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          19,35 zł
+                        </span>
+                        <span class="list__table-value">
+                          510399-PL1124-18138
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
                           })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'error',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
                         </span>
                       </li>
                       <li class="list__table-item">
                         <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
+                          14/11/2024 12:34:00
                         </span>
                         <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Aktywny',
-                          type: 'active large'
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          19,35 zł
+                        </span>
+                        <span class="list__table-value">
+                          510399-PL1124-18138
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
                           })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'attention',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
                         </span>
                       </li>
                       <li class="list__table-item">
                         <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
+                          14/11/2024 12:34:00
                         </span>
                         <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Deaktywowany',
-                          type: 'inactive large',
-                          icon: false
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          19,35 zł
+                        </span>
+                        <span class="list__table-value">
+                          510399-PL1124-18138
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
                           })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'attention',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
                         </span>
                       </li>
                       <li class="list__table-item">
                         <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
+                          14/11/2024 12:34:00
                         </span>
                         <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          19,35 zł
+                        </span>
+                        <span class="list__table-value">
+                          510399-PL1124-18138
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
                           })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
                         </span>
                       </li>
                       <li class="list__table-item">
                         <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
+                          14/11/2024 12:34:00
                         </span>
                         <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          19,35 zł
+                        </span>
+                        <span class="list__table-value">
+                          510399-PL1124-18138
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
                           })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
                         </span>
                       </li>
                       <li class="list__table-item">
                         <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
+                          14/11/2024 12:34:00
                         </span>
                         <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          19,35 zł
+                        </span>
+                        <span class="list__table-value">
+                          510399-PL1124-18138
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
                           })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
                         </span>
                       </li>
                       <li class="list__table-item">
                         <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
+                          14/11/2024 12:34:00
                         </span>
                         <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          19,35 zł
+                        </span>
+                        <span class="list__table-value">
+                          510399-PL1124-18138
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
                           })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
                         </span>
                       </li>
                       <li class="list__table-item">
                         <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
+                          14/11/2024 12:34:00
                         </span>
                         <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          19,35 zł
+                        </span>
+                        <span class="list__table-value">
+                          510399-PL1124-18138
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
                           })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
                         </span>
                       </li>
-
                     </ul>
                   </div>
+
+                  <div class="list__table-body tab-block tab-2 _active">
+                    <ul class="list__table">
+                      <li class="list__table-header">
+                        <span class="list__table-name">ID Faktur</span>
+                        <span class="list__table-name">Data</span>
+                        <span class="list__table-name">Obrót</span>
+                        <span class="list__table-name">Wypłaty</span>
+                        <span class="list__table-name"></span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          511-968020
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          04/11/2024 - 10/11/2024
+                        </span>
+                        <span class="list__table-value">
+                          6222,22 zł
+                        </span>
+                        <span class="list__table-value">
+                          5425,82 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
 
                   <div class="list__pagination">
                     <div class="list__pagination-left">

@@ -232,7 +232,7 @@
         }
       }
 
-      &.active {
+      &._active {
         background-color: var(--light-blue);
       }
     }
@@ -277,6 +277,14 @@
     &__table-body {
       width: 100%;
       overflow: auto;
+
+      &.tab-block{
+        display: none;
+
+        &._active{
+          display: block;
+        }
+      }
 
       &::-webkit-scrollbar {
         width: 5px;

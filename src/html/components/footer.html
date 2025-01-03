@@ -736,6 +736,115 @@
   </div>
 </div>
 
+<div class="popup popup-add-doc-car">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <div class="popup-container">
+        <div class="popup-top-body">
+          <div class="popup-download-info">
+            <span class="popup-download-info-icon">
+              <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.4727 1.36328H3.12266C2.63532 1.36328 2.16795 1.55687 1.82335 1.90147C1.47875 2.24607 1.28516 2.71345 1.28516 3.20078V17.9008C1.28516 18.3881 1.47875 18.8555 1.82335 19.2001C2.16795 19.5447 2.63532 19.7383 3.12266 19.7383H14.1477C14.635 19.7383 15.1024 19.5447 15.447 19.2001C15.7916 18.8555 15.9852 18.3881 15.9852 17.9008V6.87578L10.4727 1.36328Z"
+                  stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12.31 15.1445H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12.31 11.4688H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M6.79746 7.79492H5.87871H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M10.4727 1.36328V6.87578H15.9852" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+
+            <div class="popup-download-texts">
+              <h6 class="popup-download-title">Formulaż dodania Dokumentów</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-content">
+
+
+
+      <div class="popup-download-files">
+
+        @@include("./ui/dropdown.html", {
+        label:"Gmina",
+        options: [{
+        label: "Document 1",
+        value: "document-1"
+        },
+        {
+        label: "Document 2",
+        value: "document-2"
+        },{
+        label: "Document 3",
+        value: "document-3"
+        },{
+        label: "Document 4",
+        value: "document-4"
+        },{
+        label: "Document 5",
+        value: "document-5"
+        },{
+        label: "Document 6",
+        value: "document-6"
+        }]
+        })
+
+
+        <input hidden type="file" multiple id="docs2">
+        <label for="docs2" class="popup-download-input-file-label">
+          <svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z"
+              fill="#292D32" />
+            <path
+              d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z"
+              fill="#292D32" />
+            <path
+              d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z"
+              fill="#292D32" />
+            <path
+              d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z"
+              fill="#292D32" />
+          </svg>
+
+          <div class="popup-download-input-file-texts">
+            <div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div>
+            <div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div>
+          </div>
+
+          <button class="popup-download-input-file-button">
+            <i class="ui-icon-download"></i>
+            <span> Przeglądaj plik</span>
+          </button>
+        </label>
+
+        @@include("./ui/datepicker.html", {label:"Data ważności dokumentu"})
+
+      </div>
+
+
+      @@include("./ui/button.html", {
+      label:"Zapisz",
+      className:"popup-submit popup-close",
+      })
+    </div>
+  </div>
+</div>
+
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>

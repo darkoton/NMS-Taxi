@@ -4,6 +4,8 @@ import isWebp from './modules/webp.js';
 
 import './modules/spoiler.js';
 
+import './modules/tabs.js';
+
 isWebp();
 //< " popups " >=============================================================================================================>//
 
