@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+@@include("components/head.html", { "title": "NMS Taxi" })
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main class="page">
+        <div class="document profile">
+          <div class="document__body">
+
+
+            <div class="form">
+              <div class="form__body">
+                <h2 class="form__title">Profil kierowcy</h2>
+
+                <p class="form__description">
+                  Dodaj swoje dane, aby rozpocząć proces dodawania kierowcy
+                </p>
+
+                <div class="form__sections">
+
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Dane osobowe</div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__user">
+                        <img class="form__user-avatar" src="./img/user.png" alt="">
+                        <div class="form__info">
+                          <span class="form__user-field">
+                            <span class="medium">Imię:</span>
+                            Andrzej
+                          </span>
+                          <span class="form__user-field">
+                            <span class="medium">Nazwisko:</span>
+                            Sebastian
+                            Kowalski
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Dane kontaktowe</div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__info">
+                        <span class="form__user-field">
+                          <span class="medium">E-mail:</span>
+                          dsjfnsdifsijn@gmail.com
+                        </span>
+                        <span class="form__user-field">
+                          <span class="medium">Telefon:</span>
+                          +480000000
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Indywidualny numer identyfikacyjny</div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__info">
+                        <span class="form__user-field">
+                          a340835a-a577-45cb-af00-cbfa2a40cb7a
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="docs">
+              <div class="docs__title">Dokumenty kierowcy</div>
+
+              <ul class="docs__list" data-spollers data-one-spoller>
+                <li class="docs__doc doc">
+                  <div class="doc__head" data-spoller>
+                    <div class="doc__head-left">
+                      <p class="doc__name">Orzeczenie lekarskie</p>
+                      <p class="doc__date warning"> <i class="ui-icon-time"></i> 3.10.2025</p>
+                    </div>
+
+                    <button class="doc__button"><i class="ui-icon-arrow-down"></i></button>
+                  </div>
+
+                  @@include("./components/ui/multi-field.html")
+                </li>
+                <li class="docs__doc doc">
+                  <div class="doc__head" data-spoller>
+                    <div class="doc__head-left">
+                      <p class="doc__name">Orzeczenie lekarskie</p>
+                      <p class="doc__date success"> <i class="ui-icon-ok"></i> 19.10.2027</p>
+                    </div>
+
+                    <button class="doc__button"><i class="ui-icon-arrow-down"></i></button>
+                  </div>
+
+                  @@include("./components/ui/multi-field.html")
+                </li>
+                <li class="docs__doc doc">
+                  <div class="doc__head" data-spoller>
+                    <div class="doc__head-left">
+                      <p class="doc__name">Orzeczenie lekarskie</p>
+                      <p class="doc__date error"> <i class="ui-icon-time"></i> 16.05.2033</p>
+                    </div>
+
+                    <button class="doc__button"><i class="ui-icon-arrow-down"></i></button>
+                  </div>
+
+                  @@include("./components/ui/multi-field.html")
+                </li>
+                <li class="docs__doc doc">
+                  <div class="doc__head" data-spoller>
+                    <div class="doc__head-left">
+                      <p class="doc__name">Orzeczenie lekarskie</p>
+                      <p class="doc__date error"> <i class="ui-icon-time"></i> 16.05.2033</p>
+                    </div>
+
+                    <button class="doc__button"><i class="ui-icon-arrow-down"></i></button>
+                  </div>
+
+                  @@include("./components/ui/multi-field.html")
+                </li>
+                <li class="docs__doc doc">
+                  <div class="doc__head" data-spoller>
+                    <div class="doc__head-left">
+                      <p class="doc__name">Orzeczenie lekarskie</p>
+                      <p class="doc__date error"> <i class="ui-icon-time"></i> 19.01.2038</p>
+                    </div>
+
+                    <button class="doc__button"><i class="ui-icon-arrow-down"></i></button>
+                  </div>
+
+                  @@include("./components/ui/multi-field.html")
+                </li>
+                <li class="docs__doc doc">
+                  <div class="doc__head" data-spoller>
+                    <div class="doc__head-left">
+                      <p class="doc__name">Orzeczenie lekarskie</p>
+                      <p class="doc__date error"> <i class="ui-icon-time"></i> 19.01.2038</p>
+                    </div>
+
+                    <button class="doc__button"><i class="ui-icon-arrow-down"></i></button>
+                  </div>
+
+                  @@include("./components/ui/multi-field.html")
+                </li>
+                <li class="docs__doc doc">
+                  <div class="doc__head" data-spoller>
+                    <div class="doc__head-left">
+                      <p class="doc__name">Orzeczenie lekarskie</p>
+                      <p class="doc__date error"> <i class="ui-icon-time"></i> 19.01.2038</p>
+                    </div>
+
+                    <button class="doc__button"><i class="ui-icon-arrow-down"></i></button>
+                  </div>
+
+                  @@include("./components/ui/multi-field.html")
+                </li>
+              </ul>
+
+              @@include("./components/ui/button.html", {
+              label: "Prześlij kolejny dokument",
+              icon: "<i class='ui-icon-plus'></i>",
+              className: "medium docs__submit",
+              attributes: "data-popup-open='popup-add-doc'"
+              })
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("components/footer.html")
+
+  </div>
+</body>
+
+</html>

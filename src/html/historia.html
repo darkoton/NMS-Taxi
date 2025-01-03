@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+@@include("components/head.html", { "title": "NMS Taxi" })
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main class="page">
+        <div class="dashboard">
+          <div class="dashboard__body">
+            <header class="dashboard__header header">
+              <div class="header__body">
+                <h1 class="header__title">Kierowcy</h1>
+
+                @@include("./components/ui/menu.html")
+
+                <div class="header__profile">
+                  <img class="header__profile-avatar" src="./img/user.png" alt="">
+                  <div class="header__profile-info">
+                    <span class="header__profile-name">Artur Gawryś</span>
+                    <span class="header__profile-email">artur@nmskorpo.pl</span>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <div class="dashboard__info info">
+              <div class="info__body">
+                <div class="info__list list">
+                  <div class="list__filter">
+                    @@include("./components/ui/datepicker.html", {
+                    placeholder:"Listopad 2024",
+                    iconColor: "var(--neutrals-900)"
+                    })
+
+                    @@include("./components/ui/select.html", {
+                    placeholder: "Płatnośc",
+                    options: [{
+                    label: "value 1",
+                    value: "value-1"
+                    },{
+                    label: "value 2",
+                    value: "value-2"
+                    },{
+                    label: "value 3",
+                    value: "value-3"
+                    },{
+                    label: "value 4",
+                    value: "value-4"
+                    },{
+                    label: "value 5",
+                    value: "value-5"
+                    },{
+                    label: "value 6",
+                    value: "value-6"
+                    },{
+                    label: "value 7",
+                    value: "value-7"
+                    },]
+                    })
+
+                  </div>
+                  <div class="list__search">
+                    <i class="ui-icon-search"></i>
+                    <input type="text" class="list__search-input" placeholder="Wyszukaj kierowcę" />
+                  </div>
+                  <div class="list__table-body">
+                    <ul class="list__table">
+                      <li class="list__table-header">
+                        <span class="list__table-name">Data</span>
+                        <span class="list__table-name">Kierowca</span>
+                        <span class="list__table-name">Trasa</span>
+                        <span class="list__table-name">Kurs</span>
+                        <span class="list__table-name">Płatnośc</span>
+                        <span class="list__table-name">Kwota</span>
+                        <span class="list__table-name"></span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          14/11/2024 12:34:00 <br> 14/11/2024 12:46:06
+                        </span>
+                        <span class="list__table-value">
+                          Andrzej Sebastian Kowalski
+                        </span>
+                        <span class="list__table-value">
+                          Kaufland - Wielicka, Kraków, Wielicka 259, <br>
+                          Kraków, Juliusza Lea 193, Kraków 00-000
+                        </span>
+                        <span class="list__table-value">
+                          0:12:05 <br> 4.96 km
+                        </span>
+                        <span class="list__table-value">
+                          karta
+                        </span>
+                        <span class="list__table-value">
+                          15.78 zł
+                        </span>
+                        <span class="list__table-value">
+                          @@include('./components/ui/button.html', {
+                          label: "Pobierz",
+                          icon: "<i class='ui-icon-download'></i>",
+                          className: "secondary outlined"
+                          })
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="list__pagination">
+                    <div class="list__pagination-left">
+                      @@include("components/ui/select.html", {
+                      theme: 'dark-blue',
+                      position: 'up',
+                      placeholder: 5,
+                      options: [
+                      {
+                      label: 5,
+                      value: 5
+                      },
+                      {
+                      label: 10,
+                      value: 10
+                      },
+                      {
+                      label: 20,
+                      value: 20
+                      }
+                      ]
+                      })
+
+                      <div class="list__pagination-title">
+                        Pozycje na stronę
+                      </div>
+                      <div class="list__pagination-value">
+                        1-10 z 200 pozycji
+                      </div>
+                    </div>
+
+                    <div class="list__pagination-right">
+                      @@include("components/ui/select.html", {
+                      theme: 'dark-blue',
+                      position: 'up',
+                      placeholder: 1,
+                      options: [
+                      {
+                      label: 1,
+                      value: 1
+                      },
+                      {
+                      label: 2,
+                      value: 2
+                      },
+                      {
+                      label: 3,
+                      value: 3
+                      }
+                      ]
+                      })
+
+                      <div class="list__pagination-title">
+                        z 44 stron
+                      </div>
+                      <div class="list__pagination-actions">
+                        <button>
+                          <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.63477 9L1.63477 5L5.63477 1" stroke="#525252" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.63477 9L5.63477 5L1.63477 1" stroke="#525252" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("components/footer.html")
+
+    <script src="./js/kierowcy.js"></script>
+
+  </div>
+</body>
+
+</html>

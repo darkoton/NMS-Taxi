@@ -62,6 +62,7 @@
     display: flex;
     gap: 16px;
     flex: 1 1 auto;
+    overflow: hidden;
 
     @media (min-width: 1120px) {
       &.right-0 {
@@ -210,13 +211,13 @@
     gap: 32px;
     flex: 1 1 auto;
 
-    &__tabs{
+    &__tabs {
       display: flex;
       align-self: start;
       background-color: var(--neutrals-50);
       border-radius: 10px;
     }
-    &__tab{
+    &__tab {
       padding: 9.5px 18px;
       border-radius: 10px;
       font-weight: 500;
@@ -225,24 +226,24 @@
       background-color: var(--neutrals-50);
       color: var(--neutrals-900);
 
-      @media(any-hover:hover){
-        &:hover{
+      @media (any-hover: hover) {
+        &:hover {
           background-color: var(--light-blue);
         }
       }
 
-      &.active{
+      &.active {
         background-color: var(--light-blue);
       }
     }
 
-    &__filter{
+    &__filter {
       display: flex;
       gap: 8px;
       width: 100%;
       max-width: 385px;
 
-      & .ui-select{
+      & .ui-select {
         width: 100%;
       }
     }
@@ -310,7 +311,7 @@
         align-items: center;
         white-space: nowrap;
         width: 100%;
-        justify-content: center;
+        // justify-content: center;
 
         & span {
           font-weight: 400;
@@ -347,12 +348,11 @@
         font-size: 12px;
         color: var(--neutrals-900);
         width: 100%;
-        justify-content: center;
+        // justify-content: center;
 
-        &.stretch{
+        &.stretch {
           justify-content: stretch;
         }
-
       }
       &-avatar {
         width: 100%;
@@ -368,40 +368,41 @@
           --size: 24px;
         }
       }
-      &-button-dots{
+      &-button-dots {
         display: flex;
         align-items: center;
         background: transparent;
       }
     }
 
-    &__pagination{
+    &__pagination {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px;
 
-      &-left, &-right{
+      &-left,
+      &-right {
         display: flex;
         gap: 16px;
         align-items: center;
       }
 
-      &-title{
+      &-title {
         font-weight: 400;
         font-size: 12px;
         color: var(--neutrals-500);
       }
-      &-value{
+      &-value {
         font-weight: 400;
         font-size: 12px;
         color: var(--blue-1);
       }
-      &-actions{
+      &-actions {
         display: flex;
         gap: 8px;
 
-        button{
+        button {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -412,36 +413,35 @@
       }
     }
   }
-  & .user{
+  & .user {
     padding-top: 87px;
     position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-    background: url('../img/dashboard/decor-bg-2.png') left bottom / contain no-repeat;
+    background: url("../img/dashboard/decor-bg-2.png") left bottom / contain no-repeat;
     background-color: var(--neutrals-20);
 
-    &__close{
+    &__close {
       position: absolute;
       top: 26px;
       right: 26px;
       padding: 5px;
       color: var(--neutrals-600);
       background: transparent;
-
     }
 
-    &__head{
+    &__head {
       display: flex;
       align-items: center;
       gap: 18px;
     }
-    &__avatar{
+    &__avatar {
       width: 100%;
       max-width: 56px;
     }
-    &__name{
+    &__name {
       line-height: 27px;
       font-weight: 600;
       font-size: 18px;
@@ -449,24 +449,22 @@
       color: var(--neutrals-900);
     }
 
-    &__info{
+    &__info {
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
   }
 
-
   @media (max-width: 1120px) {
     overflow: auto;
 
-    &__body{
+    &__body {
       gap: 10px;
     }
 
     & .info {
       flex-direction: column-reverse;
-
 
       &__body {
         flex-direction: column;
@@ -493,7 +491,7 @@
         max-height: 400px;
       }
     }
-    & .user{
+    & .user {
       max-width: 100%;
       flex: 0 1 auto;
 
@@ -507,8 +505,9 @@
       &__title {
         display: none;
       }
-    } & .list{
-      &__table-name{
+    }
+    & .list {
+      &__table-name {
         font-size: 12px;
       }
     }
@@ -578,32 +577,36 @@
     & .list {
       gap: 10px;
 
-      &__table-header{
+      &__table-header {
         padding: 4px 0px;
         justify-content: space-between;
       }
-      &__table-name{
+      &__table-name {
         font-size: 12px;
 
-        &.name, &.income, &.costs, &.cash, &.transfer {
+        &.name,
+        &.income,
+        &.costs,
+        &.cash,
+        &.transfer {
           width: auto;
         }
       }
 
-      &__tab{
+      &__tab {
         padding: 6px 12px;
         border-radius: 6px;
         font-size: 12px;
       }
     }
 
-    & .user{
+    & .user {
       padding-top: 35px;
-      &__close{
+      &__close {
         top: 15px;
         right: 15px;
       }
-      &__name{
+      &__name {
         line-height: 20px;
         font-weight: 600;
         font-size: 15px;

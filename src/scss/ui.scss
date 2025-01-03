@@ -59,17 +59,17 @@
   border-radius: 6px;
   padding: 7px 6px 7px 4px;
 
-  &.small{
+  &.small {
     --text-size: 12px;
     --icon-size: 12px;
     --dot-size: 6px;
   }
-  &.medium{
+  &.medium {
     --text-size: 12px;
     --icon-size: 14px;
     --dot-size: 8px;
   }
-  &.large{
+  &.large {
     --text-size: 14px;
     --icon-size: 16px;
     --dot-size: 10px;
@@ -771,6 +771,7 @@
     display: flex;
     align-items: center;
     transition: all 0.3s ease 0s;
+    cursor: pointer;
 
     &:active {
       background-color: var(--blue-1);
@@ -794,12 +795,12 @@
   max-height: 0;
   transition: all 0.3s ease 0s;
 
-  &.down{
+  &.down {
     bottom: auto;
     top: calc(100% + 5px);
   }
 
-  &.up{
+  &.up {
     top: auto;
     bottom: calc(100% + 5px);
   }
@@ -875,7 +876,8 @@
   }
 }
 
-.ui-dropdown, .ui-select {
+.ui-dropdown,
+.ui-select {
   --bg: var(--neutrals-20);
   --text: var(--neutrals-900);
 
@@ -889,7 +891,7 @@
     }
   }
 
-  &.dark-blue{
+  &.dark-blue {
     --bg: var(--dark-blue);
     --text: var(--neutrals-20);
   }
@@ -909,20 +911,24 @@
     height: 40px;
     box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.25);
     background: var(--bg);
+    cursor: pointer;
+
+    &.ui-dropdown {
+      align-items: stretch;
+    }
 
     & .ui-dropdown-value {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      align-items: center;
       height: 100%;
       overflow: auto;
       color: var(--text);
-
+      align-items: center;
 
       & i {
         color: var(--text);
         transition: all 0.2s ease 0s;
+        align-self: center;
       }
 
       & .ui-dropdown-value-list {
@@ -958,8 +964,8 @@
   }
 }
 
-.ui-select{
-  & .ui-dropdown-field{
+.ui-select {
+  & .ui-dropdown-field {
     padding-left: 16px;
     color: var(--neutrals-900);
   }
@@ -1112,6 +1118,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 4px;
+  width: 100%;
 }
 
 .date-picker-field label {
