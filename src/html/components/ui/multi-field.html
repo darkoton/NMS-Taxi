@@ -7,9 +7,9 @@
     <div class="ui-multi-input-body">
       <ul class="ui-multi-value-list">
       </ul>
-      <input @@if(context.id){id="@@id" } id="test" multiple accept="image/*" type="file" class="ui-multi-input">
+      <input required @@if(context.id){id="@@id" } multiple accept="image/*" type="file" class="ui-multi-input">
     </div>
-    <label @@if(context.id){for="@@id" } for="test" class="ui-multi-button">Dodać</label>
+    <label @@if(context.id){for="@@id" } class="ui-multi-button">Dodać</label>
   </div>
 
 </div>

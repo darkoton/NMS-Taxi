@@ -149,10 +149,13 @@
       flex-direction: column;
       align-items: center;
       width: 100%;
-      max-width: 720px;
+      max-width: 748px;
       margin: auto;
       padding: 24px;
 
+      &.max-460 {
+        max-width: 460px;
+      }
       @media (max-width: 992px) {
         background-color: var(--neutrals-20);
         max-width: 100%;
@@ -212,6 +215,21 @@
       letter-spacing: 0.04em;
       color: var(--neutrals-900);
       text-transform: uppercase;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      i {
+        --size: 24px;
+
+        &.ui-icon-info {
+          color: var(--error);
+        }
+
+        &.ui-icon-ok {
+          color: var(--success);
+        }
+      }
 
       &.center {
         text-align: center;
@@ -327,6 +345,18 @@
       cursor: pointer;
       transition: all 0.3s ease 0s;
       height: 108px;
+
+      &.success {
+        border-color: var(--success);
+
+        & .form__input-file-body {
+          display: none;
+        }
+      }
+
+      &.error {
+        border-color: var(--error);
+      }
 
       @media (any-hover: hover) {
         cursor: pointer;

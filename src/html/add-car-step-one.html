@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+@@include("components/head.html", { "title": "NMS Taxi" })
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main class="page">
+        <div class="document">
+          <div class="document__body">
+            <div class="banner">
+              <div class="banner__body">
+                <img class="banner__logo" src="./img/logo-2.svg" alt="" />
+                <div class="banner__steps">
+                  <div class="banner__step active">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-car"></i>
+                      </span>
+                    </div>
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">
+                        Szczegóły pojazdu
+                      </h3>
+
+
+                      <p class="banner__step-text">
+                        Dodaj informacje o samochodzie
+                      </p>
+                    </div>
+                  </div>
+                  <div class="banner__step">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-id-card"></i>
+                      </span>
+                    </div>
+
+
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">
+                        Dokumenty
+                      </h3>
+
+                      <p class="banner__step-text">
+                        Dodaj dokumenty dotyczące samochodu
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form">
+              <div class="form__body max-460">
+                <h2 class="form__title">Szczegóły pojazdu</h2>
+
+                <p class="form__description">
+                  Dodaj dane, aby rozpocząć dodawanie pojazdu
+                </p>
+
+                <div class="form__sections">
+                  <div class="form__section">
+
+                    <div class="form__label center">Dodaj pojazd</div>
+
+                    @@include("components/ui/dropdown.html", {
+                    label: "Marka",
+                    options: [{
+                    label:"Mark 1",
+                    value:"mark-1"
+                    },
+                    {
+                    label:"Mark 2",
+                    value:"mark-2"
+                    },
+                    {
+                    label:"Mark 3",
+                    value:"mark-3"
+                    },
+                    {
+                    label:"Mark 4",
+                    value:"mark-4"
+                    },
+                    {
+                    label:"Mark 5",
+                    value:"mark-5"
+                    },
+                    {
+                    label:"Mark 6",
+                    value:"mark-6"
+                    },
+                    {
+                    label:"Mark 7",
+                    value:"mark-7"
+                    }]
+                    })
+
+                    @@include("components/ui/dropdown.html", {
+                    label: "Model",
+                    options: [{
+                    label:"Model 1",
+                    value:"Model-1"
+                    },
+                    {
+                    label:"Model 2",
+                    value:"Model-2"
+                    },
+                    {
+                    label:"Model 3",
+                    value:"Model-3"
+                    },
+                    {
+                    label:"Model 4",
+                    value:"Model-4"
+                    },
+                    {
+                    label:"Model 5",
+                    value:"Model-5"
+                    },
+                    {
+                    label:"Model 6",
+                    value:"Model-6"
+                    },
+                    {
+                    label:"Model 7",
+                    value:"Model-7"
+                    }]
+                    })
+
+                    @@include("components/ui/dropdown.html", {
+                    label: "Rok",
+                    options: [{
+                    label:"Rok 1",
+                    value:"Rok-1"
+                    },
+                    {
+                    label:"Rok 2",
+                    value:"Rok-2"
+                    },
+                    {
+                    label:"Rok 3",
+                    value:"Rok-3"
+                    },
+                    {
+                    label:"Rok 4",
+                    value:"Rok-4"
+                    },
+                    {
+                    label:"Rok 5",
+                    value:"Rok-5"
+                    },
+                    {
+                    label:"Rok 6",
+                    value:"Rok-6"
+                    },
+                    {
+                    label:"Rok 7",
+                    value:"Rok-7"
+                    }]
+                    })
+
+                    @@include("components/ui/field.html", {label: "Numer rejestracyjny (bez spacji)"})
+                    @@include("components/ui/field.html", {label: "Kolor"})
+
+                  </div>
+
+                  @@include("components/ui/button.html", {className:"form__submit medium", label: "Dalej"})
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("components/footer.html")
+
+  </div>
+</body>
+
+</html>

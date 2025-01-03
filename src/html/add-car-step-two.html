@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+@@include("components/head.html", { "title": "NMS Taxi" })
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main class="page">
+        <div class="document">
+          <div class="document__body">
+            <div class="banner">
+              <div class="banner__body">
+                <img class="banner__logo" src="./img/logo-2.svg" alt="" />
+                <div class="banner__steps">
+                  <div class="banner__step">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-car"></i>
+                      </span>
+                    </div>
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">
+                        Szczegóły pojazdu
+                      </h3>
+
+
+                      <p class="banner__step-text">
+                        Dodaj informacje o samochodzie
+                      </p>
+                    </div>
+                  </div>
+                  <div class="banner__step active">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-id-card"></i>
+                      </span>
+                    </div>
+
+
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">
+                        Dokumenty
+                      </h3>
+
+                      <p class="banner__step-text">
+                        Dodaj dokumenty dotyczące samochodu
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form">
+              <div class="form__body">
+                <h2 class="form__title">Dokumenty</h2>
+
+                <p class="form__description">
+                  Dodaj swoje dane, aby rozpocząć proces dodawania kierowcy
+                </p>
+
+                <div class="form__sections">
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Dowód Rejestracyjny <i class="ui-icon-info"></i></div>
+                      <button class="form__reset">
+                        <i class="ui-icon-reset"></i>
+                        <span>Resetuj</span>
+                      </button>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <h4 class="form__field-title">Dowód Rejestracyjny</h4>
+                        <p class="form__field-text">Akceptujemy zdjęcie przedniej strony dowodu rejestracyjnego w którym
+                          widoczne trzy strony</p>
+                      </div>
+
+                      <div class="form__field-body">
+                        <label for="prozd" class="form__input-file success">
+                          <input type="file" hidden id="prozd">
+                          <div class="form__input-file-body">
+                            <span class="form__input-icon">
+                              <i class="ui-icon-download "></i>
+                            </span>
+                            <div class="form__input-label">Przód</div>
+                          </div>
+                        </label>
+                        <label for="tyt" class="form__input-file error">
+                          <input type="file" hidden id="tyt">
+                          <div class="form__input-file-body">
+                            <span class="form__input-icon">
+                              <i class="ui-icon-download "></i>
+                            </span>
+                            <div class="form__input-label">Tył</div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Ubezpieczenie OC <i class="ui-icon-ok"></i></div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <p class="form__field-text">Akceptujemy zdjęcia kwitkta lub umowę ubezpieczeniową</p>
+                      </div>
+
+                      <div class="form__field-body">
+                        @@include("components/ui/multi-field.html", {id:"ubezpieczenie"})
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Wypis z licencji</div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <p class="form__field-text">Akceptujemy tyłko zdjęcie wypisu</p>
+                      </div>
+
+                      <div class="form__field-body">
+                        @@include("components/ui/multi-field.html", {id:"ubezpieczenie"})
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Zdjęcie pojazdu</div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <p class="form__field-text">Zrób zdjęcia pojazdu z widocznym kogutem i oznakowianiem zgodzie z
+                          urzędnikiem miasta obszaru wykonującego przejazdy
+                          <a href="#">Link na wzór</a>
+                        </p>
+                      </div>
+
+                      <div class="form__field-body">
+                        @@include("components/ui/multi-field.html", {id:"ubezpieczenie"})
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Dodatkowe dokumenty <i class="ui-icon-ok"></i></div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <p class="form__field-text">
+                          Wypisy na gminy w obszarze miasta oraz inne
+                        </p>
+                      </div>
+
+                      <div class="form__field-body">
+                        @@include("components/ui/multi-field.html", {id:"ubezpieczenie"})
+                      </div>
+                    </div>
+                  </div>
+
+                  @@include("components/ui/button.html", {className:"form__submit medium", label: "Dalej"})
+
+                </div>
+                <!-- <div class="form__fields">
+                @@include("components/ui/field.html", { label: "E-mail", type: "email", valid:"valid",
+                error:"e-mail jest nieprawidłowy" })
+              </div>
+
+              @@include("components/ui/button.html", {
+              className: "large form__button",
+              label: "Resetuj"
+              }) -->
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("components/footer.html")
+
+  </div>
+</body>
+
+</html>

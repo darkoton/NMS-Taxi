@@ -196,10 +196,18 @@ const multiFields = document.querySelectorAll('.ui-multi-field');
 multiFields.forEach(field => {
   const list = field.querySelector('.ui-multi-value-list');
   const input = field.querySelector('.ui-multi-input');
-  // const button = field.querySelector('.ui-multi-button');
+  const button = field.querySelector('.ui-multi-button');
 
   function RenderItem() {
     list.innerHTML = '';
+
+    if (input.files.length) {
+      button.classList.add('change');
+      button.textContent = 'Zmień';
+    } else {
+      button.classList.remove('change');
+      button.textContent = 'Dodać';
+    }
 
     Array.from(input.files).forEach(file => {
       const li = document.createElement('li');
@@ -221,6 +229,13 @@ multiFields.forEach(field => {
         let currMultiValue = input.dataset.value ? JSON.parse(input.dataset.value) : [];
         currMultiValue = currMultiValue.filter(e => e !== li.querySelector('span').textContent);
         input.dataset.value = JSON.stringify(currMultiValue);
+        if (currMultiValue.length) {
+          button.classList.add('change');
+          button.textContent = 'Zmień';
+        } else {
+          button.classList.remove('change');
+          button.textContent = 'Dodać';
+        }
       });
 
       list.appendChild(li);

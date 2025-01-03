@@ -726,13 +726,15 @@
     background: var(--neutrals-20);
     padding: 2px 3px;
     border-radius: 12px;
-    padding-right: 100px;
+    // padding-right: 100px;
     flex: 1 1 auto;
   }
 
   & .ui-multi-value-list {
     display: flex;
     gap: 2px;
+    flex-wrap: wrap;
+    overflow: auto;
 
     li {
       border-radius: 10px;
@@ -775,6 +777,11 @@
 
     &:active {
       background-color: var(--blue-1);
+    }
+
+    &.change {
+      color: var(--neutrals-20);
+      background-color: var(--yellow);
     }
   }
 }
