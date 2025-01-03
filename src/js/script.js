@@ -8,13 +8,26 @@ isWebp();
 //< " popups " >=============================================================================================================>//
 
 const popups = document.querySelectorAll('.popup');
-const openBtns = document.querySelectorAll('[data-popup-open]');
-openBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const popup = document.querySelector('.' + btn.dataset.popupOpen);
-    popup.classList.add('active');
-  });
+const openBtns = Array.from(document.querySelectorAll('[data-popup-open]'));
+
+window.addEventListener('click', ({ target }) => {
+  const btn = target.closest('[data-popup-open]');
+
+  if (btn && !openBtns.includes(btn)) {
+    openBtns.push(btn);
+    btn.addEventListener('click', () => openPopup(btn));
+    openPopup(btn);
+  }
 });
+
+openBtns.forEach(btn => {
+  btn.addEventListener('click', () => openPopup(btn));
+});
+
+function openPopup(btn) {
+  const popup = document.querySelector('.' + btn.dataset.popupOpen);
+  popup.classList.add('active');
+}
 
 popups.forEach(popup => {
   const closeBtns = popup.querySelectorAll('.popup-close');

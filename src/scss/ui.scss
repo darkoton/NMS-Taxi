@@ -906,8 +906,7 @@
   & .ui-dropdown-field {
     position: relative;
     border-radius: 12px;
-    padding: 3px;
-    padding-right: 16px;
+    // padding: 3px;
     height: 40px;
     box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.25);
     background: var(--bg);
@@ -924,6 +923,7 @@
       overflow: auto;
       color: var(--text);
       align-items: center;
+      padding-right: 16px;
 
       & i {
         color: var(--text);
@@ -966,8 +966,11 @@
 
 .ui-select {
   & .ui-dropdown-field {
-    padding-left: 16px;
     color: var(--neutrals-900);
+  }
+  & .ui-dropdown-value {
+    padding-left: 16px;
+    gap: 9px;
   }
 }
 

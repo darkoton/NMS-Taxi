@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+@@include("components/head.html", { "title": "NMS Taxi" })
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main class="page">
+        <div class="dashboard">
+          <div class="dashboard__body">
+            <header class="dashboard__header header">
+              <div class="header__body">
+                <h1 class="header__title">Kierowcy</h1>
+
+                @@include("./components/ui/menu.html")
+
+                <div class="header__profile">
+                  <img class="header__profile-avatar" src="./img/user.png" alt="">
+                  <div class="header__profile-info">
+                    <span class="header__profile-name">Artur Gawryś</span>
+                    <span class="header__profile-email">artur@nmskorpo.pl</span>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <div class="dashboard__info info">
+              <div class="info__body">
+                <div class="info__list list">
+                  <div class="list__tabs">
+                    <button class="list__tab active">Wszystkie</button>
+                    <button class="list__tab">Aktywni</button>
+                    <button class="list__tab">W trakcie akceptacji</button>
+                  </div>
+                  <div class="list__row">
+                    <div class="list__filter">
+                      @@include("./components/ui/select.html", {
+                      placeholder: "Status",
+                      options: [{
+                      label: "Status 1",
+                      value: "status-1"
+                      },{
+                      label: "Status 2",
+                      value: "status-2"
+                      },{
+                      label: "Status 3",
+                      value: "status-3"
+                      },{
+                      label: "Status 4",
+                      value: "status-4"
+                      },{
+                      label: "Status 5",
+                      value: "status-5"
+                      },{
+                      label: "Status 6",
+                      value: "status-6"
+                      },{
+                      label: "Status 7",
+                      value: "status-7"
+                      },]
+                      })
+                      @@include("./components/ui/select.html", {
+                      placeholder: "Dokumenty",
+                      options: [{
+                      label: "Dokumenty 1",
+                      value: "dokumenty-1"
+                      },{
+                      label: "Dokumenty 2",
+                      value: "dokumenty-2"
+                      },{
+                      label: "Dokumenty 3",
+                      value: "dokumenty-3"
+                      },{
+                      label: "Dokumenty 4",
+                      value: "dokumenty-4"
+                      },{
+                      label: "Dokumenty 5",
+                      value: "dokumenty-5"
+                      },{
+                      label: "Dokumenty 6",
+                      value: "dokumenty-6"
+                      },{
+                      label: "Dokumenty 7",
+                      value: "dokumenty-7"
+                      },]
+                      })
+                    </div>
+
+                    @@include('./components/ui/button.html', {
+                    className:"medium list__add-button",
+                    label: "Dodaj Kierowcę",
+                    icon: "<i class='ui-icon-plus'></i>"
+                    })
+                  </div>
+                  <div class="list__search">
+                    <i class="ui-icon-search"></i>
+                    <input type="text" class="list__search-input" placeholder="Wyszukaj kierowcę" />
+                  </div>
+                  <div class="list__table-body">
+                    <ul class="list__table">
+                      <li class="list__table-header">
+                        <span class="list__table-name">Marka / model pojazdu</span>
+                        <span class="list__table-name">Status</span>
+                        <span class="list__table-name">Numer rejestracyjny / Numer VIN</span>
+                        <span class="list__table-name">Dokumenty</span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          <img class="list__table-car" src="./img/dashboard/car-photo.png" alt="">
+                          2011 Toyota Prius
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          @@include("./components/ui/status.html", {
+                          label: 'Zablokowany',
+                          type: 'inactive large'
+                          })
+                        </span>
+                        <span class="list__table-value">
+                          JTDKN3DU0B1387770 <br> WY274XC
+                        </span>
+                        <span class="list__table-value">
+                          @@include("./components/ui/doc-verf.html", {
+                          count: 1,
+                          type: 'error',
+                          className:"list__doc-verf"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          <img class="list__table-car" src="./img/dashboard/car-photo.png" alt="">
+                          2011 Toyota Prius
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          @@include("./components/ui/status.html", {
+                          label: 'Deaktywowany',
+                          type: 'inactive large',
+                          icon: false,
+                          })
+                        </span>
+                        <span class="list__table-value">
+                          JTDKN3DU0B1387770 <br> WY274XC
+                        </span>
+                        <span class="list__table-value">
+                          @@include("./components/ui/doc-verf.html", {
+                          count: 1,
+                          type: 'error',
+                          className:"list__doc-verf"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          <img class="list__table-car" src="./img/dashboard/car-photo.png" alt="">
+                          2011 Toyota Prius
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          @@include("./components/ui/status.html", {
+                          label: 'Aktywny',
+                          type: 'active large'
+                          })
+                        </span>
+                        <span class="list__table-value">
+                          JTDKN3DU0B1387770 <br> WY274XC
+                        </span>
+                        <span class="list__table-value">
+                          @@include("./components/ui/doc-verf.html", {
+                          count: 1,
+                          type: 'active',
+                          className:"list__doc-verf"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          <img class="list__table-car" src="./img/dashboard/car-photo.png" alt="">
+                          2011 Toyota Prius
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          @@include("./components/ui/status.html", {
+                          label: 'Deaktywowany',
+                          type: 'inactive large'
+                          })
+                        </span>
+                        <span class="list__table-value">
+                          JTDKN3DU0B1387770 <br> WY274XC
+                        </span>
+                        <span class="list__table-value">
+                          @@include("./components/ui/doc-verf.html", {
+                          count: 1,
+                          type: 'active',
+                          className:"list__doc-verf"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          <img class="list__table-car" src="./img/dashboard/car-photo.png" alt="">
+                          2011 Toyota Prius
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          @@include("./components/ui/status.html", {
+                          label: 'Deaktywowany',
+                          type: 'inactive large'
+                          })
+                        </span>
+                        <span class="list__table-value">
+                          JTDKN3DU0B1387770 <br> WY274XC
+                        </span>
+                        <span class="list__table-value">
+                          @@include("./components/ui/doc-verf.html", {
+                          count: 1,
+                          type: 'active',
+                          className:"list__doc-verf"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          <img class="list__table-car" src="./img/dashboard/car-photo.png" alt="">
+                          2011 Toyota Prius
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          @@include("./components/ui/status.html", {
+                          label: 'Deaktywowany',
+                          type: 'inactive large'
+                          })
+                        </span>
+                        <span class="list__table-value">
+                          JTDKN3DU0B1387770 <br> WY274XC
+                        </span>
+                        <span class="list__table-value">
+                          @@include("./components/ui/doc-verf.html", {
+                          count: 1,
+                          type: 'active',
+                          className:"list__doc-verf"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          <img class="list__table-car" src="./img/dashboard/car-photo.png" alt="">
+                          2011 Toyota Prius
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          @@include("./components/ui/status.html", {
+                          label: 'Deaktywowany',
+                          type: 'inactive large'
+                          })
+                        </span>
+                        <span class="list__table-value">
+                          JTDKN3DU0B1387770 <br> WY274XC
+                        </span>
+                        <span class="list__table-value">
+                          @@include("./components/ui/doc-verf.html", {
+                          count: 1,
+                          type: 'active',
+                          className:"list__doc-verf"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          <img class="list__table-car" src="./img/dashboard/car-photo.png" alt="">
+                          2011 Toyota Prius
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          @@include("./components/ui/status.html", {
+                          label: 'Deaktywowany',
+                          type: 'inactive large'
+                          })
+                        </span>
+                        <span class="list__table-value">
+                          JTDKN3DU0B1387770 <br> WY274XC
+                        </span>
+                        <span class="list__table-value">
+                          @@include("./components/ui/doc-verf.html", {
+                          count: 1,
+                          type: 'active',
+                          className:"list__doc-verf"
+                          })
+                        </span>
+                      </li>
+                      <li class="list__table-item">
+                        <span class="list__table-value">
+                          <img class="list__table-car" src="./img/dashboard/car-photo.png" alt="">
+                          2011 Toyota Prius
+                        </span>
+                        <span class="list__table-value stretch list__table-status">
+                          @@include("./components/ui/status.html", {
+                          label: 'Deaktywowany',
+                          type: 'inactive large'
+                          })
+                        </span>
+                        <span class="list__table-value">
+                          JTDKN3DU0B1387770 <br> WY274XC
+                        </span>
+                        <span class="list__table-value">
+                          @@include("./components/ui/doc-verf.html", {
+                          count: 1,
+                          type: 'active',
+                          className:"list__doc-verf"
+                          })
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="list__pagination">
+                    <div class="list__pagination-left">
+                      @@include("components/ui/select.html", {
+                      theme: 'dark-blue',
+                      position: 'up',
+                      placeholder: 5,
+                      options: [
+                      {
+                      label: 5,
+                      value: 5
+                      },
+                      {
+                      label: 10,
+                      value: 10
+                      },
+                      {
+                      label: 20,
+                      value: 20
+                      }
+                      ]
+                      })
+
+                      <div class="list__pagination-title">
+                        Pozycje na stronę
+                      </div>
+                      <div class="list__pagination-value">
+                        1-10 z 200 pozycji
+                      </div>
+                    </div>
+
+                    <div class="list__pagination-right">
+                      @@include("components/ui/select.html", {
+                      theme: 'dark-blue',
+                      position: 'up',
+                      placeholder: 1,
+                      options: [
+                      {
+                      label: 1,
+                      value: 1
+                      },
+                      {
+                      label: 2,
+                      value: 2
+                      },
+                      {
+                      label: 3,
+                      value: 3
+                      }
+                      ]
+                      })
+
+                      <div class="list__pagination-title">
+                        z 44 stron
+                      </div>
+                      <div class="list__pagination-actions">
+                        <button>
+                          <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.63477 9L1.63477 5L5.63477 1" stroke="#525252" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.63477 9L5.63477 5L1.63477 1" stroke="#525252" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("components/footer.html")
+
+    <script src="./js/tooltips.js"></script>
+
+  </div>
+</body>
+
+</html>

@@ -620,6 +620,122 @@
   </div>
 </div>
 
+<div class="popup popup-invite-driver">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+    </div>
+    <div class="popup-content">
+      <div class="popup-form">
+        @@include("./ui/field.html", {
+        label:"Telefon",
+        type:"phone"
+        })
+
+        @@include("./ui/field.html", {
+        label:"Kod polecający",
+        type:"text"
+        })
+      </div>
+
+      @@include("./ui/button.html", {
+      label:"Wyslać",
+      className:"popup-submit popup-close",
+      attributes: 'data-popup-open="popup-sucess-invite-driver"'
+      })
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-sucess-invite-driver">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <h5 class="popup-title">SUKCES</h5>
+    </div>
+    <div class="popup-content">
+      <div class="popup-texts">
+        <p class="popup-text">
+          Konto kierowcy pod mail test@nmskorpo.pl jest stworzone.
+          Wciśnij: <a href="#">stworzyć konto samodziełnie</a>, oby dodać dokumenty bez uczestnictwa kierowcy.
+        </p>
+      </div>
+
+      @@include("./ui/button.html", {
+      label:"kontynuować",
+      className:"popup-submit popup-close",
+      })
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-add-driver">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <h5 class="popup-title">Formulaż dodania kierowcY</h5>
+      <p class="popup-status">
+        <i class="ui-icon-error"></i>
+        Kierowca już istnieje w systemie
+      </p>
+    </div>
+    <div class="popup-content">
+      <div class="popup-form">
+
+        @@include("./ui/field.html", {
+        label:"Imię",
+        valid: true,
+        type: "text",
+        placeholder: "Charlene Reed"
+        })
+
+        @@include("./ui/field.html", {
+        label:"Nazwisko",
+        valid: true,
+        type: "text",
+        placeholder: "Charlene Reed"
+        })
+
+        @@include("./ui/field.html", {
+        label:"Telefon",
+        valid: true,
+        type: "phone"
+        })
+
+        @@include("./ui/field.html", {
+        label:"E-mail",
+        valid: true,
+        type: "email"
+        })
+
+      </div>
+
+      @@include("./ui/button.html", {
+      label:"kontynuować",
+      className:"popup-submit popup-close",
+      })
+    </div>
+  </div>
+</div>
+
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>

@@ -32,56 +32,64 @@
                     <button class="list__tab">Aktywni</button>
                     <button class="list__tab">W trakcie akceptacji</button>
                   </div>
-                  <div class="list__filter">
-                    @@include("./components/ui/select.html", {
-                    placeholder: "Status",
-                    options: [{
-                    label: "Status 1",
-                    value: "status-1"
-                    },{
-                    label: "Status 2",
-                    value: "status-2"
-                    },{
-                    label: "Status 3",
-                    value: "status-3"
-                    },{
-                    label: "Status 4",
-                    value: "status-4"
-                    },{
-                    label: "Status 5",
-                    value: "status-5"
-                    },{
-                    label: "Status 6",
-                    value: "status-6"
-                    },{
-                    label: "Status 7",
-                    value: "status-7"
-                    },]
-                    })
-                    @@include("./components/ui/select.html", {
-                    placeholder: "Dokumenty",
-                    options: [{
-                    label: "Dokumenty 1",
-                    value: "dokumenty-1"
-                    },{
-                    label: "Dokumenty 2",
-                    value: "dokumenty-2"
-                    },{
-                    label: "Dokumenty 3",
-                    value: "dokumenty-3"
-                    },{
-                    label: "Dokumenty 4",
-                    value: "dokumenty-4"
-                    },{
-                    label: "Dokumenty 5",
-                    value: "dokumenty-5"
-                    },{
-                    label: "Dokumenty 6",
-                    value: "dokumenty-6"
-                    },{
-                    label: "Dokumenty 7",
-                    value: "dokumenty-7"
-                    },]
+                  <div class="list__row">
+                    <div class="list__filter">
+                      @@include("./components/ui/select.html", {
+                      placeholder: "Status",
+                      options: [{
+                      label: "Status 1",
+                      value: "status-1"
+                      },{
+                      label: "Status 2",
+                      value: "status-2"
+                      },{
+                      label: "Status 3",
+                      value: "status-3"
+                      },{
+                      label: "Status 4",
+                      value: "status-4"
+                      },{
+                      label: "Status 5",
+                      value: "status-5"
+                      },{
+                      label: "Status 6",
+                      value: "status-6"
+                      },{
+                      label: "Status 7",
+                      value: "status-7"
+                      },]
+                      })
+                      @@include("./components/ui/select.html", {
+                      placeholder: "Dokumenty",
+                      options: [{
+                      label: "Dokumenty 1",
+                      value: "dokumenty-1"
+                      },{
+                      label: "Dokumenty 2",
+                      value: "dokumenty-2"
+                      },{
+                      label: "Dokumenty 3",
+                      value: "dokumenty-3"
+                      },{
+                      label: "Dokumenty 4",
+                      value: "dokumenty-4"
+                      },{
+                      label: "Dokumenty 5",
+                      value: "dokumenty-5"
+                      },{
+                      label: "Dokumenty 6",
+                      value: "dokumenty-6"
+                      },{
+                      label: "Dokumenty 7",
+                      value: "dokumenty-7"
+                      },]
+                      })
+                    </div>
+
+                    @@include('./components/ui/button.html', {
+                    className:"medium list__add-button",
+                    label: "Dodaj Kierowcę",
+                    icon: "<i class='ui-icon-plus'></i>"
                     })
                   </div>
                   <div class="list__search">
@@ -115,7 +123,8 @@
                         <span class="list__table-value">
                           @@include("./components/ui/doc-verf.html", {
                           count: 1,
-                          type: 'error'
+                          type: 'error',
+                          className:"list__doc-verf"
                           })
                         </span>
                         <span class="list__table-value">
@@ -154,7 +163,8 @@
                         <span class="list__table-value">
                           @@include("./components/ui/doc-verf.html", {
                           count: 1,
-                          type: 'error'
+                          type: 'error',
+                          className:"list__doc-verf"
                           })
                         </span>
                         <span class="list__table-value">
@@ -192,7 +202,8 @@
                         <span class="list__table-value">
                           @@include("./components/ui/doc-verf.html", {
                           count: 1,
-                          type: 'attention'
+                          type: 'attention',
+                          className:"list__doc-verf"
                           })
                         </span>
                         <span class="list__table-value">
@@ -231,7 +242,8 @@
                         <span class="list__table-value">
                           @@include("./components/ui/doc-verf.html", {
                           count: 1,
-                          type: 'attention'
+                          type: 'attention',
+                          className:"list__doc-verf"
                           })
                         </span>
                         <span class="list__table-value">
@@ -269,7 +281,8 @@
                         <span class="list__table-value">
                           @@include("./components/ui/doc-verf.html", {
                           count: 1,
-                          type: 'process'
+                          type: 'process',
+                          className:"list__doc-verf"
                           })
                         </span>
                         <span class="list__table-value">
@@ -307,7 +320,8 @@
                         <span class="list__table-value">
                           @@include("./components/ui/doc-verf.html", {
                           count: 1,
-                          type: 'process'
+                          type: 'process',
+                          className:"list__doc-verf"
                           })
                         </span>
                         <span class="list__table-value">
@@ -345,7 +359,8 @@
                         <span class="list__table-value">
                           @@include("./components/ui/doc-verf.html", {
                           count: 1,
-                          type: 'process'
+                          type: 'process',
+                          className:"list__doc-verf"
                           })
                         </span>
                         <span class="list__table-value">
@@ -383,7 +398,8 @@
                         <span class="list__table-value">
                           @@include("./components/ui/doc-verf.html", {
                           count: 1,
-                          type: 'process'
+                          type: 'process',
+                          className:"list__doc-verf"
                           })
                         </span>
                         <span class="list__table-value">
@@ -421,7 +437,8 @@
                         <span class="list__table-value">
                           @@include("./components/ui/doc-verf.html", {
                           count: 1,
-                          type: 'process'
+                          type: 'process',
+                          className:"list__doc-verf"
                           })
                         </span>
                         <span class="list__table-value">
@@ -525,7 +542,7 @@
 
     @@include("components/footer.html")
 
-    <script src="./js/kierowcy.js"></script>
+    <script src="./js/tooltips.js"></script>
 
   </div>
 </body>

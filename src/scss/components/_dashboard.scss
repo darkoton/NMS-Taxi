@@ -236,7 +236,10 @@
         background-color: var(--light-blue);
       }
     }
-
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
     &__filter {
       display: flex;
       gap: 8px;
@@ -247,7 +250,9 @@
         width: 100%;
       }
     }
-
+    &__add-button {
+      font-size: 16px;
+    }
     &__search {
       display: flex;
       padding: 8px 0;
@@ -272,6 +277,19 @@
     &__table-body {
       width: 100%;
       overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--blue-1);
+        border-radius: 100px;
+      }
     }
     &__table {
       min-width: 850px;
@@ -346,6 +364,7 @@
         gap: 12px;
         font-weight: 400;
         font-size: 12px;
+        line-height: 18px;
         color: var(--neutrals-900);
         width: 100%;
         // justify-content: center;
@@ -357,6 +376,11 @@
       &-avatar {
         width: 100%;
         max-width: 36px;
+        object-fit: contain;
+      }
+      &-car {
+        width: 100%;
+        max-width: 52px;
         object-fit: contain;
       }
       &-button-arrow {

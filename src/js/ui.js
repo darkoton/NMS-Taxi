@@ -168,7 +168,6 @@ dropdowns.forEach(dropdown => {
   );
 });
 
-
 // Selects
 const selects = document.querySelectorAll('.ui-select');
 
@@ -179,21 +178,17 @@ selects.forEach(select => {
 
   openButton.onclick = () => {
     list.classList.toggle('open');
-    dropdown.classList.toggle('open');
   };
 
   const options = list.querySelectorAll('li');
   options.forEach(
     option =>
       (option.onclick = () => {
-        value.textContent = option.textContent
-        select.dataset.value = option.dataset.value
-      })
+        value.textContent = option.textContent;
+        select.dataset.value = option.dataset.value;
+      }),
   );
 });
-
-
-
 
 // Multi field
 

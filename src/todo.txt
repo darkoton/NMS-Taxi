@@ -1,3 +1,0 @@
-kirerowcy
-  добавить tooltip
-  добавить popup

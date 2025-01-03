@@ -1,16 +1,16 @@
-<div class="ui-doc-verf @@type">
+<div class="ui-doc-verf @@if(context.type){@@type} @@if(context.className){@@className}">
 
   @@if (type == 'error') {
   <i class="ui-icon-error"></i>
   }
   @@if (type == 'active') {
-    <i class="ui-icon-ok"></i>
+  <i class="ui-icon-ok"></i>
   }
   @@if (type == 'process') {
   <i class="ui-icon-in-process"></i>
   }
   @@if (type == 'attention') {
- <i class="ui-icon-info"></i>
+  <i class="ui-icon-info"></i>
   }
 
   <span class="ui-doc-count">
