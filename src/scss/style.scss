@@ -4,8 +4,6 @@
 //< " FILE WITH VARIABLES " >=============================================================================================================>//
 @import "./modules/_vars";
 
-@import "./modules/_utilities";
-
 @import "./modules/_custom";
 
 //< " body SITE " >=============================================================================================================>//
@@ -49,6 +47,8 @@ body {
 @import "./components/_document";
 @import "./components/_dashboard";
 @import "./components/_popup";
+
+@import "./modules/_utilities";
 
 //< " MAIN BLOCK " >=============================================================================================================>//
 .page {

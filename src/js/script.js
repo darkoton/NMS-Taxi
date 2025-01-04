@@ -129,3 +129,16 @@ window.addEventListener('click', ({ target }) => {
     });
   }
 });
+
+// Burger Dashboad header
+
+const burgerButtonOpen = document.querySelector('.header__burger');
+const burgerButtonClose = document.querySelector('.menu__close');
+const menu = document.querySelector('.menu');
+burgerButtonOpen.addEventListener('click', () => {
+  menu.classList.add('active');
+});
+
+burgerButtonClose.addEventListener('click', () => {
+  menu.classList.remove('active');
+});

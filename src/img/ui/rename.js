@@ -17,6 +17,9 @@ fs.readdir(directoryPath, (err, files) => {
 
     // Ищем шаблон и создаем новое имя
     let match = file.split('Icon=')[1];
+    if (!match) {
+      return;
+    }
     match = match.replace(/ /g, '-');
     if (match) {
       const newFileName = match.toLowerCase() + '.svg';

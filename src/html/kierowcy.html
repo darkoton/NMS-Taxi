@@ -9,7 +9,7 @@
         <div class="dashboard">
           <div class="dashboard__body">
 
-                @@include("./components/dashboard-header.html", { "title": "Kierowcy" })
+            @@include("./components/dashboard-header.html", { "title": "Kierowcy" })
 
 
             <div class="dashboard__info info">
@@ -85,368 +85,874 @@
                     <input type="text" class="list__search-input" placeholder="Wyszukaj kierowcę" />
                   </div>
                   <div class="list__table-body">
-                    <ul class="list__table">
+                    <ul class="list__table" data-spollers>
                       <li class="list__table-header">
                         <span class="list__table-name">Imie Nazwisko</span>
                         <span class="list__table-name">Status</span>
-                        <span class="list__table-name">Dane kontaktowe</span>
-                        <span class="list__table-name">Dokumenty</span>
-                        <span class="list__table-name">Ustawienia</span>
-                      </li>
-                      <li class="list__table-item">
-                        <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'error',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </span>
-                      </li>
-                      <li class="list__table-item">
-                        <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Deaktywowany',
-                          type: 'inactive large',
-                          icon: false,
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'error',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </span>
-                      </li>
-                      <li class="list__table-item">
-                        <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Aktywny',
-                          type: 'active large'
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'attention',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </span>
-                      </li>
-                      <li class="list__table-item">
-                        <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Deaktywowany',
-                          type: 'inactive large',
-                          icon: false
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'attention',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </span>
-                      </li>
-                      <li class="list__table-item">
-                        <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </span>
-                      </li>
-                      <li class="list__table-item">
-                        <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </span>
-                      </li>
-                      <li class="list__table-item">
-                        <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </span>
-                      </li>
-                      <li class="list__table-item">
-                        <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </span>
-                      </li>
-                      <li class="list__table-item">
-                        <span class="list__table-value">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value stretch list__table-status">
-                          @@include("./components/ui/status.html", {
-                          label: 'Zablokowany',
-                          type: 'inactive large'
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          +48 692 280 931 <br>
-                          akowalski@gmail.com
-                        </span>
-                        <span class="list__table-value">
-                          @@include("./components/ui/doc-verf.html", {
-                          count: 1,
-                          type: 'process',
-                          className:"list__doc-verf"
-                          })
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-dots">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path
-                                d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
-                                stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </span>
+                        <span class="list__table-name not-mobile">Dane kontaktowe</span>
+                        <span class="list__table-name not-tablet">Dokumenty</span>
+                        <span class="list__table-name not-tablet">Ustawienia</span>
+                        <span class="list__table-name button mobile"></span>
                       </li>
 
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            @@include("./components/ui/status.html", {
+                            label: 'Zablokowany',
+                            type: 'inactive large'
+                            })
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            +48 692 280 931 <br>
+                            akowalski@gmail.com
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            @@include("./components/ui/doc-verf.html", {
+                            count: 1,
+                            type: 'error',
+                            className:"list__doc-verf"
+                            })
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            <button class="list__table-button-dots">
+                              <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M10.4915 10.834C10.9518 10.834 11.3249 10.4609 11.3249 10.0007C11.3249 9.54041 10.9518 9.16732 10.4915 9.16732C10.0313 9.16732 9.6582 9.54041 9.6582 10.0007C9.6582 10.4609 10.0313 10.834 10.4915 10.834Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 5.00065C10.9518 5.00065 11.3249 4.62755 11.3249 4.16732C11.3249 3.70708 10.9518 3.33398 10.4915 3.33398C10.0313 3.33398 9.6582 3.70708 9.6582 4.16732C9.6582 4.62755 10.0313 5.00065 10.4915 5.00065Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                  d="M10.4915 16.6673C10.9518 16.6673 11.3249 16.2942 11.3249 15.834C11.3249 15.3737 10.9518 15.0007 10.4915 15.0007C10.0313 15.0007 9.6582 15.3737 9.6582 15.834C9.6582 16.2942 10.0313 16.6673 10.4915 16.6673Z"
+                                  stroke="#0F0F0F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dane kontaktowe
+                                  </p>
+                                  <p class="list__table-item-value">+48 692 280 931 <br /> akowalski@gmail.com</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Dokumenty
+                                  </p>
+
+                                  @@include("./components/ui/doc-verf.html", {
+                                  count: 1,
+                                  type: 'error',
+                                  className:"list__doc-verf"
+                                  })
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Ustawienia
+                                  </p>
+                                  <button class="list__table-item-more">Więcej <i
+                                      class="ui-icon-arrow-right"></i></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
                   </div>
 

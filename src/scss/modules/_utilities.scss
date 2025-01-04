@@ -13,3 +13,34 @@
 .text-blue {
   color: var(--blue);
 }
+
+@media (max-width: 991.98px) {
+  .tablet {
+    display: block !important;
+  }
+  .not-tablet {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .tablet {
+    display: none !important;
+  }
+}
+@media (max-width: 679.98px) {
+  .mobile {
+    display: block !important;
+  }
+  .not-mobile {
+    display: none !important;
+  }
+}
+@media (min-width: 680px) {
+  .mobile {
+    display: none !important;
+  }
+}
+
+.font-normal {
+  font-weight: 400;
+}

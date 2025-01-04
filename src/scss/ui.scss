@@ -59,20 +59,32 @@
   border-radius: 6px;
   padding: 7px 6px 7px 4px;
 
-  &.small {
-    --text-size: 12px;
-    --icon-size: 12px;
-    --dot-size: 6px;
-  }
-  &.medium {
+  // &.small {
+  //   --text-size: 12px;
+  //   --icon-size: 12px;
+  //   --dot-size: 6px;
+  // }
+  // &.medium {
+  //   --text-size: 12px;
+  //   --icon-size: 14px;
+  //   --dot-size: 8px;
+  // }
+  // &.large {
+  //   --text-size: 14px;
+  //   --icon-size: 16px;
+  //   --dot-size: 10px;
+  // }
+
+  @media (max-width: 992px) {
     --text-size: 12px;
     --icon-size: 14px;
     --dot-size: 8px;
   }
-  &.large {
-    --text-size: 14px;
-    --icon-size: 16px;
-    --dot-size: 10px;
+
+  @media (max-width: 680px) {
+    --text-size: 12px;
+    --icon-size: 12px;
+    --dot-size: 6px;
   }
 
   &.active {
@@ -967,6 +979,21 @@
         color: var(--text);
         --size: 20px;
       }
+
+      @media (max-width: 680px) {
+        font-weight: 400;
+      }
+    }
+  }
+
+  @media (max-width: 680px) {
+    .ui-dropdown-value {
+      padding: 0 11px;
+      font-weight: 700;
+      font-size: 12px;
+      i {
+        --size: 16px;
+      }
     }
   }
 }
@@ -1112,6 +1139,10 @@
   position: relative;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+
+  @media (max-width: 680px) {
+    font-size: 12px;
+  }
 }
 
 .datepicker-input.in-edit:active,
@@ -1128,7 +1159,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 4px;
-  width: 100%;
+  // width: 100%;
 }
 
 .date-picker-field label {
@@ -1149,6 +1180,10 @@
   transform: translateY(-50%);
   right: 16px;
   color: var(--neutrals-500);
+
+  @media (max-width: 680px) {
+    --size: 16px;
+  }
 }
 
 .date-picker-input-body input {
@@ -1156,13 +1191,33 @@
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  border-radius: 16px;
-  padding: 6px;
+  position: relative;
   background-color: var(--dark-blue);
-  gap: 6px;
+  border-radius: 16px;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    gap: 6px;
+  }
+
+  &__logo {
+    display: none;
+    width: 100%;
+    max-width: 220px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 6%;
+    left: 16px;
+    padding: 6px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    display: none;
+  }
 
   &__link {
     display: flex;
@@ -1201,14 +1256,53 @@
   }
 
   @media (max-width: 992px) {
-    flex: 1 1 auto;
-    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    border-radius: 0px;
+    z-index: 100;
+    gap: 67px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease 0s;
+
+    &.active {
+      top: 0;
+      left: 0%;
+    }
+
+    &__close {
+      display: flex;
+    }
+
+    &__logo {
+      display: block;
+    }
+
+    &__nav {
+      width: 100%;
+      flex-direction: column;
+    }
+
     &__link {
-      padding: 9px 13px;
+      width: 100%;
+      padding: 12px 33px;
+      border-radius: 12px;
+      span {
+        display: block;
+      }
     }
   }
   @media (max-width: 680px) {
-    width: 100%;
+    &__link {
+      font-weight: 400;
+      font-size: 14px;
+    }
   }
   @media (max-width: 440px) {
     &__link {

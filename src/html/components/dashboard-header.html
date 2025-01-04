@@ -1,15 +1,29 @@
 <header class="header">
   <div class="header__body">
+
+    <button class="header__burger">
+      <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.63477 1H17.6348M1.63477 7H17.6348H4.63477M1.63477 13H11.6348" stroke="black" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+
     <h1 class="header__title">@@title</h1>
 
     @@include("./ui/menu.html")
 
-    <div class="header__profile">
-      <img class="header__profile-avatar" src="./img/user.png" alt="">
-      <div class="header__profile-info">
-        <span class="header__profile-name">Artur Gawryś</span>
-        <span class="header__profile-email">artur@nmskorpo.pl</span>
+    <div class="header__right">
+      <button class="header__search-button">
+        <i class="ui-icon-search"></i>
+      </button>
+      <div class="header__profile">
+        <img class="header__profile-avatar" src="./img/user.png" alt="">
+        <div class="header__profile-info">
+          <span class="header__profile-name">Artur Gawryś</span>
+          <span class="header__profile-email">artur@nmskorpo.pl</span>
+        </div>
       </div>
+
     </div>
   </div>
 </header>

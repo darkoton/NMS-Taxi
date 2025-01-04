@@ -138,6 +138,7 @@ tippy(downloadButtons, {
 });
 
 const profileButtons = document.querySelectorAll('.header__profile');
+
 tippy(profileButtons, {
   content: e => {
     const menu = document.createElement('div');

@@ -27,55 +27,69 @@
 
                   </div>
 
-                  <div class="filtr__about">
-                    <div class="filtr__cash">
+                  <div class="filtr__about" data-spollers="1120,max">
+                    <div class="filtr__cash" data-spoller>
                       <h4 class="filtr__cash-title">Do przełewu:</h4>
                       <span class="filtr__cash-value">841 582,07 zł </span>
+
+                      <button class="filtr__cash-button">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12.6348 22C18.1576 22 22.6348 17.5228 22.6348 12C22.6348 6.47715 18.1576 2 12.6348 2C7.11192 2 2.63477 6.47715 2.63477 12C2.63477 17.5228 7.11192 22 12.6348 22Z"
+                            stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M8.53418 9.81836L12.5342 14.182L16.5342 9.81836" stroke="#0F0F0F"
+                            stroke-width="1.09091" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
                     </div>
 
-                    <div class="filtr__info">
-                      <div class="info__section">
-                        <div class="info__line">
-                          <span class="info__line-label">Przychód
-                            <span class="info__line-label-subtitle">(brutto)</span>:</span>
-                          <span class="info__line-value">1 031 982,92 zł</span>
-                        </div>
-                      </div>
-                      <div class="info__section">
-                        <div class="info__line">
-                          <span class="info__line-label">Opłaty
-                            <span class="info__line-label-subtitle">(brutto)</span>:</span>
-                          <span class="info__line-value">-190 400,85 zł</span>
-                        </div>
-                        <div class="info__section">
-                          <div class="info__line">
-                            <span class="info__line-label">Prowizja:</span>
-                            <span class="info__line-value">-154 797,44 zł</span>
+                    <div>
+                      <div class="filtr__infos">
+                        <div class="filtr__info">
+                          <div class="info__section">
+                            <div class="info__line">
+                              <span class="info__line-label">Przychód
+                                <span class="info__line-label-subtitle">(brutto)</span>:</span>
+                              <span class="info__line-value">1 031 982,92 zł</span>
+                            </div>
                           </div>
-                          <div class="info__line">
-                            <span class="info__line-label">Podatek:</span>
-                            <span class="info__line-value">-35 603,41 zł</span>
+                          <div class="info__section">
+                            <div class="info__line">
+                              <span class="info__line-label">Opłaty
+                                <span class="info__line-label-subtitle">(brutto)</span>:</span>
+                              <span class="info__line-value">-190 400,85 zł</span>
+                            </div>
+                            <div class="info__section">
+                              <div class="info__line">
+                                <span class="info__line-label">Prowizja:</span>
+                                <span class="info__line-value">-154 797,44 zł</span>
+                              </div>
+                              <div class="info__line">
+                                <span class="info__line-label">Podatek:</span>
+                                <span class="info__line-value">-35 603,41 zł</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="info__section no-line">
+                            <div class="info__line result">
+                              <span class="info__line-label">Dochód:</span>
+                              <span class="info__line-value">841 582,07 zł</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="info__section no-line">
-                        <div class="info__line result">
-                          <span class="info__line-label">Dochód:</span>
-                          <span class="info__line-value">841 582,07 zł</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="filtr__info">
-                      <div class="info__section">
-                        <div class="info__line">
-                          <span class="info__line-label">Odebrano gotówki:</span>
-                          <span class="info__line-value">-612 947,83 zł</span>
-                        </div>
-                      </div>
-                      <div class="info__section no-line">
-                        <div class="info__line result">
-                          <span class="info__line-label">Przewidywany przelew:</span>
-                          <span class="info__line-value">228 634,20 zł</span>
+                        <div class="filtr__info">
+                          <div class="info__section">
+                            <div class="info__line">
+                              <span class="info__line-label">Odebrano gotówki:</span>
+                              <span class="info__line-value">-612 947,83 zł</span>
+                            </div>
+                          </div>
+                          <div class="info__section no-line">
+                            <div class="info__line result">
+                              <span class="info__line-label">Przewidywany przelew:</span>
+                              <span class="info__line-value">228 634,20 zł</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -88,110 +102,699 @@
                     <input type="text" class="list__search-input" placeholder="Wyszukaj kierowcę" />
                   </div>
                   <div class="list__table-body">
-                    <ul class="list__table">
+                    <ul class="list__table" data-spollers="680,max" data-one-spoller>
                       <li class="list__table-header">
                         <span class="list__table-name">Imie Nazwisko</span>
                         <span class="list__table-name">
                           Przychód
                           <span><strong>(</strong>brutto<strong>)</strong></span>
                         </span>
-                        <span class="list__table-name">
+                        <span class="list__table-name not-mobile">
                           Koszty
                           <span><strong>(</strong>brutto<strong>)</strong></span>
                         </span>
-                        <span class="list__table-name">Gotówka</span>
-                        <span class="list__table-name">Przewidywany przelew</span>
-                        <span class="list__table-name"></span>
+                        <span class="list__table-name not-tablet">Gotówka</span>
+                        <span class="list__table-name not-tablet">Przewidywany przelew</span>
+                        <span class="list__table-name button"></span>
                       </li>
                       <li class="list__table-item">
-                        <span class="list__table-value name">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
 
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value income">
-                          111 398,92
-                        </span>
-                        <span class="list__table-value costs">
-                          20 553,11
-                        </span>
-                        <span class="list__table-value cash">
-                          10 293,08
-                        </span>
-                        <span class="list__table-value transfer">
-                          10 293,08
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
-                        </span>
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
                       </li>
                       <li class="list__table-item">
-                        <span class="list__table-value name">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
 
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value income">
-                          111 398,92
-                        </span>
-                        <span class="list__table-value costs">
-                          20 553,11
-                        </span>
-                        <span class="list__table-value cash">
-                          10 293,08
-                        </span>
-                        <span class="list__table-value transfer">
-                          10 293,08
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
-                        </span>
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
                       </li>
                       <li class="list__table-item">
-                        <span class="list__table-value name">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
 
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value income">
-                          111 398,92
-                        </span>
-                        <span class="list__table-value costs">
-                          20 553,11
-                        </span>
-                        <span class="list__table-value cash">
-                          10 293,08
-                        </span>
-                        <span class="list__table-value transfer">
-                          10 293,08
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
-                        </span>
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
                       </li>
                       <li class="list__table-item">
-                        <span class="list__table-value name">
-                          <img class="list__table-avatar" src="./img/user.png" alt="">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
 
-                          Andrzej Sebastian Kowalski
-                        </span>
-                        <span class="list__table-value income">
-                          111 398,92
-                        </span>
-                        <span class="list__table-value costs">
-                          20 553,11
-                        </span>
-                        <span class="list__table-value cash">
-                          10 293,08
-                        </span>
-                        <span class="list__table-value transfer">
-                          10 293,08
-                        </span>
-                        <span class="list__table-value">
-                          <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
-                        </span>
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
                       </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__table-item">
+                        <div class="list__table-item-top" data-spoller>
+                          <span class="list__table-value">
+                            <img class="list__table-avatar" src="./img/user.png" alt="">
+
+                            Andrzej Sebastian Kowalski
+                          </span>
+                          <span class="list__table-value">
+                            111 398,92
+                          </span>
+                          <span class="list__table-value not-mobile">
+                            20 553,11
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value not-tablet">
+                            10 293,08
+                          </span>
+                          <span class="list__table-value button not-mobile">
+                            <button class="list__table-button-arrow"><i class="ui-icon-arrow-right"></i></button>
+                          </span>
+                          <span class="list__table-value button mobile">
+                            <button class="list__table-spoller-arrow"><i class="ui-icon-arrow-down-circle"></i></button>
+                          </span>
+                        </div>
+
+                        <div>
+                          <div class="mobile">
+                            <div class="list__table-item-spoller">
+                              <div class="list__table-item-lines">
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Koszty <span class="font-normal">(brutto)</span>:
+                                  </p>
+                                  <p class="list__table-item-value">20 553,11</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Gotówka:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                                <div class="list__table-item-line">
+                                  <p class="list__table-item-title">
+                                    Przewidywany przelew:
+                                  </p>
+                                  <p class="list__table-item-value">10 293,08</p>
+                                </div>
+                              </div>
+                              <button class="list__table-item-more">Więcej <i class="ui-icon-arrow-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
                     </ul>
+                  </div>
+
+                  <div class="list__pagination">
+                    <div class="list__pagination-left">
+                      @@include("components/ui/select.html", {
+                      theme: 'dark-blue',
+                      position: 'up',
+                      placeholder: 5,
+                      options: [
+                      {
+                      label: 5,
+                      value: 5
+                      },
+                      {
+                      label: 10,
+                      value: 10
+                      },
+                      {
+                      label: 20,
+                      value: 20
+                      }
+                      ]
+                      })
+
+                      <div class="list__pagination-title not-mobile">
+                        Pozycje na stronę
+                      </div>
+                      <div class="list__pagination-value not-mobile">
+                        1-10 z 200 pozycji
+                      </div>
+                    </div>
+
+                    <div class="list__pagination-right">
+                      @@include("components/ui/select.html", {
+                      theme: 'dark-blue',
+                      position: 'up',
+                      placeholder: 1,
+                      options: [
+                      {
+                      label: 1,
+                      value: 1
+                      },
+                      {
+                      label: 2,
+                      value: 2
+                      },
+                      {
+                      label: 3,
+                      value: 3
+                      }
+                      ]
+                      })
+
+                      <div class="list__pagination-title">
+                        z 44 stron
+                      </div>
+                      <div class="list__pagination-actions">
+                        <button>
+                          <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.63477 9L1.63477 5L5.63477 1" stroke="#525252" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.63477 9L5.63477 5L1.63477 1" stroke="#525252" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -263,6 +866,7 @@
 
     @@include("components/footer.html")
 
+    <script src="./js/tooltips.js"></script>
     <script src="./js/zarobki.js"></script>
 
   </div>
