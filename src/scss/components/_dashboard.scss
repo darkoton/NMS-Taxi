@@ -278,6 +278,7 @@
       text-align: center;
       background-color: var(--neutrals-50);
       color: var(--neutrals-900);
+      white-space: nowrap;
 
       @media (any-hover: hover) {
         &:hover {
