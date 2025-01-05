@@ -1285,10 +1285,20 @@ body._lock-scroll {
   font-size: 14px;
 }
 .dashboard .filtr {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: 353px;
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+}
+.dashboard .filtr.hidden {
+  max-width: 0px;
+  margin-right: -40px;
+}
+.dashboard .filtr__body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 353px;
   gap: 32px;
 }
 .dashboard .filtr__head {
@@ -1658,23 +1668,24 @@ body._lock-scroll {
   background: transparent;
 }
 .dashboard .user {
-  padding-top: 87px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  max-width: 400px;
   height: 100%;
-  background: url("../img/dashboard/decor-bg-2.png") left bottom/contain no-repeat;
-  background-color: var(--neutrals-20);
   transition: all 0.3s ease 0s;
-  transform: translateX(105%);
-  position: absolute;
-  right: -100%;
+  max-width: 0px;
+  overflow: hidden;
 }
 .dashboard .user.active {
-  position: static;
-  transform: translateX(0);
+  max-width: 400px;
+}
+.dashboard .user__body {
+  position: relative;
+  padding-top: 87px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  background: url("../img/dashboard/decor-bg-2.png") left bottom/contain no-repeat;
+  background-color: var(--neutrals-20);
 }
 .dashboard .user__close {
   position: absolute;
@@ -1894,6 +1905,10 @@ body._lock-scroll {
   .dashboard .filtr {
     max-width: 100%;
     gap: 10px;
+    overflow: visible;
+  }
+  .dashboard .filtr.hidden {
+    display: none;
   }
   .dashboard .filtr__cash-button {
     display: flex;
@@ -1904,8 +1919,18 @@ body._lock-scroll {
   .dashboard .user {
     max-width: 100%;
     flex: 0 1 auto;
+    height: auto;
+    overflow: visible;
+    display: none;
+  }
+  .dashboard .user.active {
+    display: block;
+    max-width: 100%;
+  }
+  .dashboard .user__body {
     background-position: center;
     background-size: cover;
+    min-width: auto;
   }
 }
 @media (max-width: 992px) {
@@ -2017,6 +2042,7 @@ body._lock-scroll {
   }
   .dashboard .user {
     padding-top: 35px;
+    height: 100%;
   }
   .dashboard .user__close {
     top: 15px;
