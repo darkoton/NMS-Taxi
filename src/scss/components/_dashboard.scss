@@ -173,11 +173,23 @@
     }
   }
   & .filtr {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     max-width: 353px;
-    gap: 32px;
+    transition: all 0.3s ease 0s;
+    overflow: hidden;
+
+    &.hidden {
+      max-width: 0px;
+      margin-right: -40px;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-width: 353px;
+      gap: 32px;
+    }
 
     &__head {
       display: flex;
@@ -593,23 +605,25 @@
     }
   }
   & .user {
-    padding-top: 87px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    max-width: 400px;
     height: 100%;
-    background: url("../img/dashboard/decor-bg-2.png") left bottom / contain no-repeat;
-    background-color: var(--neutrals-20);
     transition: all 0.3s ease 0s;
-    transform: translateX(105%);
-    position: absolute;
-    right: -100%;
+    max-width: 0px;
+    overflow: hidden;
 
     &.active {
-      position: static;
-      transform: translateX(0);
+      max-width: 400px;
+    }
+
+    &__body {
+      position: relative;
+      padding-top: 87px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      min-width: 400px;
+      background: url("../img/dashboard/decor-bg-2.png") left bottom / contain no-repeat;
+      background-color: var(--neutrals-20);
     }
 
     &__close {
@@ -864,6 +878,11 @@
     & .filtr {
       max-width: 100%;
       gap: 10px;
+      overflow: visible;
+
+      &.hidden {
+        display: none;
+      }
 
       &__cash {
         &-button {
@@ -879,9 +898,20 @@
     & .user {
       max-width: 100%;
       flex: 0 1 auto;
+      height: auto;
+      overflow: visible;
+      display: none;
 
-      background-position: center;
-      background-size: cover;
+      &.active {
+        display: block;
+        max-width: 100%;
+      }
+
+      &__body {
+        background-position: center;
+        background-size: cover;
+        min-width: auto;
+      }
     }
   }
 
@@ -1021,6 +1051,7 @@
 
     & .user {
       padding-top: 35px;
+      height: 100%;
       &__close {
         top: 15px;
         right: 15px;
