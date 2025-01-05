@@ -1,1 +1,1423 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css"><link rel="stylesheet" href="css/icons.css"><link rel="stylesheet" href="css/ui.css"><link rel="stylesheet" href="css/style.css"><title>NMS Taxi</title></head><body><div class="wrapper"><div class="content"><main class="page"><div class="document"><div class="document__body"><div class="banner"><div class="banner__body"><img class="banner__logo" src="./img/logo-2.svg" alt=""><div class="banner__steps"><div class="banner__step"><div class="banner__icon-body"><span class="banner__icon"><i class="ui-icon-id-card"></i></span></div><div class="banner__step-info"><h3 class="banner__step-title">Dokumenty partnera</h3><p class="banner__step-text">Dodaj dokumenty aby rozpocząć współpracę jako partner</p></div></div><div class="banner__step active"><div class="banner__icon-body"><span class="banner__icon"><i class="ui-icon-document"></i></span></div><div class="banner__step-info"><h3 class="banner__step-title">Licencja</h3><p class="banner__step-text">Dodaj licencję w swoim mieście</p></div></div></div></div></div><div class="form"><div class="form__body"><h2 class="form__title">Licencja</h2><p class="form__description">Dodaj swoją licencję, aby rozpocząć proces współpracy</p><div class="form__sections"><div class="form__section"><div class="form__header"><div class="form__label">Licencja Główna</div></div><div class="form__section-body"><div class="form__field-info"><h4 class="form__field-title">Warszawa</h4><p class="form__field-text">Dodaj licencję dla miasta, w którym pracujesz</p></div><div class="form__field-body"><div class="ui-multi-field"><div class="ui-field-body"><div class="ui-multi-input-body"><ul class="ui-multi-value-list"></ul><input required id="warzawa" multiple="multiple" accept="image/*" type="file" class="ui-multi-input"></div><label for="warzawa" class="ui-multi-button">Dodać</label></div></div></div></div></div><div class="form__section"><div class="form__header"><div class="form__label">Dodatkowa licencja</div><div class="form__actions"><button class="form__add" data-popup-open="popup-add-license"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.85376 1.36328V10.3633" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.17065 5.86328H10.5365" stroke="#2E2E2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Dodać licencję</span></button> <button class="form__reset"><i class="ui-icon-reset"></i> <span>Resetuj</span></button></div></div><div class="form__section-body"><div class="form__field-info"><h4 class="form__field-title">Pruszków</h4><p class="form__field-text">Dodaj licencję dla miasta, w którym pracujesz</p></div><div class="form__field-body"><div class="ui-multi-field"><div class="ui-field-body"><div class="ui-multi-input-body"><ul class="ui-multi-value-list"></ul><input required id="bank" multiple="multiple" accept="image/*" type="file" class="ui-multi-input"></div><label for="bank" class="ui-multi-button">Dodać</label></div></div></div></div><div class="form__section-body"><div class="form__field-info"><h4 class="form__field-title">Ząbki</h4><p class="form__field-text">Dodaj licencję dla miasta, w którym pracujesz</p></div><div class="form__field-body"><div class="ui-multi-field"><div class="ui-field-body"><div class="ui-multi-input-body"><ul class="ui-multi-value-list"></ul><input required id="zqbki" multiple="multiple" accept="image/*" type="file" class="ui-multi-input"></div><label for="zqbki" class="ui-multi-button">Dodać</label></div></div></div></div></div><button data-popup-open="popup-sucess-partner" class="ui-button form__submit medium"><span class="ui-button-text">Dalej</span></button></div></div></div></div></div></main></div><div class="popup popup-register"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><h5 class="popup-title">SUKCES</h5></div><div class="popup-content"><div class="popup-texts"><p class="popup-text">Konto dla <a href="#">test@nmskorpo.pl</a> zostało utworzone.</p><p class="popup-text">Aby aktywować Twoje konto, musimy otrzymać zdjęcia Twoich dokumentów. Akceptujemy wyłącznie zdjęcia lub skany w wysokiej jakości.</p></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">Dokończ rejestrację</span></button></div></div></div><div class="popup popup-add-license"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><h5 class="popup-title">Formulaż dodania licencji</h5></div><div class="popup-content"><div class="popup-form"><div class="ui-dropdown"><label class="ui-dropdown-label">Dokończ rejestrację</label><div class="ui-dropdown-field"><span class="ui-dropdown-value"><ul class="ui-dropdown-value-list"></ul><i class="ui-icon-arrow-down"></i></span><ul class="ui-dropdown-list"><li data-value="Pruszków">Pruszków</li><li data-value="Pruszków 2">Pruszków 2</li><li data-value="Pruszków 3">Pruszków 3</li><li data-value="Pruszków 4">Pruszków 4</li></ul></div></div><div class="ui-multi-field"><label class="ui-multi-label">Dodać dokument</label><div class="ui-field-body"><div class="ui-multi-input-body"><ul class="ui-multi-value-list"></ul><input required multiple="multiple" accept="image/*" type="file" class="ui-multi-input"></div><label class="ui-multi-button">Dodać</label></div></div><div class="date-picker-field"><label>Data ważności dokumentu</label><div class="date-picker-input-body"><input type="text" class="datepicker datepicker-input" placeholder="YYYY-MM-DD"> <i class="ui-icon-calendar"></i></div></div></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">Zapisz</span></button></div></div></div><div class="popup popup-sucess-partner"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><h5 class="popup-title">SUKCES</h5></div><div class="popup-content"><div class="popup-texts"><p class="popup-text">Konto dla <a href="#">test@nmskorpo.pl</a> zostało utworzone.</p><p class="popup-text">Wkrótce z tobą skontaktuje sie manager na podany przez ceibie e-mail.</p><p class="popup-text">W razie jakichkolwiek pytań kontaktuj się na mail <a href="#">support@nms.com</a>.</p></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">Dokończ rejestrację</span></button></div></div></div><div class="popup popup-download"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><div class="popup-container"><div class="popup-top-body"><div class="popup-download-info"><span class="popup-download-info-icon"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.01594 21.729H5.95321C2.79474 21.5034 1.37671 19.0755 1.37671 16.9161C1.37671 14.7568 2.79476 12.3181 5.89951 12.1032C6.33998 12.0603 6.72672 12.404 6.75895 12.8553C6.79118 13.2957 6.45819 13.6825 6.00698 13.7147C3.92282 13.8651 2.98817 15.4336 2.98817 16.9269C2.98817 18.4202 3.92282 19.9887 6.00698 20.1391H8.01594C8.4564 20.1391 8.82167 20.5043 8.82167 20.9448C8.82167 21.3853 8.4564 21.729 8.01594 21.729Z" fill="#0F0F0F"/><path d="M17.9095 21.729C17.888 21.729 17.8773 21.729 17.8558 21.729C17.4153 21.729 17.0071 21.3637 17.0071 20.9232C17.0071 20.4613 17.3509 20.1175 17.8021 20.1175C19.1235 20.1175 20.3053 19.6555 21.2292 18.8283C22.9051 17.3673 23.0125 15.2616 22.5613 13.7791C22.1101 12.3073 20.8531 10.6206 18.6615 10.352C18.307 10.3091 18.0277 10.0405 17.9632 9.68596C17.5335 7.10761 16.1477 5.32426 14.042 4.67967C11.8719 4.00285 9.33651 4.66893 7.75727 6.32336C6.22101 7.92408 5.8665 10.1694 6.75817 12.6403C6.90858 13.0593 6.69377 13.5212 6.27479 13.6716C5.85581 13.822 5.39383 13.6072 5.24343 13.1882C4.15837 10.1586 4.65257 7.25801 6.59707 5.21682C8.58454 3.13266 11.7752 2.30544 14.5147 3.1434C17.0286 3.9169 18.8012 5.99032 19.4458 8.86947C21.6374 9.36365 23.3993 11.0288 24.0976 13.3279C24.8603 15.831 24.1728 18.4094 22.2927 20.0423C21.1002 21.1166 19.5425 21.729 17.9095 21.729Z" fill="#0F0F0F"/><path d="M12.8931 24.8878C10.7337 24.8878 8.71406 23.7383 7.60752 21.8797C7.48934 21.6971 7.37117 21.4822 7.27448 21.2459C6.90922 20.4831 6.71582 19.6129 6.71582 18.7105C6.71582 15.3049 9.48754 12.5332 12.8931 12.5332C16.2987 12.5332 19.0704 15.3049 19.0704 18.7105C19.0704 19.6236 18.877 20.4831 18.4903 21.2781C18.4043 21.4822 18.2862 21.6971 18.1572 21.9012C17.0722 23.7383 15.0525 24.8878 12.8931 24.8878ZM12.8931 14.1447C10.3792 14.1447 8.32729 16.1966 8.32729 18.7105C8.32729 19.3766 8.46695 19.9997 8.73553 20.569C8.82147 20.7517 8.89665 20.9021 8.9826 21.0417C9.79907 22.4276 11.2924 23.2763 12.8823 23.2763C14.4723 23.2763 15.9656 22.4276 16.7713 21.0632C16.868 20.9021 16.954 20.7517 17.0185 20.6013C17.3085 20.0104 17.4482 19.3873 17.4482 18.7212C17.4589 16.1966 15.407 14.1447 12.8931 14.1447Z" fill="#0F0F0F"/><path d="M12.2805 20.5793C12.0763 20.5793 11.8722 20.5041 11.7111 20.343L10.6475 19.2794C10.3359 18.9678 10.3359 18.4522 10.6475 18.1406C10.959 17.8291 11.4747 17.8291 11.7862 18.1406L12.302 18.6563L14.0208 17.0663C14.3539 16.7655 14.8588 16.787 15.1596 17.1093C15.4604 17.4316 15.4389 17.9473 15.1166 18.2481L12.8284 20.3645C12.6672 20.5041 12.4738 20.5793 12.2805 20.5793Z" fill="#0F0F0F"/></svg></span><div class="popup-download-texts"><h6 class="popup-download-title">Przesyłanie plików</h6><h7 class="popup-download-subtitle">Wybierz i prześlij wybrane pliki</h7></div></div></div></div></div><div class="popup-content"><div class="popup-download-files"><input hidden type="file" multiple="multiple" id="docs"> <label for="docs" class="popup-download-input-file-label"><svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z" fill="#292D32"/><path d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z" fill="#292D32"/><path d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z" fill="#292D32"/><path d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z" fill="#292D32"/></svg><div class="popup-download-input-file-texts"><div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div><div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div></div><button class="popup-download-input-file-button"><i class="ui-icon-download"></i> <span>Przeglądaj plik</span></button></label><div class="popup-download-file"><button class="popup-download-file-remove"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7M1 1L7 7" stroke="#2E2E2E" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-download-file-top"><picture><source srcset="./img/pdf.webp" type="image/webp"><img src="./img/pdf.png" alt="" class="popup-download-file-pdf"></picture><div class="popup-download-file-info"><div class="popup-download-file-title">Pruszków.pdf</div><div class="popup-download-file-info-bottom"><div class="popup-download-file-size">60 KB of 12O KB •</div><div class="popup-download-file-status"><i class="ui-icon-in-process process"></i> <span>Przesyłanie...</span></div></div></div></div><div class="popup-download-file-bottom"><div class="popup-download-file-progress"><div class="popup-download-file-progress-value"></div></div></div></div><div class="popup-download-file"><button class="popup-download-file-remove"><i class="ui-icon-delete"></i></button><div class="popup-download-file-top"><picture><source srcset="./img/pdf.webp" type="image/webp"><img src="./img/pdf.png" alt="" class="popup-download-file-pdf"></picture><div class="popup-download-file-info"><div class="popup-download-file-title">Ząbki.pdf</div><div class="popup-download-file-info-bottom"><div class="popup-download-file-size">94 KB of 94 KB •</div><div class="popup-download-file-status"><i class="ui-icon-in-process success"></i> <span>Zakończono</span></div></div></div></div></div></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">Zapisz</span></button></div></div></div><div class="popup popup-dowod"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><div class="popup-container"><div class="popup-top-body"><div class="popup-download-info"><span class="popup-download-info-icon"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.01594 21.729H5.95321C2.79474 21.5034 1.37671 19.0755 1.37671 16.9161C1.37671 14.7568 2.79476 12.3181 5.89951 12.1032C6.33998 12.0603 6.72672 12.404 6.75895 12.8553C6.79118 13.2957 6.45819 13.6825 6.00698 13.7147C3.92282 13.8651 2.98817 15.4336 2.98817 16.9269C2.98817 18.4202 3.92282 19.9887 6.00698 20.1391H8.01594C8.4564 20.1391 8.82167 20.5043 8.82167 20.9448C8.82167 21.3853 8.4564 21.729 8.01594 21.729Z" fill="#0F0F0F"/><path d="M17.9095 21.729C17.888 21.729 17.8773 21.729 17.8558 21.729C17.4153 21.729 17.0071 21.3637 17.0071 20.9232C17.0071 20.4613 17.3509 20.1175 17.8021 20.1175C19.1235 20.1175 20.3053 19.6555 21.2292 18.8283C22.9051 17.3673 23.0125 15.2616 22.5613 13.7791C22.1101 12.3073 20.8531 10.6206 18.6615 10.352C18.307 10.3091 18.0277 10.0405 17.9632 9.68596C17.5335 7.10761 16.1477 5.32426 14.042 4.67967C11.8719 4.00285 9.33651 4.66893 7.75727 6.32336C6.22101 7.92408 5.8665 10.1694 6.75817 12.6403C6.90858 13.0593 6.69377 13.5212 6.27479 13.6716C5.85581 13.822 5.39383 13.6072 5.24343 13.1882C4.15837 10.1586 4.65257 7.25801 6.59707 5.21682C8.58454 3.13266 11.7752 2.30544 14.5147 3.1434C17.0286 3.9169 18.8012 5.99032 19.4458 8.86947C21.6374 9.36365 23.3993 11.0288 24.0976 13.3279C24.8603 15.831 24.1728 18.4094 22.2927 20.0423C21.1002 21.1166 19.5425 21.729 17.9095 21.729Z" fill="#0F0F0F"/><path d="M12.8931 24.8878C10.7337 24.8878 8.71406 23.7383 7.60752 21.8797C7.48934 21.6971 7.37117 21.4822 7.27448 21.2459C6.90922 20.4831 6.71582 19.6129 6.71582 18.7105C6.71582 15.3049 9.48754 12.5332 12.8931 12.5332C16.2987 12.5332 19.0704 15.3049 19.0704 18.7105C19.0704 19.6236 18.877 20.4831 18.4903 21.2781C18.4043 21.4822 18.2862 21.6971 18.1572 21.9012C17.0722 23.7383 15.0525 24.8878 12.8931 24.8878ZM12.8931 14.1447C10.3792 14.1447 8.32729 16.1966 8.32729 18.7105C8.32729 19.3766 8.46695 19.9997 8.73553 20.569C8.82147 20.7517 8.89665 20.9021 8.9826 21.0417C9.79907 22.4276 11.2924 23.2763 12.8823 23.2763C14.4723 23.2763 15.9656 22.4276 16.7713 21.0632C16.868 20.9021 16.954 20.7517 17.0185 20.6013C17.3085 20.0104 17.4482 19.3873 17.4482 18.7212C17.4589 16.1966 15.407 14.1447 12.8931 14.1447Z" fill="#0F0F0F"/><path d="M12.2805 20.5793C12.0763 20.5793 11.8722 20.5041 11.7111 20.343L10.6475 19.2794C10.3359 18.9678 10.3359 18.4522 10.6475 18.1406C10.959 17.8291 11.4747 17.8291 11.7862 18.1406L12.302 18.6563L14.0208 17.0663C14.3539 16.7655 14.8588 16.787 15.1596 17.1093C15.4604 17.4316 15.4389 17.9473 15.1166 18.2481L12.8284 20.3645C12.6672 20.5041 12.4738 20.5793 12.2805 20.5793Z" fill="#0F0F0F"/></svg></span><div class="popup-download-texts"><h6 class="popup-download-title">Dowód tożsamości (przód czy tył)</h6><h7 class="popup-download-subtitle">Akceptujemy zdjęcie dobrej jakości przedniej strony ważnego dowodu osobistego, pierwszej strony paszpotu lub karty pobytu</h7></div></div></div></div></div><div class="popup-content"><div class="popup-download-files"><input hidden type="file" multiple="multiple" id="docs2"> <label for="docs2" class="popup-download-input-file-label"><svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z" fill="#292D32"/><path d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z" fill="#292D32"/><path d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z" fill="#292D32"/><path d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z" fill="#292D32"/></svg><div class="popup-download-input-file-texts"><div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div><div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div></div><button class="popup-download-input-file-button"><i class="ui-icon-download"></i> <span>Przeglądaj plik</span></button></label><div class="date-picker-field"><label>Data ważności dokumentu</label><div class="date-picker-input-body"><input type="text" class="datepicker datepicker-input" placeholder="YYYY-MM-DD"> <i class="ui-icon-calendar"></i></div></div></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">Zapisz</span></button></div></div></div><div class="popup popup-bank"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><div class="popup-container"><div class="popup-top-body"><div class="popup-download-info"><span class="popup-download-info-icon"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.01594 21.729H5.95321C2.79474 21.5034 1.37671 19.0755 1.37671 16.9161C1.37671 14.7568 2.79476 12.3181 5.89951 12.1032C6.33998 12.0603 6.72672 12.404 6.75895 12.8553C6.79118 13.2957 6.45819 13.6825 6.00698 13.7147C3.92282 13.8651 2.98817 15.4336 2.98817 16.9269C2.98817 18.4202 3.92282 19.9887 6.00698 20.1391H8.01594C8.4564 20.1391 8.82167 20.5043 8.82167 20.9448C8.82167 21.3853 8.4564 21.729 8.01594 21.729Z" fill="#0F0F0F"/><path d="M17.9095 21.729C17.888 21.729 17.8773 21.729 17.8558 21.729C17.4153 21.729 17.0071 21.3637 17.0071 20.9232C17.0071 20.4613 17.3509 20.1175 17.8021 20.1175C19.1235 20.1175 20.3053 19.6555 21.2292 18.8283C22.9051 17.3673 23.0125 15.2616 22.5613 13.7791C22.1101 12.3073 20.8531 10.6206 18.6615 10.352C18.307 10.3091 18.0277 10.0405 17.9632 9.68596C17.5335 7.10761 16.1477 5.32426 14.042 4.67967C11.8719 4.00285 9.33651 4.66893 7.75727 6.32336C6.22101 7.92408 5.8665 10.1694 6.75817 12.6403C6.90858 13.0593 6.69377 13.5212 6.27479 13.6716C5.85581 13.822 5.39383 13.6072 5.24343 13.1882C4.15837 10.1586 4.65257 7.25801 6.59707 5.21682C8.58454 3.13266 11.7752 2.30544 14.5147 3.1434C17.0286 3.9169 18.8012 5.99032 19.4458 8.86947C21.6374 9.36365 23.3993 11.0288 24.0976 13.3279C24.8603 15.831 24.1728 18.4094 22.2927 20.0423C21.1002 21.1166 19.5425 21.729 17.9095 21.729Z" fill="#0F0F0F"/><path d="M12.8931 24.8878C10.7337 24.8878 8.71406 23.7383 7.60752 21.8797C7.48934 21.6971 7.37117 21.4822 7.27448 21.2459C6.90922 20.4831 6.71582 19.6129 6.71582 18.7105C6.71582 15.3049 9.48754 12.5332 12.8931 12.5332C16.2987 12.5332 19.0704 15.3049 19.0704 18.7105C19.0704 19.6236 18.877 20.4831 18.4903 21.2781C18.4043 21.4822 18.2862 21.6971 18.1572 21.9012C17.0722 23.7383 15.0525 24.8878 12.8931 24.8878ZM12.8931 14.1447C10.3792 14.1447 8.32729 16.1966 8.32729 18.7105C8.32729 19.3766 8.46695 19.9997 8.73553 20.569C8.82147 20.7517 8.89665 20.9021 8.9826 21.0417C9.79907 22.4276 11.2924 23.2763 12.8823 23.2763C14.4723 23.2763 15.9656 22.4276 16.7713 21.0632C16.868 20.9021 16.954 20.7517 17.0185 20.6013C17.3085 20.0104 17.4482 19.3873 17.4482 18.7212C17.4589 16.1966 15.407 14.1447 12.8931 14.1447Z" fill="#0F0F0F"/><path d="M12.2805 20.5793C12.0763 20.5793 11.8722 20.5041 11.7111 20.343L10.6475 19.2794C10.3359 18.9678 10.3359 18.4522 10.6475 18.1406C10.959 17.8291 11.4747 17.8291 11.7862 18.1406L12.302 18.6563L14.0208 17.0663C14.3539 16.7655 14.8588 16.787 15.1596 17.1093C15.4604 17.4316 15.4389 17.9473 15.1166 18.2481L12.8284 20.3645C12.6672 20.5041 12.4738 20.5793 12.2805 20.5793Z" fill="#0F0F0F"/></svg></span><div class="popup-download-texts"><h6 class="popup-download-title">Wyciąg bankowy</h6></div></div></div></div></div><div class="popup-content"><div class="popup-download-files"><input hidden type="file" multiple="multiple" id="docs3"> <label for="docs3" class="popup-download-input-file-label"><svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z" fill="#292D32"/><path d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z" fill="#292D32"/><path d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z" fill="#292D32"/><path d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z" fill="#292D32"/></svg><div class="popup-download-input-file-texts"><div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div><div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div></div><button class="popup-download-input-file-button"><i class="ui-icon-download"></i> <span>Przeglądaj plik</span></button></label><div class="ui-field ui-field-text"><label for="@@id">Odbiorca rachunku</label><div class="ui-field-body"><input data-type="text" type="text"></div></div><div class="ui-field ui-field-text"><label for="@@id">Numer rachunku bankowego IBAN</label><div class="ui-field-body"><input data-type="text" type="text"></div></div><div class="ui-field ui-field-text"><label for="@@id">Kod SWIFT</label><div class="ui-field-body"><input data-type="text" type="text"></div></div></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">Zapisz</span></button></div></div></div><div class="popup popup-krs"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><div class="popup-container"><div class="popup-top-body"><div class="popup-download-info"><span class="popup-download-info-icon"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.01594 21.729H5.95321C2.79474 21.5034 1.37671 19.0755 1.37671 16.9161C1.37671 14.7568 2.79476 12.3181 5.89951 12.1032C6.33998 12.0603 6.72672 12.404 6.75895 12.8553C6.79118 13.2957 6.45819 13.6825 6.00698 13.7147C3.92282 13.8651 2.98817 15.4336 2.98817 16.9269C2.98817 18.4202 3.92282 19.9887 6.00698 20.1391H8.01594C8.4564 20.1391 8.82167 20.5043 8.82167 20.9448C8.82167 21.3853 8.4564 21.729 8.01594 21.729Z" fill="#0F0F0F"/><path d="M17.9095 21.729C17.888 21.729 17.8773 21.729 17.8558 21.729C17.4153 21.729 17.0071 21.3637 17.0071 20.9232C17.0071 20.4613 17.3509 20.1175 17.8021 20.1175C19.1235 20.1175 20.3053 19.6555 21.2292 18.8283C22.9051 17.3673 23.0125 15.2616 22.5613 13.7791C22.1101 12.3073 20.8531 10.6206 18.6615 10.352C18.307 10.3091 18.0277 10.0405 17.9632 9.68596C17.5335 7.10761 16.1477 5.32426 14.042 4.67967C11.8719 4.00285 9.33651 4.66893 7.75727 6.32336C6.22101 7.92408 5.8665 10.1694 6.75817 12.6403C6.90858 13.0593 6.69377 13.5212 6.27479 13.6716C5.85581 13.822 5.39383 13.6072 5.24343 13.1882C4.15837 10.1586 4.65257 7.25801 6.59707 5.21682C8.58454 3.13266 11.7752 2.30544 14.5147 3.1434C17.0286 3.9169 18.8012 5.99032 19.4458 8.86947C21.6374 9.36365 23.3993 11.0288 24.0976 13.3279C24.8603 15.831 24.1728 18.4094 22.2927 20.0423C21.1002 21.1166 19.5425 21.729 17.9095 21.729Z" fill="#0F0F0F"/><path d="M12.8931 24.8878C10.7337 24.8878 8.71406 23.7383 7.60752 21.8797C7.48934 21.6971 7.37117 21.4822 7.27448 21.2459C6.90922 20.4831 6.71582 19.6129 6.71582 18.7105C6.71582 15.3049 9.48754 12.5332 12.8931 12.5332C16.2987 12.5332 19.0704 15.3049 19.0704 18.7105C19.0704 19.6236 18.877 20.4831 18.4903 21.2781C18.4043 21.4822 18.2862 21.6971 18.1572 21.9012C17.0722 23.7383 15.0525 24.8878 12.8931 24.8878ZM12.8931 14.1447C10.3792 14.1447 8.32729 16.1966 8.32729 18.7105C8.32729 19.3766 8.46695 19.9997 8.73553 20.569C8.82147 20.7517 8.89665 20.9021 8.9826 21.0417C9.79907 22.4276 11.2924 23.2763 12.8823 23.2763C14.4723 23.2763 15.9656 22.4276 16.7713 21.0632C16.868 20.9021 16.954 20.7517 17.0185 20.6013C17.3085 20.0104 17.4482 19.3873 17.4482 18.7212C17.4589 16.1966 15.407 14.1447 12.8931 14.1447Z" fill="#0F0F0F"/><path d="M12.2805 20.5793C12.0763 20.5793 11.8722 20.5041 11.7111 20.343L10.6475 19.2794C10.3359 18.9678 10.3359 18.4522 10.6475 18.1406C10.959 17.8291 11.4747 17.8291 11.7862 18.1406L12.302 18.6563L14.0208 17.0663C14.3539 16.7655 14.8588 16.787 15.1596 17.1093C15.4604 17.4316 15.4389 17.9473 15.1166 18.2481L12.8284 20.3645C12.6672 20.5041 12.4738 20.5793 12.2805 20.5793Z" fill="#0F0F0F"/></svg></span><div class="popup-download-texts"><h6 class="popup-download-title">Wyciąg z KRS</h6><h7 class="popup-download-subtitle">Akceptujemy aktualny KRS nie powyżej 30 dni</h7></div></div></div></div></div><div class="popup-content"><div class="popup-download-files"><input hidden type="file" multiple="multiple" id="docs4"> <label for="docs4" class="popup-download-input-file-label"><svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z" fill="#292D32"/><path d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z" fill="#292D32"/><path d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z" fill="#292D32"/><path d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z" fill="#292D32"/></svg><div class="popup-download-input-file-texts"><div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div><div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div></div><button class="popup-download-input-file-button"><i class="ui-icon-download"></i> <span>Przeglądaj plik</span></button></label><div class="ui-field ui-field-text"><label for="@@id">Regon</label><div class="ui-field-body"><input data-type="text" type="text"></div></div></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">Zapisz</span></button></div></div></div><div class="popup popup-add-doc"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><div class="popup-container"><div class="popup-top-body"><div class="popup-download-info"><span class="popup-download-info-icon"><svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4727 1.36328H3.12266C2.63532 1.36328 2.16795 1.55687 1.82335 1.90147C1.47875 2.24607 1.28516 2.71345 1.28516 3.20078V17.9008C1.28516 18.3881 1.47875 18.8555 1.82335 19.2001C2.16795 19.5447 2.63532 19.7383 3.12266 19.7383H14.1477C14.635 19.7383 15.1024 19.5447 15.447 19.2001C15.7916 18.8555 15.9852 18.3881 15.9852 17.9008V6.87578L10.4727 1.36328Z" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.31 15.1445H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.31 11.4688H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.79746 7.79492H5.87871H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.4727 1.36328V6.87578H15.9852" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="popup-download-texts"><h6 class="popup-download-title">Formulaż dodania Dokumentów</h6></div></div></div></div></div><div class="popup-content"><div class="popup-download-files"><div class="ui-dropdown"><label class="ui-dropdown-label">Wybierz dokument z listy poniżej, który chcesz dodać:</label><div class="ui-dropdown-field"><span class="ui-dropdown-value"><ul class="ui-dropdown-value-list"></ul><i class="ui-icon-arrow-down"></i></span><ul class="ui-dropdown-list"><li data-value="document-1">Document 1</li><li data-value="document-2">Document 2</li><li data-value="document-3">Document 3</li><li data-value="document-4">Document 4</li><li data-value="document-5">Document 5</li><li data-value="document-6">Document 6</li></ul></div></div><input hidden type="file" multiple="multiple" id="docs2"> <label for="docs2" class="popup-download-input-file-label"><svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z" fill="#292D32"/><path d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z" fill="#292D32"/><path d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z" fill="#292D32"/><path d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z" fill="#292D32"/></svg><div class="popup-download-input-file-texts"><div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div><div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div></div><button class="popup-download-input-file-button"><i class="ui-icon-download"></i> <span>Przeglądaj plik</span></button></label><div class="date-picker-field"><label>Data ważności dokumentu</label><div class="date-picker-input-body"><input type="text" class="datepicker datepicker-input" placeholder="YYYY-MM-DD"> <i class="ui-icon-calendar"></i></div></div></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">Zapisz</span></button></div></div></div><div class="popup popup-invite-driver"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"></div><div class="popup-content"><div class="popup-form"><div class="ui-field ui-field-text"><label for="@@id">Telefon</label><div class="ui-field-body"><span class="ui-field-phone"><span>+48</span> <i class="ui-icon-arrow-down"></i></span><ul class="ui-dropdown-list phone"><li data-value="+48"><div><img src="./img/ui/input/poland.svg" alt="Poland"> <span>+48</span></div></li><li data-value="+380"><div><img src="./img/ui/input/ukrain.svg" alt="Ukrain"> <span>+380</span></div></li></ul><input data-type="phone" type="phone"></div></div><div class="ui-field ui-field-text"><label for="@@id">Kod polecający</label><div class="ui-field-body"><input data-type="text" type="text"></div></div></div><button data-popup-open="popup-sucess-invite-driver" class="ui-button popup-submit popup-close"><span class="ui-button-text">Wyslać</span></button></div></div></div><div class="popup popup-sucess-invite-driver"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><h5 class="popup-title">SUKCES</h5></div><div class="popup-content"><div class="popup-texts"><p class="popup-text">Konto kierowcy pod mail test@nmskorpo.pl jest stworzone. Wciśnij: <a href="#">stworzyć konto samodziełnie</a>, oby dodać dokumenty bez uczestnictwa kierowcy.</p></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">kontynuować</span></button></div></div></div><div class="popup popup-add-driver"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><h5 class="popup-title">Formulaż dodania kierowcY</h5><p class="popup-status"><i class="ui-icon-error"></i> Kierowca już istnieje w systemie</p></div><div class="popup-content"><div class="popup-form"><div class="ui-field ui-field-text" data-valid><label for="@@id">Imię</label><div class="ui-field-body"><input data-type="text" type="text"> <i class="ui-icon-check ui-field-valid"></i></div></div><div class="ui-field ui-field-text" data-valid><label for="@@id">Nazwisko</label><div class="ui-field-body"><input data-type="text" type="text"> <i class="ui-icon-check ui-field-valid"></i></div></div><div class="ui-field ui-field-text" data-valid><label for="@@id">Telefon</label><div class="ui-field-body"><span class="ui-field-phone"><span>+48</span> <i class="ui-icon-arrow-down"></i></span><ul class="ui-dropdown-list phone"><li data-value="+48"><div><img src="./img/ui/input/poland.svg" alt="Poland"> <span>+48</span></div></li><li data-value="+380"><div><img src="./img/ui/input/ukrain.svg" alt="Ukrain"> <span>+380</span></div></li></ul><input data-type="phone" type="phone"> <i class="ui-icon-check ui-field-valid"></i></div></div><div class="ui-field ui-field-text" data-valid><label for="@@id">E-mail</label><div class="ui-field-body"><input data-type="email" type="email"> <i class="ui-icon-check ui-field-valid"></i></div></div></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">kontynuować</span></button></div></div></div><div class="popup popup-add-doc-car"><div class="popup-body"><button class="popup-close-x popup-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="popup-top"><div class="popup-container"><div class="popup-top-body"><div class="popup-download-info"><span class="popup-download-info-icon"><svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4727 1.36328H3.12266C2.63532 1.36328 2.16795 1.55687 1.82335 1.90147C1.47875 2.24607 1.28516 2.71345 1.28516 3.20078V17.9008C1.28516 18.3881 1.47875 18.8555 1.82335 19.2001C2.16795 19.5447 2.63532 19.7383 3.12266 19.7383H14.1477C14.635 19.7383 15.1024 19.5447 15.447 19.2001C15.7916 18.8555 15.9852 18.3881 15.9852 17.9008V6.87578L10.4727 1.36328Z" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.31 15.1445H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.31 11.4688H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.79746 7.79492H5.87871H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.4727 1.36328V6.87578H15.9852" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="popup-download-texts"><h6 class="popup-download-title">Formulaż dodania Dokumentów</h6></div></div></div></div></div><div class="popup-content"><div class="popup-download-files"><div class="ui-dropdown"><label class="ui-dropdown-label">Gmina</label><div class="ui-dropdown-field"><span class="ui-dropdown-value"><ul class="ui-dropdown-value-list"></ul><i class="ui-icon-arrow-down"></i></span><ul class="ui-dropdown-list"><li data-value="document-1">Document 1</li><li data-value="document-2">Document 2</li><li data-value="document-3">Document 3</li><li data-value="document-4">Document 4</li><li data-value="document-5">Document 5</li><li data-value="document-6">Document 6</li></ul></div></div><input hidden type="file" multiple="multiple" id="docs2"> <label for="docs2" class="popup-download-input-file-label"><svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z" fill="#292D32"/><path d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z" fill="#292D32"/><path d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z" fill="#292D32"/><path d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z" fill="#292D32"/></svg><div class="popup-download-input-file-texts"><div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div><div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div></div><button class="popup-download-input-file-button"><i class="ui-icon-download"></i> <span>Przeglądaj plik</span></button></label><div class="date-picker-field"><label>Data ważności dokumentu</label><div class="date-picker-input-body"><input type="text" class="datepicker datepicker-input" placeholder="YYYY-MM-DD"> <i class="ui-icon-calendar"></i></div></div></div><button class="ui-button popup-submit popup-close"><span class="ui-button-text">Zapisz</span></button></div></div></div><script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script><script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script><script src="https://www.google.com/recaptcha/api.js" async defer="defer"></script><script src="js/script.js"></script><script src="js/ui.js"></script></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/css/datepicker.min.css">
+
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>NMS Taxi</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <main class="page">
+        <div class="document">
+          <div class="document__body">
+            <div class="banner">
+              <div class="banner__body">
+                <img class="banner__logo" src="./img/logo-2.svg" alt="" />
+                <div class="banner__steps">
+                  <div class="banner__step">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-id-card"></i>
+                      </span>
+                    </div>
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">Dokumenty partnera
+                      </h3>
+                      <p class="banner__step-text">
+                        Dodaj dokumenty aby rozpocząć współpracę jako partner
+                      </p>
+                    </div>
+                  </div>
+                  <div class="banner__step active">
+                    <div class="banner__icon-body">
+                      <span class="banner__icon">
+                        <i class="ui-icon-document"></i>
+                      </span>
+                    </div>
+
+                    <div class="banner__step-info">
+                      <h3 class="banner__step-title">Licencja
+                      </h3>
+                      <p class="banner__step-text">
+                        Dodaj licencję w swoim mieście
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form">
+              <div class="form__body">
+                <h2 class="form__title">Licencja</h2>
+
+                <p class="form__description">
+                  Dodaj swoją licencję, aby rozpocząć proces współpracy
+                </p>
+
+                <div class="form__sections">
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Licencja Główna </div>
+                    </div>
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <h4 class="form__field-title">Warszawa</h4>
+                        <p class="form__field-text">Dodaj licencję dla miasta, w którym pracujesz</p>
+                      </div>
+
+                      <div class="form__field-body">
+                        <div class="ui-multi-field ">
+  
+
+  <div class="ui-field-body">
+    <div class="ui-multi-input-body">
+      <ul class="ui-multi-value-list">
+      </ul>
+      <input required id="warzawa"  multiple accept="image/*" type="file" class="ui-multi-input">
+    </div>
+    <label for="warzawa"  class="ui-multi-button">Dodać</label>
+  </div>
+
+</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__section">
+                    <div class="form__header">
+                      <div class="form__label">Dodatkowa licencja </div>
+                      <div class="form__actions">
+                        <button class="form__add" data-popup-open="popup-add-license">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.85376 1.36328V10.3633" stroke="#2E2E2E" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.17065 5.86328H10.5365" stroke="#2E2E2E" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>
+                            Dodać licencję
+                          </span>
+                        </button>
+                        <button class="form__reset">
+                          <i class="ui-icon-reset"></i>
+                          <span>Resetuj</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <h4 class="form__field-title">Pruszków</h4>
+                        <p class="form__field-text">Dodaj licencję dla miasta, w którym pracujesz</p>
+                      </div>
+
+                      <div class="form__field-body">
+                        <div class="ui-multi-field ">
+  
+
+  <div class="ui-field-body">
+    <div class="ui-multi-input-body">
+      <ul class="ui-multi-value-list">
+      </ul>
+      <input required id="bank"  multiple accept="image/*" type="file" class="ui-multi-input">
+    </div>
+    <label for="bank"  class="ui-multi-button">Dodać</label>
+  </div>
+
+</div>
+                      </div>
+                    </div>
+
+                    <div class="form__section-body">
+                      <div class="form__field-info">
+                        <h4 class="form__field-title">Ząbki</h4>
+                        <p class="form__field-text">Dodaj licencję dla miasta, w którym pracujesz</p>
+                      </div>
+
+                      <div class="form__field-body">
+                        <div class="ui-multi-field ">
+  
+
+  <div class="ui-field-body">
+    <div class="ui-multi-input-body">
+      <ul class="ui-multi-value-list">
+      </ul>
+      <input required id="zqbki"  multiple accept="image/*" type="file" class="ui-multi-input">
+    </div>
+    <label for="zqbki"  class="ui-multi-button">Dodać</label>
+  </div>
+
+</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button data-popup-open="popup-sucess-partner" 
+  class="ui-button form__submit medium">
+
+  
+
+  
+  <span class="ui-button-text">
+    Dalej
+  </span>
+  
+</button>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="popup popup-register">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <h5 class="popup-title">SUKCES</h5>
+    </div>
+    <div class="popup-content">
+      <div class="popup-texts">
+        <p class="popup-text">
+          Konto dla <a href="#">test@nmskorpo.pl</a> zostało utworzone.
+
+        </p>
+        <p class="popup-text"> Aby aktywować Twoje konto, musimy otrzymać zdjęcia Twoich dokumentów. Akceptujemy
+          wyłącznie zdjęcia lub
+          skany
+          w wysokiej jakości.
+        </p>
+      </div>
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Dokończ rejestrację
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-add-license">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <h5 class="popup-title">Formulaż dodania licencji</h5>
+    </div>
+    <div class="popup-content">
+      <div class="popup-form">
+        <div class="ui-dropdown">
+
+    
+    <label class="ui-dropdown-label">Dokończ rejestrację</label>
+    
+
+    <div class="ui-dropdown-field">
+        <span class="ui-dropdown-value">
+              <ul class="ui-dropdown-value-list">
+
+              </ul>
+              <i class="ui-icon-arrow-down"></i>
+        </span>
+
+        <ul class="ui-dropdown-list">
+            
+                <li data-value="Pruszków">
+                    Pruszków
+                </li>
+            
+                <li data-value="Pruszków 2">
+                    Pruszków 2
+                </li>
+            
+                <li data-value="Pruszków 3">
+                    Pruszków 3
+                </li>
+            
+                <li data-value="Pruszków 4">
+                    Pruszków 4
+                </li>
+            
+          </ul>
+    </div>
+</div>
+
+
+        <div class="ui-multi-field ">
+  
+  <label class="ui-multi-label">Dodać dokument</label>
+  
+
+  <div class="ui-field-body">
+    <div class="ui-multi-input-body">
+      <ul class="ui-multi-value-list">
+      </ul>
+      <input required  multiple accept="image/*" type="file" class="ui-multi-input">
+    </div>
+    <label  class="ui-multi-button">Dodać</label>
+  </div>
+
+</div>
+
+        <div class="date-picker-field ">
+  
+  <label>Data ważności dokumentu</label>
+  
+
+  <div class="date-picker-input-body">
+    <input type="text" class="datepicker datepicker-input"
+      placeholder="YYYY-MM-DD">
+    <i class="ui-icon-calendar" ></i>
+  </div>
+</div>
+
+      </div>
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Zapisz
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-sucess-partner">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <h5 class="popup-title">SUKCES</h5>
+    </div>
+    <div class="popup-content">
+      <div class="popup-texts">
+        <p class="popup-text">
+          Konto dla <a href="#">test@nmskorpo.pl</a> zostało utworzone.
+        </p>
+
+
+        <p class="popup-text">
+          Wkrótce z tobą skontaktuje sie manager na podany przez ceibie e-mail.
+        </p>
+
+
+
+        <p class="popup-text"> W razie jakichkolwiek pytań kontaktuj się na mail <a href="#">support@nms.com</a>.
+
+        </p>
+      </div>
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Dokończ rejestrację
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-download">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <div class="popup-container">
+        <div class="popup-top-body">
+          <div class="popup-download-info">
+            <span class="popup-download-info-icon">
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.01594 21.729H5.95321C2.79474 21.5034 1.37671 19.0755 1.37671 16.9161C1.37671 14.7568 2.79476 12.3181 5.89951 12.1032C6.33998 12.0603 6.72672 12.404 6.75895 12.8553C6.79118 13.2957 6.45819 13.6825 6.00698 13.7147C3.92282 13.8651 2.98817 15.4336 2.98817 16.9269C2.98817 18.4202 3.92282 19.9887 6.00698 20.1391H8.01594C8.4564 20.1391 8.82167 20.5043 8.82167 20.9448C8.82167 21.3853 8.4564 21.729 8.01594 21.729Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M17.9095 21.729C17.888 21.729 17.8773 21.729 17.8558 21.729C17.4153 21.729 17.0071 21.3637 17.0071 20.9232C17.0071 20.4613 17.3509 20.1175 17.8021 20.1175C19.1235 20.1175 20.3053 19.6555 21.2292 18.8283C22.9051 17.3673 23.0125 15.2616 22.5613 13.7791C22.1101 12.3073 20.8531 10.6206 18.6615 10.352C18.307 10.3091 18.0277 10.0405 17.9632 9.68596C17.5335 7.10761 16.1477 5.32426 14.042 4.67967C11.8719 4.00285 9.33651 4.66893 7.75727 6.32336C6.22101 7.92408 5.8665 10.1694 6.75817 12.6403C6.90858 13.0593 6.69377 13.5212 6.27479 13.6716C5.85581 13.822 5.39383 13.6072 5.24343 13.1882C4.15837 10.1586 4.65257 7.25801 6.59707 5.21682C8.58454 3.13266 11.7752 2.30544 14.5147 3.1434C17.0286 3.9169 18.8012 5.99032 19.4458 8.86947C21.6374 9.36365 23.3993 11.0288 24.0976 13.3279C24.8603 15.831 24.1728 18.4094 22.2927 20.0423C21.1002 21.1166 19.5425 21.729 17.9095 21.729Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M12.8931 24.8878C10.7337 24.8878 8.71406 23.7383 7.60752 21.8797C7.48934 21.6971 7.37117 21.4822 7.27448 21.2459C6.90922 20.4831 6.71582 19.6129 6.71582 18.7105C6.71582 15.3049 9.48754 12.5332 12.8931 12.5332C16.2987 12.5332 19.0704 15.3049 19.0704 18.7105C19.0704 19.6236 18.877 20.4831 18.4903 21.2781C18.4043 21.4822 18.2862 21.6971 18.1572 21.9012C17.0722 23.7383 15.0525 24.8878 12.8931 24.8878ZM12.8931 14.1447C10.3792 14.1447 8.32729 16.1966 8.32729 18.7105C8.32729 19.3766 8.46695 19.9997 8.73553 20.569C8.82147 20.7517 8.89665 20.9021 8.9826 21.0417C9.79907 22.4276 11.2924 23.2763 12.8823 23.2763C14.4723 23.2763 15.9656 22.4276 16.7713 21.0632C16.868 20.9021 16.954 20.7517 17.0185 20.6013C17.3085 20.0104 17.4482 19.3873 17.4482 18.7212C17.4589 16.1966 15.407 14.1447 12.8931 14.1447Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M12.2805 20.5793C12.0763 20.5793 11.8722 20.5041 11.7111 20.343L10.6475 19.2794C10.3359 18.9678 10.3359 18.4522 10.6475 18.1406C10.959 17.8291 11.4747 17.8291 11.7862 18.1406L12.302 18.6563L14.0208 17.0663C14.3539 16.7655 14.8588 16.787 15.1596 17.1093C15.4604 17.4316 15.4389 17.9473 15.1166 18.2481L12.8284 20.3645C12.6672 20.5041 12.4738 20.5793 12.2805 20.5793Z"
+                  fill="#0F0F0F" />
+              </svg>
+            </span>
+
+            <div class="popup-download-texts">
+              <h6 class="popup-download-title">Przesyłanie plików</h6>
+              <h7 class="popup-download-subtitle">Wybierz i prześlij wybrane pliki</h7>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-content">
+
+      <div class="popup-download-files">
+        <input hidden type="file" multiple id="docs">
+
+        <label for="docs" class="popup-download-input-file-label">
+          <svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z"
+              fill="#292D32" />
+            <path
+              d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z"
+              fill="#292D32" />
+            <path
+              d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z"
+              fill="#292D32" />
+            <path
+              d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z"
+              fill="#292D32" />
+          </svg>
+
+          <div class="popup-download-input-file-texts">
+            <div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div>
+            <div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div>
+          </div>
+
+          <button class="popup-download-input-file-button">
+            <i class="ui-icon-download"></i>
+            <span> Przeglądaj plik</span>
+          </button>
+        </label>
+
+        <div class="popup-download-file">
+          <button class="popup-download-file-remove">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 1L1 7M1 1L7 7" stroke="#2E2E2E" stroke-width="1.66667" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <div class="popup-download-file-top">
+            <picture><source srcset="./img/pdf.webp" type="image/webp"><img src="./img/pdf.png" alt="" class="popup-download-file-pdf"></picture>
+            <div class="popup-download-file-info">
+              <div class="popup-download-file-title">Pruszków.pdf</div>
+              <div class="popup-download-file-info-bottom">
+                <div class="popup-download-file-size">60 KB of 12O KB •</div>
+                <div class="popup-download-file-status">
+                  <i class="ui-icon-in-process process"></i>
+                  <span>Przesyłanie...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="popup-download-file-bottom">
+            <div class="popup-download-file-progress">
+              <div class="popup-download-file-progress-value"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-download-file">
+          <button class="popup-download-file-remove">
+            <i class="ui-icon-delete"></i>
+          </button>
+
+          <div class="popup-download-file-top">
+            <picture><source srcset="./img/pdf.webp" type="image/webp"><img src="./img/pdf.png" alt="" class="popup-download-file-pdf"></picture>
+            <div class="popup-download-file-info">
+              <div class="popup-download-file-title">Ząbki.pdf</div>
+              <div class="popup-download-file-info-bottom">
+                <div class="popup-download-file-size">94 KB of 94 KB •</div>
+                <div class="popup-download-file-status">
+                  <i class="ui-icon-in-process success"></i>
+                  <span>Zakończono</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Zapisz
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-dowod">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <div class="popup-container">
+        <div class="popup-top-body">
+          <div class="popup-download-info">
+            <span class="popup-download-info-icon">
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.01594 21.729H5.95321C2.79474 21.5034 1.37671 19.0755 1.37671 16.9161C1.37671 14.7568 2.79476 12.3181 5.89951 12.1032C6.33998 12.0603 6.72672 12.404 6.75895 12.8553C6.79118 13.2957 6.45819 13.6825 6.00698 13.7147C3.92282 13.8651 2.98817 15.4336 2.98817 16.9269C2.98817 18.4202 3.92282 19.9887 6.00698 20.1391H8.01594C8.4564 20.1391 8.82167 20.5043 8.82167 20.9448C8.82167 21.3853 8.4564 21.729 8.01594 21.729Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M17.9095 21.729C17.888 21.729 17.8773 21.729 17.8558 21.729C17.4153 21.729 17.0071 21.3637 17.0071 20.9232C17.0071 20.4613 17.3509 20.1175 17.8021 20.1175C19.1235 20.1175 20.3053 19.6555 21.2292 18.8283C22.9051 17.3673 23.0125 15.2616 22.5613 13.7791C22.1101 12.3073 20.8531 10.6206 18.6615 10.352C18.307 10.3091 18.0277 10.0405 17.9632 9.68596C17.5335 7.10761 16.1477 5.32426 14.042 4.67967C11.8719 4.00285 9.33651 4.66893 7.75727 6.32336C6.22101 7.92408 5.8665 10.1694 6.75817 12.6403C6.90858 13.0593 6.69377 13.5212 6.27479 13.6716C5.85581 13.822 5.39383 13.6072 5.24343 13.1882C4.15837 10.1586 4.65257 7.25801 6.59707 5.21682C8.58454 3.13266 11.7752 2.30544 14.5147 3.1434C17.0286 3.9169 18.8012 5.99032 19.4458 8.86947C21.6374 9.36365 23.3993 11.0288 24.0976 13.3279C24.8603 15.831 24.1728 18.4094 22.2927 20.0423C21.1002 21.1166 19.5425 21.729 17.9095 21.729Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M12.8931 24.8878C10.7337 24.8878 8.71406 23.7383 7.60752 21.8797C7.48934 21.6971 7.37117 21.4822 7.27448 21.2459C6.90922 20.4831 6.71582 19.6129 6.71582 18.7105C6.71582 15.3049 9.48754 12.5332 12.8931 12.5332C16.2987 12.5332 19.0704 15.3049 19.0704 18.7105C19.0704 19.6236 18.877 20.4831 18.4903 21.2781C18.4043 21.4822 18.2862 21.6971 18.1572 21.9012C17.0722 23.7383 15.0525 24.8878 12.8931 24.8878ZM12.8931 14.1447C10.3792 14.1447 8.32729 16.1966 8.32729 18.7105C8.32729 19.3766 8.46695 19.9997 8.73553 20.569C8.82147 20.7517 8.89665 20.9021 8.9826 21.0417C9.79907 22.4276 11.2924 23.2763 12.8823 23.2763C14.4723 23.2763 15.9656 22.4276 16.7713 21.0632C16.868 20.9021 16.954 20.7517 17.0185 20.6013C17.3085 20.0104 17.4482 19.3873 17.4482 18.7212C17.4589 16.1966 15.407 14.1447 12.8931 14.1447Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M12.2805 20.5793C12.0763 20.5793 11.8722 20.5041 11.7111 20.343L10.6475 19.2794C10.3359 18.9678 10.3359 18.4522 10.6475 18.1406C10.959 17.8291 11.4747 17.8291 11.7862 18.1406L12.302 18.6563L14.0208 17.0663C14.3539 16.7655 14.8588 16.787 15.1596 17.1093C15.4604 17.4316 15.4389 17.9473 15.1166 18.2481L12.8284 20.3645C12.6672 20.5041 12.4738 20.5793 12.2805 20.5793Z"
+                  fill="#0F0F0F" />
+              </svg>
+            </span>
+
+            <div class="popup-download-texts">
+              <h6 class="popup-download-title">Dowód tożsamości (przód czy tył)</h6>
+              <h7 class="popup-download-subtitle">Akceptujemy zdjęcie dobrej jakości przedniej strony
+                ważnego dowodu osobistego, pierwszej strony paszpotu lub karty pobytu</h7>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-content">
+
+      <div class="popup-download-files">
+        <input hidden type="file" multiple id="docs2">
+        <label for="docs2" class="popup-download-input-file-label">
+          <svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z"
+              fill="#292D32" />
+            <path
+              d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z"
+              fill="#292D32" />
+            <path
+              d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z"
+              fill="#292D32" />
+            <path
+              d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z"
+              fill="#292D32" />
+          </svg>
+
+          <div class="popup-download-input-file-texts">
+            <div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div>
+            <div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div>
+          </div>
+
+          <button class="popup-download-input-file-button">
+            <i class="ui-icon-download"></i>
+            <span> Przeglądaj plik</span>
+          </button>
+        </label>
+
+        <div class="date-picker-field ">
+  
+  <label>Data ważności dokumentu</label>
+  
+
+  <div class="date-picker-input-body">
+    <input type="text" class="datepicker datepicker-input"
+      placeholder="YYYY-MM-DD">
+    <i class="ui-icon-calendar" ></i>
+  </div>
+</div>
+
+      </div>
+
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Zapisz
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-bank">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <div class="popup-container">
+        <div class="popup-top-body">
+          <div class="popup-download-info">
+            <span class="popup-download-info-icon">
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.01594 21.729H5.95321C2.79474 21.5034 1.37671 19.0755 1.37671 16.9161C1.37671 14.7568 2.79476 12.3181 5.89951 12.1032C6.33998 12.0603 6.72672 12.404 6.75895 12.8553C6.79118 13.2957 6.45819 13.6825 6.00698 13.7147C3.92282 13.8651 2.98817 15.4336 2.98817 16.9269C2.98817 18.4202 3.92282 19.9887 6.00698 20.1391H8.01594C8.4564 20.1391 8.82167 20.5043 8.82167 20.9448C8.82167 21.3853 8.4564 21.729 8.01594 21.729Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M17.9095 21.729C17.888 21.729 17.8773 21.729 17.8558 21.729C17.4153 21.729 17.0071 21.3637 17.0071 20.9232C17.0071 20.4613 17.3509 20.1175 17.8021 20.1175C19.1235 20.1175 20.3053 19.6555 21.2292 18.8283C22.9051 17.3673 23.0125 15.2616 22.5613 13.7791C22.1101 12.3073 20.8531 10.6206 18.6615 10.352C18.307 10.3091 18.0277 10.0405 17.9632 9.68596C17.5335 7.10761 16.1477 5.32426 14.042 4.67967C11.8719 4.00285 9.33651 4.66893 7.75727 6.32336C6.22101 7.92408 5.8665 10.1694 6.75817 12.6403C6.90858 13.0593 6.69377 13.5212 6.27479 13.6716C5.85581 13.822 5.39383 13.6072 5.24343 13.1882C4.15837 10.1586 4.65257 7.25801 6.59707 5.21682C8.58454 3.13266 11.7752 2.30544 14.5147 3.1434C17.0286 3.9169 18.8012 5.99032 19.4458 8.86947C21.6374 9.36365 23.3993 11.0288 24.0976 13.3279C24.8603 15.831 24.1728 18.4094 22.2927 20.0423C21.1002 21.1166 19.5425 21.729 17.9095 21.729Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M12.8931 24.8878C10.7337 24.8878 8.71406 23.7383 7.60752 21.8797C7.48934 21.6971 7.37117 21.4822 7.27448 21.2459C6.90922 20.4831 6.71582 19.6129 6.71582 18.7105C6.71582 15.3049 9.48754 12.5332 12.8931 12.5332C16.2987 12.5332 19.0704 15.3049 19.0704 18.7105C19.0704 19.6236 18.877 20.4831 18.4903 21.2781C18.4043 21.4822 18.2862 21.6971 18.1572 21.9012C17.0722 23.7383 15.0525 24.8878 12.8931 24.8878ZM12.8931 14.1447C10.3792 14.1447 8.32729 16.1966 8.32729 18.7105C8.32729 19.3766 8.46695 19.9997 8.73553 20.569C8.82147 20.7517 8.89665 20.9021 8.9826 21.0417C9.79907 22.4276 11.2924 23.2763 12.8823 23.2763C14.4723 23.2763 15.9656 22.4276 16.7713 21.0632C16.868 20.9021 16.954 20.7517 17.0185 20.6013C17.3085 20.0104 17.4482 19.3873 17.4482 18.7212C17.4589 16.1966 15.407 14.1447 12.8931 14.1447Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M12.2805 20.5793C12.0763 20.5793 11.8722 20.5041 11.7111 20.343L10.6475 19.2794C10.3359 18.9678 10.3359 18.4522 10.6475 18.1406C10.959 17.8291 11.4747 17.8291 11.7862 18.1406L12.302 18.6563L14.0208 17.0663C14.3539 16.7655 14.8588 16.787 15.1596 17.1093C15.4604 17.4316 15.4389 17.9473 15.1166 18.2481L12.8284 20.3645C12.6672 20.5041 12.4738 20.5793 12.2805 20.5793Z"
+                  fill="#0F0F0F" />
+              </svg>
+            </span>
+
+            <div class="popup-download-texts">
+              <h6 class="popup-download-title">Wyciąg bankowy</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-content">
+
+      <div class="popup-download-files">
+        <input hidden type="file" multiple id="docs3">
+        <label for="docs3" class="popup-download-input-file-label">
+          <svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z"
+              fill="#292D32" />
+            <path
+              d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z"
+              fill="#292D32" />
+            <path
+              d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z"
+              fill="#292D32" />
+            <path
+              d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z"
+              fill="#292D32" />
+          </svg>
+
+          <div class="popup-download-input-file-texts">
+            <div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div>
+            <div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div>
+          </div>
+
+          <button class="popup-download-input-file-button">
+            <i class="ui-icon-download"></i>
+            <span> Przeglądaj plik</span>
+          </button>
+        </label>
+
+        <div class="ui-field ui-field-text " >
+  
+  <label for="@@id">Odbiorca rachunku</label>
+  
+  <div class="ui-field-body">
+    
+
+    <input data-type="text" type="text"  >
+
+    
+
+    
+
+  </div>
+  
+</div>
+
+        <div class="ui-field ui-field-text " >
+  
+  <label for="@@id">Numer rachunku bankowego IBAN </label>
+  
+  <div class="ui-field-body">
+    
+
+    <input data-type="text" type="text"  >
+
+    
+
+    
+
+  </div>
+  
+</div>
+
+        <div class="ui-field ui-field-text " >
+  
+  <label for="@@id">Kod SWIFT</label>
+  
+  <div class="ui-field-body">
+    
+
+    <input data-type="text" type="text"  >
+
+    
+
+    
+
+  </div>
+  
+</div>
+      </div>
+
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Zapisz
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-krs">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <div class="popup-container">
+        <div class="popup-top-body">
+          <div class="popup-download-info">
+            <span class="popup-download-info-icon">
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.01594 21.729H5.95321C2.79474 21.5034 1.37671 19.0755 1.37671 16.9161C1.37671 14.7568 2.79476 12.3181 5.89951 12.1032C6.33998 12.0603 6.72672 12.404 6.75895 12.8553C6.79118 13.2957 6.45819 13.6825 6.00698 13.7147C3.92282 13.8651 2.98817 15.4336 2.98817 16.9269C2.98817 18.4202 3.92282 19.9887 6.00698 20.1391H8.01594C8.4564 20.1391 8.82167 20.5043 8.82167 20.9448C8.82167 21.3853 8.4564 21.729 8.01594 21.729Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M17.9095 21.729C17.888 21.729 17.8773 21.729 17.8558 21.729C17.4153 21.729 17.0071 21.3637 17.0071 20.9232C17.0071 20.4613 17.3509 20.1175 17.8021 20.1175C19.1235 20.1175 20.3053 19.6555 21.2292 18.8283C22.9051 17.3673 23.0125 15.2616 22.5613 13.7791C22.1101 12.3073 20.8531 10.6206 18.6615 10.352C18.307 10.3091 18.0277 10.0405 17.9632 9.68596C17.5335 7.10761 16.1477 5.32426 14.042 4.67967C11.8719 4.00285 9.33651 4.66893 7.75727 6.32336C6.22101 7.92408 5.8665 10.1694 6.75817 12.6403C6.90858 13.0593 6.69377 13.5212 6.27479 13.6716C5.85581 13.822 5.39383 13.6072 5.24343 13.1882C4.15837 10.1586 4.65257 7.25801 6.59707 5.21682C8.58454 3.13266 11.7752 2.30544 14.5147 3.1434C17.0286 3.9169 18.8012 5.99032 19.4458 8.86947C21.6374 9.36365 23.3993 11.0288 24.0976 13.3279C24.8603 15.831 24.1728 18.4094 22.2927 20.0423C21.1002 21.1166 19.5425 21.729 17.9095 21.729Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M12.8931 24.8878C10.7337 24.8878 8.71406 23.7383 7.60752 21.8797C7.48934 21.6971 7.37117 21.4822 7.27448 21.2459C6.90922 20.4831 6.71582 19.6129 6.71582 18.7105C6.71582 15.3049 9.48754 12.5332 12.8931 12.5332C16.2987 12.5332 19.0704 15.3049 19.0704 18.7105C19.0704 19.6236 18.877 20.4831 18.4903 21.2781C18.4043 21.4822 18.2862 21.6971 18.1572 21.9012C17.0722 23.7383 15.0525 24.8878 12.8931 24.8878ZM12.8931 14.1447C10.3792 14.1447 8.32729 16.1966 8.32729 18.7105C8.32729 19.3766 8.46695 19.9997 8.73553 20.569C8.82147 20.7517 8.89665 20.9021 8.9826 21.0417C9.79907 22.4276 11.2924 23.2763 12.8823 23.2763C14.4723 23.2763 15.9656 22.4276 16.7713 21.0632C16.868 20.9021 16.954 20.7517 17.0185 20.6013C17.3085 20.0104 17.4482 19.3873 17.4482 18.7212C17.4589 16.1966 15.407 14.1447 12.8931 14.1447Z"
+                  fill="#0F0F0F" />
+                <path
+                  d="M12.2805 20.5793C12.0763 20.5793 11.8722 20.5041 11.7111 20.343L10.6475 19.2794C10.3359 18.9678 10.3359 18.4522 10.6475 18.1406C10.959 17.8291 11.4747 17.8291 11.7862 18.1406L12.302 18.6563L14.0208 17.0663C14.3539 16.7655 14.8588 16.787 15.1596 17.1093C15.4604 17.4316 15.4389 17.9473 15.1166 18.2481L12.8284 20.3645C12.6672 20.5041 12.4738 20.5793 12.2805 20.5793Z"
+                  fill="#0F0F0F" />
+              </svg>
+            </span>
+
+            <div class="popup-download-texts">
+              <h6 class="popup-download-title">Wyciąg z KRS</h6>
+              <h7 class="popup-download-subtitle">Akceptujemy aktualny KRS nie powyżej 30 dni</h7>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-content">
+
+      <div class="popup-download-files">
+        <input hidden type="file" multiple id="docs4">
+        <label for="docs4" class="popup-download-input-file-label">
+          <svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z"
+              fill="#292D32" />
+            <path
+              d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z"
+              fill="#292D32" />
+            <path
+              d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z"
+              fill="#292D32" />
+            <path
+              d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z"
+              fill="#292D32" />
+          </svg>
+
+          <div class="popup-download-input-file-texts">
+            <div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div>
+            <div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div>
+          </div>
+
+          <button class="popup-download-input-file-button">
+            <i class="ui-icon-download"></i>
+            <span> Przeglądaj plik</span>
+          </button>
+        </label>
+
+        <div class="ui-field ui-field-text " >
+  
+  <label for="@@id">Regon</label>
+  
+  <div class="ui-field-body">
+    
+
+    <input data-type="text" type="text"  >
+
+    
+
+    
+
+  </div>
+  
+</div>
+      </div>
+
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Zapisz
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-add-doc">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <div class="popup-container">
+        <div class="popup-top-body">
+          <div class="popup-download-info">
+            <span class="popup-download-info-icon">
+              <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.4727 1.36328H3.12266C2.63532 1.36328 2.16795 1.55687 1.82335 1.90147C1.47875 2.24607 1.28516 2.71345 1.28516 3.20078V17.9008C1.28516 18.3881 1.47875 18.8555 1.82335 19.2001C2.16795 19.5447 2.63532 19.7383 3.12266 19.7383H14.1477C14.635 19.7383 15.1024 19.5447 15.447 19.2001C15.7916 18.8555 15.9852 18.3881 15.9852 17.9008V6.87578L10.4727 1.36328Z"
+                  stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12.31 15.1445H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12.31 11.4688H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M6.79746 7.79492H5.87871H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M10.4727 1.36328V6.87578H15.9852" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+
+            <div class="popup-download-texts">
+              <h6 class="popup-download-title">Formulaż dodania Dokumentów</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-content">
+
+
+
+      <div class="popup-download-files">
+
+        <div class="ui-dropdown">
+
+    
+    <label class="ui-dropdown-label">Wybierz dokument z listy poniżej, który chcesz dodać:</label>
+    
+
+    <div class="ui-dropdown-field">
+        <span class="ui-dropdown-value">
+              <ul class="ui-dropdown-value-list">
+
+              </ul>
+              <i class="ui-icon-arrow-down"></i>
+        </span>
+
+        <ul class="ui-dropdown-list">
+            
+                <li data-value="document-1">
+                    Document 1
+                </li>
+            
+                <li data-value="document-2">
+                    Document 2
+                </li>
+            
+                <li data-value="document-3">
+                    Document 3
+                </li>
+            
+                <li data-value="document-4">
+                    Document 4
+                </li>
+            
+                <li data-value="document-5">
+                    Document 5
+                </li>
+            
+                <li data-value="document-6">
+                    Document 6
+                </li>
+            
+          </ul>
+    </div>
+</div>
+
+
+
+        <input hidden type="file" multiple id="docs2">
+        <label for="docs2" class="popup-download-input-file-label">
+          <svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z"
+              fill="#292D32" />
+            <path
+              d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z"
+              fill="#292D32" />
+            <path
+              d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z"
+              fill="#292D32" />
+            <path
+              d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z"
+              fill="#292D32" />
+          </svg>
+
+          <div class="popup-download-input-file-texts">
+            <div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div>
+            <div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div>
+          </div>
+
+          <button class="popup-download-input-file-button">
+            <i class="ui-icon-download"></i>
+            <span> Przeglądaj plik</span>
+          </button>
+        </label>
+
+        <div class="date-picker-field ">
+  
+  <label>Data ważności dokumentu</label>
+  
+
+  <div class="date-picker-input-body">
+    <input type="text" class="datepicker datepicker-input"
+      placeholder="YYYY-MM-DD">
+    <i class="ui-icon-calendar" ></i>
+  </div>
+</div>
+
+      </div>
+
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Zapisz
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-invite-driver">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+    </div>
+    <div class="popup-content">
+      <div class="popup-form">
+        <div class="ui-field ui-field-text " >
+  
+  <label for="@@id">Telefon</label>
+  
+  <div class="ui-field-body">
+    
+    <span class="ui-field-phone">
+      <span>+48</span>
+
+      <i class="ui-icon-arrow-down"></i>
+
+
+
+    </span>
+
+    <ul class="ui-dropdown-list phone">
+      <li data-value="+48">
+        <div>
+          <img src="./img/ui/input/poland.svg" alt="Poland">
+          <span>+48</span>
+        </div>
+
+      </li>
+      <li data-value="+380">
+        <div>
+          <img src="./img/ui/input/ukrain.svg" alt="Ukrain">
+          <span>+380</span>
+        </div>
+
+      </li>
+    </ul>
+
+    
+
+    <input data-type="phone" type="phone"  >
+
+    
+
+    
+
+  </div>
+  
+</div>
+
+        <div class="ui-field ui-field-text " >
+  
+  <label for="@@id">Kod polecający</label>
+  
+  <div class="ui-field-body">
+    
+
+    <input data-type="text" type="text"  >
+
+    
+
+    
+
+  </div>
+  
+</div>
+      </div>
+
+      <button data-popup-open="popup-sucess-invite-driver" 
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Wyslać
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-sucess-invite-driver">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <h5 class="popup-title">SUKCES</h5>
+    </div>
+    <div class="popup-content">
+      <div class="popup-texts">
+        <p class="popup-text">
+          Konto kierowcy pod mail test@nmskorpo.pl jest stworzone.
+          Wciśnij: <a href="#">stworzyć konto samodziełnie</a>, oby dodać dokumenty bez uczestnictwa kierowcy.
+        </p>
+      </div>
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    kontynuować
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-add-driver">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <h5 class="popup-title">Formulaż dodania kierowcY</h5>
+      <p class="popup-status">
+        <i class="ui-icon-error"></i>
+        Kierowca już istnieje w systemie
+      </p>
+    </div>
+    <div class="popup-content">
+      <div class="popup-form">
+
+        <div class="ui-field ui-field-text " data-valid>
+  
+  <label for="@@id">Imię</label>
+  
+  <div class="ui-field-body">
+    
+
+    <input data-type="text" type="text"  >
+
+    
+    <i class="ui-icon-check ui-field-valid"></i>
+    
+
+    
+
+  </div>
+  
+</div>
+
+        <div class="ui-field ui-field-text " data-valid>
+  
+  <label for="@@id">Nazwisko</label>
+  
+  <div class="ui-field-body">
+    
+
+    <input data-type="text" type="text"  >
+
+    
+    <i class="ui-icon-check ui-field-valid"></i>
+    
+
+    
+
+  </div>
+  
+</div>
+
+        <div class="ui-field ui-field-text " data-valid>
+  
+  <label for="@@id">Telefon</label>
+  
+  <div class="ui-field-body">
+    
+    <span class="ui-field-phone">
+      <span>+48</span>
+
+      <i class="ui-icon-arrow-down"></i>
+
+
+
+    </span>
+
+    <ul class="ui-dropdown-list phone">
+      <li data-value="+48">
+        <div>
+          <img src="./img/ui/input/poland.svg" alt="Poland">
+          <span>+48</span>
+        </div>
+
+      </li>
+      <li data-value="+380">
+        <div>
+          <img src="./img/ui/input/ukrain.svg" alt="Ukrain">
+          <span>+380</span>
+        </div>
+
+      </li>
+    </ul>
+
+    
+
+    <input data-type="phone" type="phone"  >
+
+    
+    <i class="ui-icon-check ui-field-valid"></i>
+    
+
+    
+
+  </div>
+  
+</div>
+
+        <div class="ui-field ui-field-text " data-valid>
+  
+  <label for="@@id">E-mail</label>
+  
+  <div class="ui-field-body">
+    
+
+    <input data-type="email" type="email"  >
+
+    
+    <i class="ui-icon-check ui-field-valid"></i>
+    
+
+    
+
+  </div>
+  
+</div>
+
+      </div>
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    kontynuować
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup-add-doc-car">
+  <div class="popup-body">
+    <button class="popup-close-x popup-close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 1L1 11M1 1L11 11" stroke="#7A7A7A" stroke-width="1.66667" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="popup-top">
+      <div class="popup-container">
+        <div class="popup-top-body">
+          <div class="popup-download-info">
+            <span class="popup-download-info-icon">
+              <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.4727 1.36328H3.12266C2.63532 1.36328 2.16795 1.55687 1.82335 1.90147C1.47875 2.24607 1.28516 2.71345 1.28516 3.20078V17.9008C1.28516 18.3881 1.47875 18.8555 1.82335 19.2001C2.16795 19.5447 2.63532 19.7383 3.12266 19.7383H14.1477C14.635 19.7383 15.1024 19.5447 15.447 19.2001C15.7916 18.8555 15.9852 18.3881 15.9852 17.9008V6.87578L10.4727 1.36328Z"
+                  stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12.31 15.1445H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12.31 11.4688H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M6.79746 7.79492H5.87871H4.95996" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M10.4727 1.36328V6.87578H15.9852" stroke="#0F0F0F" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+
+            <div class="popup-download-texts">
+              <h6 class="popup-download-title">Formulaż dodania Dokumentów</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-content">
+
+
+
+      <div class="popup-download-files">
+
+        <div class="ui-dropdown">
+
+    
+    <label class="ui-dropdown-label">Gmina</label>
+    
+
+    <div class="ui-dropdown-field">
+        <span class="ui-dropdown-value">
+              <ul class="ui-dropdown-value-list">
+
+              </ul>
+              <i class="ui-icon-arrow-down"></i>
+        </span>
+
+        <ul class="ui-dropdown-list">
+            
+                <li data-value="document-1">
+                    Document 1
+                </li>
+            
+                <li data-value="document-2">
+                    Document 2
+                </li>
+            
+                <li data-value="document-3">
+                    Document 3
+                </li>
+            
+                <li data-value="document-4">
+                    Document 4
+                </li>
+            
+                <li data-value="document-5">
+                    Document 5
+                </li>
+            
+                <li data-value="document-6">
+                    Document 6
+                </li>
+            
+          </ul>
+    </div>
+</div>
+
+
+
+        <input hidden type="file" multiple id="docs2">
+        <label for="docs2" class="popup-download-input-file-label">
+          <svg class="popup-download-input-file-icon" width="26" height="27" viewBox="0 0 26 27" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.12311 21.522H6.06039C2.90192 21.2964 1.48389 18.8685 1.48389 16.7091C1.48389 14.5497 2.90193 12.1111 6.00669 11.8962C6.44716 11.8532 6.8339 12.197 6.86612 12.6482C6.89835 13.0887 6.56537 13.4754 6.11416 13.5077C4.03 13.6581 3.09535 15.2266 3.09535 16.7198C3.09535 18.2131 4.03 19.7816 6.11416 19.932H8.12311C8.56358 19.932 8.92885 20.2973 8.92885 20.7378C8.92885 21.1782 8.56358 21.522 8.12311 21.522Z"
+              fill="#292D32" />
+            <path
+              d="M18.0167 21.5219C17.9952 21.5219 17.9845 21.5219 17.963 21.5219C17.5225 21.5219 17.1143 21.1567 17.1143 20.7162C17.1143 20.2542 17.4581 19.9105 17.9093 19.9105C19.2307 19.9105 20.4124 19.4485 21.3363 18.6213C23.0123 17.1602 23.1197 15.0546 22.6685 13.572C22.2173 12.1002 20.9603 10.4136 18.7687 10.145C18.4142 10.102 18.1349 9.83345 18.0704 9.47893C17.6407 6.90058 16.2549 5.11722 14.1492 4.47264C11.9791 3.79582 9.44369 4.46189 7.86445 6.11633C6.32819 7.71705 5.97368 9.96237 6.86535 12.4333C7.01576 12.8523 6.80095 13.3142 6.38197 13.4646C5.96298 13.615 5.50101 13.4002 5.3506 12.9812C4.26555 9.95162 4.75974 7.05098 6.70425 5.00979C8.69172 2.92563 11.8824 2.0984 14.6219 2.93637C17.1358 3.70987 18.9084 5.78329 19.5529 8.66244C21.7445 9.15662 23.5064 10.8218 24.2047 13.1208C24.9675 15.624 24.2799 18.2023 22.3999 19.8353C21.2074 20.9096 19.6496 21.5219 18.0167 21.5219Z"
+              fill="#292D32" />
+            <path
+              d="M13.0003 24.6807C10.8409 24.6807 8.82123 23.5312 7.71469 21.6727C7.59652 21.49 7.47835 21.2752 7.38166 21.0388C7.01639 20.2761 6.823 19.4059 6.823 18.5035C6.823 15.0979 9.59472 12.3262 13.0003 12.3262C16.4058 12.3262 19.1776 15.0979 19.1776 18.5035C19.1776 19.4166 18.9842 20.2761 18.5975 21.0711C18.5115 21.2752 18.3933 21.49 18.2644 21.6942C17.1794 23.5312 15.1596 24.6807 13.0003 24.6807ZM13.0003 13.9376C10.4864 13.9376 8.43446 15.9896 8.43446 18.5035C8.43446 19.1695 8.57413 19.7926 8.84271 20.362C8.92865 20.5446 9.00383 20.695 9.08978 20.8347C9.90625 22.2206 11.3995 23.0693 12.9895 23.0693C14.5795 23.0693 16.0728 22.2206 16.8785 20.8562C16.9752 20.6951 17.0612 20.5446 17.1257 20.3942C17.4157 19.8034 17.5553 19.1803 17.5553 18.5142C17.5661 15.9896 15.5142 13.9376 13.0003 13.9376Z"
+              fill="#292D32" />
+            <path
+              d="M12.3876 20.3723C12.1835 20.3723 11.9794 20.2971 11.8183 20.1359L10.7547 19.0724C10.4431 18.7608 10.4431 18.2451 10.7547 17.9336C11.0662 17.622 11.5819 17.622 11.8934 17.9336L12.4091 18.4493L14.128 16.8593C14.461 16.5585 14.966 16.58 15.2668 16.9023C15.5676 17.2245 15.5461 17.7402 15.2238 18.041L12.9355 20.1574C12.7744 20.2971 12.581 20.3723 12.3876 20.3723Z"
+              fill="#292D32" />
+          </svg>
+
+          <div class="popup-download-input-file-texts">
+            <div class="popup-download-input-file-text">Wybierz plik lub przeciągnij i upuść go tutaj</div>
+            <div class="popup-download-input-file-format">Formaty JPEG, PNG, PDF, do 50 MB</div>
+          </div>
+
+          <button class="popup-download-input-file-button">
+            <i class="ui-icon-download"></i>
+            <span> Przeglądaj plik</span>
+          </button>
+        </label>
+
+        <div class="date-picker-field ">
+  
+  <label>Data ważności dokumentu</label>
+  
+
+  <div class="date-picker-input-body">
+    <input type="text" class="datepicker datepicker-input"
+      placeholder="YYYY-MM-DD">
+    <i class="ui-icon-calendar" ></i>
+  </div>
+</div>
+
+      </div>
+
+
+      <button  
+  class="ui-button popup-submit popup-close">
+
+  
+
+  
+  <span class="ui-button-text">
+    Zapisz
+  </span>
+  
+</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.3.4/dist/js/datepicker-full.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="js/script.js"></script>
+<script src="js/ui.js"></script>
+
+
+  </div>
+
+</body>
+
+</html>
