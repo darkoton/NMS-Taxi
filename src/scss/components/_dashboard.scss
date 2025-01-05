@@ -602,6 +602,15 @@
     height: 100%;
     background: url("../img/dashboard/decor-bg-2.png") left bottom / contain no-repeat;
     background-color: var(--neutrals-20);
+    transition: all 0.3s ease 0s;
+    transform: translateX(105%);
+    position: absolute;
+    right: -100%;
+
+    &.active {
+      position: static;
+      transform: translateX(0);
+    }
 
     &__close {
       position: absolute;
